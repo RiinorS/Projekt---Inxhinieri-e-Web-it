@@ -1,11 +1,11 @@
 var vargu = [
-        'C://Users//Lenovo//Desktop//Tech-Shopp//images//xiaomi.jpg',
-        'C://Users//Lenovo//Desktop//Tech-Shopp//images//mouseRazer.jpg',
-        'C://Users//Lenovo//Desktop//Tech-Shopp//images//kase.jpg',
-        'C://Users//Lenovo//Desktop//Tech-Shopp//images//ps5controlller.jpg',
-        'C://Users//Lenovo//Desktop//Tech-Shopp//images//kgrafike.jpg',
-        'C://Users//Lenovo//Desktop//Tech-Shopp//images//jblcharge5.jpg',
-        'C://Users//Lenovo//Desktop//Tech-Shopp//images//hyperXkufje.jpg'
+        './/images//xiaomi.jpg',
+        './/images//mouseRazer.jpg',
+        './/images//kase.jpg',
+        './/images//ps5controlller.jpg',
+        './/images//kgrafike.jpg',
+        './images//jblcharge5.jpg',
+        './/images//hyperXkufje.jpg'
 ];
 
 var index = 0;
