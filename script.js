@@ -206,7 +206,7 @@ function validimiKycuni(){
     var regex_Mesazhi = regMsg.test(mesazhi_kontakto);
 
     if(!regex_Mesazhi){
-        alert("Ju lutem plotësoni fushën e numrit me të dhëna të sakta!");
+        alert("Ju lutem plotësoni fushën e mesazhit me të dhëna të sakta!");
     }
 
 
