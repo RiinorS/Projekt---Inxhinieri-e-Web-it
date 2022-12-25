@@ -98,7 +98,7 @@ function validimiKycuni(){
     
 }
 
-    function validimiRegjistohuni(){
+function validimiRegjistohuni(){
 
 
 
@@ -144,13 +144,11 @@ function validimiKycuni(){
 
 }
 
-
     // validimi i kontaktit
 
     // emri dhe mbiemri te kene te pakten 3 karaktere
 
-
-    function kontakti(){
+function kontakti(){
 
     const perdoruesi_kontakto = document.getElementById('perdoruesi_kontakto').value;
     const email_kontakto = document.getElementById('email_kontakto').value;
