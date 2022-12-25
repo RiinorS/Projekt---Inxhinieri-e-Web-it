@@ -35,12 +35,7 @@ function redirect() {
 
 // validimi per butonat lart kycuni dhe regjistrohuni 
 
-// var x = document.getElementById("forma-kycuni");
-// var y = document.getElementById("forma-regjistrohuni");
-// var z = document.getElementById("butonikr");
-// let x = document.getElementById("forma-kycuni");
-//     let y = document.getElementById("forma-regjistrohuni");
-//     let z = document.getElementById("butonikr");
+
 
 
 function regjistrohuni(){
@@ -72,22 +67,6 @@ function kycuni(){
 }
 
 kycuni();
-
-// function kycuni(){
-
-//     let x = document.getElementById("forma-kycuni");
-//     let y = document.getElementById("forma-regjistrohuni");
-//     let z = document.getElementById("butonikr");
-
-
-//     x.style.left = "50px";
-//     y.style.left = "450px";
-//     z.style.left = "0";
-
-// }
-// kycuni();
-
-
 
 function validimiKycuni(){
 
