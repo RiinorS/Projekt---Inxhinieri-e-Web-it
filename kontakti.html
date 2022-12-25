@@ -68,27 +68,27 @@
       <div class="kontakt-forma">
         <h1>Na kontaktoni</h1>
         <div id="prapavija-formave" class="tekst-infot">
-          <label>Emri dhe mbiemri :</label>
-          <input type="text" name="" value="" placeholder="Shënoni emrin dhe mbiemrin">
+          <label>Perdoruesi :</label>
+          <input type="text"  id="perdoruesi_kontakto" name="" value="" placeholder="Shënoni përdoruesin">
         </div>
   
         <div id="prapavija-formave" class="tekst-infot">
           <label>Email :</label>
-          <input type="email" name="" value="" placeholder="Shënoni email-en tuaj">
+          <input type="email" id="email_kontakto" name="" value="" placeholder="Shënoni email-en tuaj">
         </div>
   
         <div id="prapavija-formave" class="tekst-infot">
           <label>Numri i telefonit :</label>
-          <input type="text" name="" value="" placeholder="Shënoni numrin tuaj të telefonit ">
+          <input type="number" id="numri_kontakto" name="" value="" placeholder="Shënoni numrin tuaj të telefonit ">
         </div>
   
         <div id="prapavija-formave"class="tekst-infot">
           <label>Mesazhi juaj :</label>
        
-          <textarea></textarea>
+          <textarea id="mesazhi_kontakto" ></textarea>
         
         </div>
-        <a class="dergo">Dërgoni</a>
+        <button type="submit" class="dergo" onclick="kontakti()" >Dërgoni</button> 
       </div>
     </div>
 
