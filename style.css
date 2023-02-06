@@ -313,7 +313,7 @@ span{
     background:rgb(147, 10, 10) ;
     color: #fff;
 }
-/* @media (max-width: 1080px){
+ @media (max-width: 1080px){
     .mbajtesi-produkteve .kartat{
         width: calc(33% - 20px);
     }
@@ -323,20 +323,9 @@ span{
         width: 100%;
         margin-bottom: 20px;
     }
-} */
-
- @media screen and (max-width: 1080px){
-    .mbajtesi-produkteve {
-        flex-direction: column;
-    }
-}
+} 
 
 
-@media screen and (max-width: 1080px){
-  .mbajtesi-produkteve .kartat{
-      flex-direction: column;
-  }
-}
 
   
 
