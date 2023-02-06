@@ -326,13 +326,17 @@ span{
 } */
 
  @media screen and (max-width: 1080px){
-    .mbajtesi-produkteve .kartat{
+    .mbajtesi-produkteve {
         flex-direction: column;
     }
 }
 
 
-
+@media screen and (max-width: 1080px){
+  .mbajtesi-produkteve .kartat{
+      flex-direction: column;
+  }
+}
 
   
 
