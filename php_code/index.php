@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rini - Tech  </title>
 
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="../css_code/style.css" rel="stylesheet" type="text/css">
     
 
 </head>
@@ -36,7 +36,7 @@
 
     </header> -->
 
-    <?php  include ''    ?>
+    <?php  include ''   ?>
 
 
 
