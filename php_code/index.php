@@ -14,7 +14,7 @@
 
  
   <!-- Navigimi i faqes -->
-    <header>
+    <!-- <header>
 
         <div class="logo">RINI <span>  Tech</span></div>
     
@@ -34,7 +34,12 @@
               <a href="kycuni-regjistrohuni.html"> <img src="./images/logIn.png"  width="19px"> Kycuni & Regjistrohuni</a>   
             </div>
 
-    </header>
+    </header> -->
+
+    <?php  include ''    ?>
+
+
+
 
 
     <!-- Faqja kryesore -->
@@ -104,7 +109,7 @@
     </div>
 
     <!-- Fillimi i footerit   -->
-    <div class="footer">
+    <!-- <div class="footer">
       <div class="footer-column">
         <h4>Dyqani</h4>
           <ul>
@@ -133,7 +138,10 @@
               <li>Telefoni : 045499539</li>
          
             </ul>
-    </div>
+    </div> -->
+
+
+  <?php include '../'  ?>
   
 
   <!-- Mbarimi i footerit   -->
