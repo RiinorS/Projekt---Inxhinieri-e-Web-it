@@ -17,7 +17,7 @@
 
         public function getUserById($userId){
 
-            $sql = " select * from user where userid = : id ";
+            $sql = " select * from user where userid = :id ";
 
             $statement = $this-> conn -> prepare($sql);
             $statement -> bindParam(":id" , $userId);
@@ -48,10 +48,9 @@
 
         }
 
-        public function insertUser( $user){
+        public function insertUser($user){
 
-            $sql = "  insert into user (username,userlastname ,role,password) values (:name ,:lastname, 
-            :role ,:password) ";
+            $sql = "insert into user(username,userlastname ,role,password) values (:name ,:lastname,:role ,:password)";
 
             
             $username = $user->getUsername();
@@ -61,7 +60,7 @@
             $role = $user->getRole();
 
 
-            $statement = $this-> conn -> prepare($sql);
+            $statement =$this->conn->prepare($sql);
 
             $statement -> bindParam(":name" , $username) ;
             $statement -> bindParam(":lastname" , $lastname) ;
@@ -77,13 +76,13 @@
 
         public function edit(\SimpleUser $user, $id)
         {
-            $this->query = "update user set username=:username, email:email where userid=:id";
+            $this->query = "update user set username=:username, userlastname:lastname where userid=:id";
             var_dump($user);
             $statement = $this->conn->prepare($this->query);
             $username = $user->getUsername();
             $lastname = $user->getLastname();
             $statement->bindParam(":username", $username);
-            $statement->bindParam(":email", $lastname);
+            $statement->bindParam(":userlastname", $lastname);
             $statement->bindParam(":id", $id);
 
             $statement->execute();

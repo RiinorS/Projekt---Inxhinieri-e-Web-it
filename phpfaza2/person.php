@@ -8,7 +8,7 @@
         protected $password;
         protected $role;
 
-        function __construct($username, $userlastname, $password, $role) {
+        function __construct($username, $userlastname, $role, $password) {
             $this->username = $username;
             $this->userlastname = $userlastname;
             $this->password = $password;

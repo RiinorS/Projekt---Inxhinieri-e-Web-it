@@ -65,7 +65,7 @@
 
       </form>
 
-      <form action="#" id="regjistrohuni" class="input-grupi">
+      <form action="../phpfaza2/loginVerify.php" id="regjistrohuni"  method="post" class="input-grupi">
           <input type="text" name="register-username"  id="email_regjistrohuni" class="input-fusha" placeholder="Emri" required>
           <input type="text" name="register-lastname"  id="perdoruesi_regjistrohuni" class="input-fusha" placeholder="Mbiemri" required>
           <input type="password" name="register-password"  id="fjalekalimi_regjistrohuni" class="input-fusha" placeholder="Fjalëkalimi" required>

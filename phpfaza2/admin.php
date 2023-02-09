@@ -5,7 +5,7 @@ require_once '../phpfaza2/person.php';
 class Admin extends Person
 {
     
-    public function __construct($username, $userlastname, $password, $role )  {
+    public function __construct($username, $userlastname, $role, $password )  {
         parent::__construct($username, $userlastname, $password, $role);
 
     }

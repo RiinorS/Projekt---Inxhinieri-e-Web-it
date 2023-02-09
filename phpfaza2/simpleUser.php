@@ -4,8 +4,8 @@ require_once '../phpfaza2/person.php';
 class SimpleUser extends Person
 {
     
-    public function __construct($username, $userlastname, $password, $role )  {
-        parent::__construct($username, $userlastname, $password, $role);
+    public function __construct($username, $userlastname, $role, $password )  {
+        parent::__construct($username, $userlastname, $role, $password);
 
     }
 
