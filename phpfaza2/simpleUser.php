@@ -3,11 +3,10 @@ require_once '../phpfaza2/person.php';
 
 class SimpleUser extends Person
 {
-    private $lastname;
+    
+    public function __construct($username, $userlastname, $password, $role )  {
+        parent::__construct($username, $userlastname, $password, $role);
 
-    public function __construct(  $username, $password, $age, $role , $lastname )  {
-        parent::__construct($username, $password, $age, $role);
-        $this->lastname = $lastname;
     }
 
     public function setSession()
@@ -20,7 +19,7 @@ class SimpleUser extends Person
         setcookie("username", $this->getUsername(), time() + 2 * 24 * 60 * 60);
     }
     public function getLastname() {
-        return $this->lastname;
+        return $this->userlastname;
     }
 
     public function getUsername() {
@@ -31,9 +30,7 @@ class SimpleUser extends Person
         return $this->password;
     }
 
-    public function getAge() {
-        return $this->age;
-    }
+    
 
     public function getRole() {
         return $this->role;

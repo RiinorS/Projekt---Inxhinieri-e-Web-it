@@ -1,9 +1,9 @@
 
-<!-- -- Kodi per verifikimin e butonit kycuni per kycje -->
+<!-- -- Kodi per verifikimin e butonit kycuni per kycje dhe regjistrim -->
 
 <?php
 
-    require_once '../phpfaza2/users.php';
+    // require_once '../phpfaza2/users.php';
     include_once '../phpfaza2/admin.php' ;
     include_once '../phpfaza2/simpleUser.php';
     include_once '../phpfaza2/UserMapper.php';
@@ -50,12 +50,13 @@
                 header("Location: ../php_code/kycuni-regjistrohuni.php");
             }
 
-            else if($this->verifyLogin($this->username, $this->password) != null ){
-                 header("Location: ../php_code/index.php");
+            else if($this->verifyLogin($this->username, $this->password) ){
+                header("Location: ../php_code/index.php");
             }
 
-            else 
+            else {
                 header("Location: ../php_code/kycuni-regjistrohuni.php");
+            }
 
         }
 
@@ -102,11 +103,25 @@
 
         public function registerUser(){
 
-            $user = new SimpleUser($this->username , $this->password ,  24 , 0 , $this->lastname);
-            $mapper = new UserMapper();
-            $mapper->insertUser($user);
-            header("Location: ../php_code/kycuni-regjistrohuni.php");
-        }
+
+            if($this -> username === "rinor" || $this-> username === "rinas") {
+                
+                $user = new Admin($this->username , $this->lastname , $this->password , 1);
+                $mapper = new UserMapper();
+                $mapper->insertUser($user);
+                header("Location: ../php_code/index.php");
+
+
+
+            }
+            else {  
+
+                $user = new SimpleUser($this->username , $this->lastname , $this->password , 0);
+                $mapper = new UserMapper();
+                $mapper->insertUser($user);
+                header("Location: ../php_code/kycuni-regjistrohuni.php");
+            }
+        } 
 
 
 

@@ -4,11 +4,9 @@ require_once '../phpfaza2/person.php';
 
 class Admin extends Person
 {
-    private $email;
     
-    public function __construct( $email , $username, $password, $age, $role  )  {
-        parent::__construct($username, $password, $age, $role);
-        $this->email = $email;
+    public function __construct($username, $userlastname, $password, $role )  {
+        parent::__construct($username, $userlastname, $password, $role);
 
     }
 
@@ -22,21 +20,24 @@ class Admin extends Person
         setcookie("username", $this->getUsername(), time() + 2 * 24 * 60 * 60);
     }
 
-    public function getEmail() {
-        return $this->email;
-    }
+    
 
     public function getUsername() {
         return $this->username;
     }
 
+    
+    public function getLastname(){
+        return $this->userlastname;
+    }
+
+
+
     public function getPassword() {
         return $this->password;
     }
 
-    public function getAge() {
-        return $this->age;
-    }
+    
 
     public function getRole() {
         return $this->role;

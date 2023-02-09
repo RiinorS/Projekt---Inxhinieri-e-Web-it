@@ -23,7 +23,7 @@
                 <ul>
                   <?php
                   session_start();
-                    if(isset($_SESSION['roli']) && $_SESSION['roli'] == 1 ) {
+                    if(isset($_SESSION['role']) && $_SESSION['roli'] == 1 ) {
                   ?>
                     <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
 

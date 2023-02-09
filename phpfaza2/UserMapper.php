@@ -33,6 +33,7 @@
             $statement = $this->conn->prepare($this->query);
             $statement->bindParam(":username", $username);
             $statement->execute();
+
             $result = $statement->fetch(PDO::FETCH_ASSOC);
             return $result;
 
@@ -42,15 +43,15 @@
             $this->query = "select * from user";
             $statement = $this->conn->prepare($this->query);
             $statement->execute();
-            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $result = $statement->fetchAll();
             return $result;
 
         }
 
-        public function insertUser($user){
+        public function insertUser( $user){
 
-            $sql = "  insert into user (username , userlastname , role , password) values (:name , :lastname , 
-            :role , :password) ";
+            $sql = "  insert into user (username,userlastname ,role,password) values (:name ,:lastname, 
+            :role ,:password) ";
 
             
             $username = $user->getUsername();
@@ -67,7 +68,6 @@
             $statement -> bindParam(":role" , $role) ;
             $statement -> bindParam(":password" , $password) ;
 
-
             $statement -> execute();
            echo " <script?> alert ('Perdoruesi eshte shtuar me sukses!'); </script> ";
 
@@ -81,11 +81,15 @@
             var_dump($user);
             $statement = $this->conn->prepare($this->query);
             $username = $user->getUsername();
-            $email = $user->getEmail();
+            $lastname = $user->getLastname();
             $statement->bindParam(":username", $username);
-            $statement->bindParam(":email", $email);
+            $statement->bindParam(":email", $lastname);
             $statement->bindParam(":id", $id);
+
             $statement->execute();
+            echo " <script?> alert ('Perdoruesi eshte ndryshuar me sukses!'); </script> ";
+
+
         }
 
 
@@ -95,7 +99,11 @@
             $this->query = "delete from user where userid=:id";
             $statement = $this->conn->prepare($this->query);
             $statement->bindParam(":id", $userId);
+
             $statement->execute();
+
+            echo " <script?> alert ('Perdoruesi eshte fshire me sukses!'); </script> ";
+
 
         }
 

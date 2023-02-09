@@ -4,18 +4,18 @@
 
         
         protected $username;
+        protected $userlastname;
         protected $password;
-        protected $age;
         protected $role;
 
-        function __construct($username, $password, $age, $role) {
+        function __construct($username, $userlastname, $password, $role) {
             $this->username = $username;
+            $this->userlastname = $userlastname;
             $this->password = $password;
-            $this->age = $age;
             $this->role = $role;
         }
 
-        abstract function setSession();
+        abstract protected function setSession();
         abstract protected function setCookie();
 
         protected function getUsername() {
