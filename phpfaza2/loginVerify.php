@@ -3,8 +3,6 @@
 
 <?php
 
-    // require_once '../phpfaza2/users.php';
-    
     include_once '../phpfaza2/UserMapper.php';
     include_once '../phpfaza2/admin.php';
     include_once '../phpfaza2/simpleUser.php';
@@ -83,7 +81,7 @@
             
             else if (password_verify($password, $user['password'])) {
                     if ($user['role'] == 1) {
-                        $obj = new SimpleUser($user['id'], $user['username'], $user['userlastname']  , $user['role'] ,$user['password']);
+                        $obj = new Admin($user['id'], $user['username'], $user['userlastname']  , $user['role'] ,$user['password']);
                         $obj->setSession();
                     }
                     else {
@@ -118,7 +116,7 @@
 
               if($this -> username === "rinor" || $this-> username === "rinas") {
                 
-                  $user = new Admin($this->username , $this->lastname , 1 , $this->password);
+                  $user = new Admin($this->username , $this->lastname , $this->password , 1  );
                   $mapper = new UserMapper();
                   $mapper->insertUser($user);
                   header("Location: ../php_code/kycuni-regjistrohuni.php");
@@ -128,7 +126,7 @@
               }
              else {  
 
-                $user = new SimpleUser($this->username , $this->lastname , 0 , $this->password );
+                $user = new SimpleUser($this->username , $this->lastname ,  $this->password , 0);
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
                 header("Location: ../phpfaza2/kycuni-regjistrohuni.php");
