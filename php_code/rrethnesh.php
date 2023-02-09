@@ -3,34 +3,47 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rreth Nesh - Rini Tech</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel ="icon" type="image/png" href="../images/favicon.jpg">
+        <link rel="stylesheet" href="../css_code/style.css">
+        
     </head>
     <body>
        
     
      <!-- Navigimi i faqes -->
-     <header>
+      <header>
     
         <div class="logo">RINI <span>  Tech</span></div>
     
         <nav class="nav-bar">
     
                 <ul>
-                    
-                    <li> <a href="faqja.html">Faqja </a>  </li>
-                    <li> <a href="produktet.html"> Produktet  </a> </li>
-                    <li> <a href="rrethnesh.html" class="active"> Rreth Nesh  </a> </li>
-                    <li> <a href="kontakti.html"> Kontakti  </a> </li>
+                  <?php
+                  session_start();
+                    if(isset($_SESSION['roli']) && $_SESSION['roli'] == 1 ) {
+                  ?>
+                    <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
+
+                  <?php
+                  }
+
+                  ?>
+
+                  <li> <a href="index.php">Faqja </a>  </li>
+                  <li> <a href="produktet.php"> Produktet  </a> </li>
+                  <li> <a href="rrethnesh.php" class="active"> Rreth Nesh  </a> </li>
+                  <li> <a href="kontakti.php"> Kontakti  </a> </li>
                     
                 </ul>                
         </nav>
     
         <div class="icons">
-            <a href="kycuni-regjistrohuni.html"> <img src="./images/logIn.png"  width="19px"> Kycuni & Regjistrohuni</a>   
+        <a href="kycuni-regjistrohuni.php"> <img src="../images/log.png"  width="23px" height="17px"> Llogaria</a>   
         </div>
     
-    </header>
-  
+    </header> 
+
+
     
 
     <!-- Fillimi i faqes rreth nesh -->
@@ -40,7 +53,7 @@
 
         <div class="permbajtja-rrethnesh">
 
-            <img src="./images/gadgets2.jpg">
+            <img src="../images/gadgets2.jpg">
             <div class="tekstet-rrethnesh">
 
                 <h1>Rreth nesh</h1>
@@ -64,7 +77,7 @@
     
     
         <!-- Fillimi i footerit   -->
-        <div class="footer">
+        <!-- <div class="footer">
             <div class="footer-column">
               <h4>Dyqani</h4>
                 <ul>
@@ -94,7 +107,9 @@
                
                   </ul>
           </div>
-        
+         -->
+
+        <?php include '../components/footer.php'  ?>
       
         <!-- Mbarimi i footerit   -->
       

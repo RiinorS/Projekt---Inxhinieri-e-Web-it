@@ -1,12 +1,21 @@
 var vargu = [
-        './/images//xiaomi.jpg',
-        './/images//mouseRazer.jpg',
-        './/images//kase.jpg',
-        './/images//ps5controlller.jpg',
-        './/images//kgrafike.jpg',
-        './images//jblcharge5.jpg',
-        './/images//hyperXkufje.jpg'
+        '../images/hyperXkufje.jpg',
+        '../images/mouseRazer.jpg',
+        '../images/kase.jpg',
+        '../images/ps5controlller.jpg',
+        '../images/kgrafike.jpg',
+        '../images/jblcharge5.jpg',
+        '../images/hyperXkufje.jpg'
 ];
+
+
+// var vargu = [
+    
+
+
+
+
+// ];
 
 var index = 0;
 var koha = 2000;
@@ -29,7 +38,7 @@ krijoSlider();
 
 
 function redirect() {
-    window.location = 'produktet.html';
+    window.location = 'produktet.php';
 }
 
 
@@ -70,52 +79,53 @@ kycuni();
 
 function validimiKycuni(){
 
-    const perdoruesi_kycuni = document.getElementById('perdoruesi_kycuni').value;
-    const fjalekalimi_kycuni = document.getElementById('fjalekalimi_kycuni').value;
+    //const perdoruesi_kycuni = document.getElementById('perdoruesi_kycuni').value;
+   // const fjalekalimi_kycuni = document.getElementById('fjalekalimi_kycuni').value;
 
     // perdoruesi duhet te jete me minimum 6 karaktere, maksimumi 16 karaktere , duhet te kete te pakten nje numer 
     // dhe te pakten nje shkronje te madhe
 
-    var regPerdoruesi = /^(?=.{6,16}$)(?=.*[A-Z])(?=.*[0-9])/;
+    // var regPerdoruesi = /^(?=.{6,16}$)(?=.*[A-Z])(?=.*[0-9])/;
 
-    var regex_Perdoruesi = regPerdoruesi.test(perdoruesi_kycuni);
+    // var regex_Perdoruesi = regPerdoruesi.test(perdoruesi_kycuni);
 
-    if(!regex_Perdoruesi){
-        alert("Ju lutem plotësoni fushën e përdoruesit me të dhëna të sakta!");
-    }
+    // if(!regex_Perdoruesi){
+    //     alert("Ju lutem plotësoni fushën e përdoruesit me të dhëna të sakta!");
+    // }
     
 
 
     // fjalekalimi duhet te kete minimum 8 karaktere, maksimum 20 karaktere, dhe ka karaktere speciale
 
-    var regFjalekalimi = /^[A-Za-z0-9!@#$%^&*()_]{8,20}$/;
+    //var regFjalekalimi = /^[A-Za-z0-9!@#$%^&*()_]{8,20}$/;
 
-    var regex_Fjalekalimi = regFjalekalimi.test(fjalekalimi_kycuni);
+//     var regex_Fjalekalimi = regFjalekalimi.test(fjalekalimi_kycuni);
 
-    if(!regex_Fjalekalimi){
-        alert("Ju lutem plotësoni fushën e fjalëkalimit me të dhëna të sakta!");
-    }
+//     if(!regex_Fjalekalimi){
+//         alert("Ju lutem plotësoni fushën e fjalëkalimit me të dhëna të sakta!");
+//     }
     
-}
+    
+// }
 
-function validimiRegjistohuni(){
+// function validimiRegjistohuni(){
 
 
 
-    const email_regjistrohuni = document.getElementById('email_regjistrohuni').value;
-    const perdoruesi_regjistrohuni = document.getElementById('perdoruesi_regjistrohuni').value;
-    const fjalekalimi_regjistrohuni = document.getElementById('fjalekalimi_regjistrohuni').value;
+//     const email_regjistrohuni = document.getElementById('email_regjistrohuni').value;
+//     const perdoruesi_regjistrohuni = document.getElementById('perdoruesi_regjistrohuni').value;
+//     const fjalekalimi_regjistrohuni = document.getElementById('fjalekalimi_regjistrohuni').value;
 
-    // email-a duhet te kete minimum 5 karaktere, duhet te permbaje te pakten nje numer, te permbaje '@' dhe te perfundoje me 
-    //   'com' ose 'net'
+//     // email-a duhet te kete minimum 5 karaktere, duhet te permbaje te pakten nje numer, te permbaje '@' dhe te perfundoje me 
+//     //   'com' ose 'net'
 
-    var regEm = /^(?=.{5,})(?=.*[0-9])(?=.*@).*\.(com|net)$/;
+//     var regEm = /^(?=.{5,})(?=.*[0-9])(?=.*@).*\.(com|net)$/;
 
-    var regex_Email = regEm.test(email_regjistrohuni);
+//     var regex_Email = regEm.test(email_regjistrohuni);
 
-    if(!regex_Email){
-        alert("Ju lutem plotësoni fushën e email-it me të dhëna të sakta!");
-    }
+//     if(!regex_Email){
+//         alert("Ju lutem plotësoni fushën e email-it me të dhëna të sakta!");
+//     }
 
 
 
@@ -123,26 +133,55 @@ function validimiRegjistohuni(){
     // dhe te pakten nje shkronje te madhe
 
 
-    var regPerdoruesi = /^(?=.{6,16}$)(?=.*[A-Z])(?=.*[0-9])/;
+    //var regPerdoruesi = /^(?=.{6,16}$)(?=.*[A-Z])(?=.*[0-9])/;
 
-    var regex_Perdoruesi = regPerdoruesi.test(perdoruesi_regjistrohuni);
+    // var regex_Perdoruesi = regPerdoruesi.test(perdoruesi_regjistrohuni);
 
-    if(!regex_Perdoruesi){
-        alert("Ju lutem plotësoni fushën e përdoruesit me të dhëna të sakta!");
-    }
+    // if(!regex_Perdoruesi){
+    //     alert("Ju lutem plotësoni fushën e përdoruesit me të dhëna të sakta!");
+    // }
 
 
-    // fjalekalimi duhet te kete minimum 8 karaktere, maksimum 20 karaktere, dhe ka karaktere speciale
+    // // fjalekalimi duhet te kete minimum 8 karaktere, maksimum 20 karaktere, dhe ka karaktere speciale
 
-    var regFjalekalimi = /^[A-Za-z0-9!@#$%^&*()_]{8,20}$/;
+    // var regFjalekalimi = /^[A-Za-z0-9!@#$%^&*()_]{8,20}$/;
 
-    var regex_Fjalekalimi = regFjalekalimi.test(fjalekalimi_regjistrohuni);
+    // var regex_Fjalekalimi = regFjalekalimi.test(fjalekalimi_regjistrohuni);
 
-    if(!regex_Fjalekalimi){
-        alert("Ju lutem plotësoni fushën e fjalëkalimit me të dhëna të sakta!");
-    }
+    // if(!regex_Fjalekalimi){
+    //     alert("Ju lutem plotësoni fushën e fjalëkalimit me të dhëna të sakta!");
+    // }
 
 }
+
+    const regPerdoruesi = /^[a-zA-Z0-9]{3,}$/;
+    const regFjalekalimi = /^[A-Z]+$/;
+
+
+    function valido() {
+
+        let inputs = document.querySelectorAll("input");
+        username = inputs[0].value;
+        password = inputs[1].value;
+
+        if(regPerdoruesi.test(username) && password !="") {
+            return true;
+        }
+        return false;
+
+    }
+
+
+
+    
+
+
+
+
+
+
+
+
 
     // validimi i kontaktit
 

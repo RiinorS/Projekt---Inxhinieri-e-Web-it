@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kycuni & Regjistrohuni - Rini Tech  </title>
-
-    <link href="style.css" rel="stylesheet">
+    <link rel ="icon" type="image/png" href="../images/favicon.jpg">
+    <link href="../css_code/style.css" rel="stylesheet">
+    
 </head>
 <body>
 
@@ -19,21 +20,33 @@
 
   <nav class="nav-bar">
 
-          <ul>
-              
-            <li> <a href="faqja.html" >Faqja </a>  </li>
-            <li> <a href="produktet.html"> Produktet  </a> </li>
-            <li> <a href="rrethnesh.html"> Rreth Nesh  </a> </li>
-            <li> <a href="kontakti.html"> Kontakti  </a> </li>
+                  <ul>
+                  <?php
+                  session_start();
+                    if(isset($_SESSION['roli']) && $_SESSION['roli'] == 1 ) {
+                  ?>
+                    <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
+
+                  <?php
+                  }
+
+                  ?>
+
+            <li> <a href="index.php" >Faqja </a>  </li>
+            <li> <a href="produktet.php"> Produktet  </a> </li>
+            <li> <a href="rrethnesh.php"> Rreth Nesh  </a> </li>
+            <li> <a href="kontakti.php"> Kontakti  </a> </li>
               
           </ul>                
   </nav>
 
   <div class="icons">
-    <a href="kycuni-regjistrohuni.html"> <img src="./images/logIn.png"  width="19px"> Kycuni & Regjistrohuni</a>   
+  <a href="kycuni-regjistrohuni.php"> <img src="../images/log.png"  width="23px" height="17px"> Llogaria</a>   
   </div>
 
-</header>
+</header> 
+
+
 
   <!-- Faqja Kycuni - Regjistrohuni -->
 
@@ -45,19 +58,19 @@
           <button type="button" class="nderrimibutonave" onclick="regjistrohuni()" >Regjistrohuni</button>
       </div>
 
-      <form action="#"  id="kycuni" class="input-grupi">
-          <input type="text" id="perdoruesi_kycuni"  class="input-fusha" placeholder="Perdoruesi" required>
-          <input type="password" id="fjalekalimi_kycuni"  class="input-fusha" placeholder="Fjalekalimi" required>
-          <button type="submit" id="butoni-kycu" class="butoni-submit" onclick="validimiKycuni()" >Kycuni</button>
+      <form action="../phpfaza2/loginVerify.php"  id="kycuni" class="input-grupi" method="post" onsubmit= " return valido()" >
+          <input type="text" id="perdoruesi_kycuni"  class="input-fusha" name="username"  placeholder="Perdoruesi" >
+          <input type="password" id="fjalekalimi_kycuni"  class="input-fusha" name="password" placeholder="Fjalekalimi" >
+          <button type="submit" id="butoni-kycu" class="butoni-submit" name= "login-btn"  onclick="validimiKycuni()" >Kycuni</button>
 
       </form>
 
       <form action="#" id="regjistrohuni" class="input-grupi">
-          <input type="email" id="email_regjistrohuni" class="input-fusha" placeholder="Email" required>
-          <input type="text" id="perdoruesi_regjistrohuni" class="input-fusha" placeholder="Përdoruesi" required>
-          <input type="password" id="fjalekalimi_regjistrohuni" class="input-fusha" placeholder="Fjalëkalimi" required>
+          <input type="text" name="register-username"  id="email_regjistrohuni" class="input-fusha" placeholder="Emri" required>
+          <input type="text" name="register-lastname"  id="perdoruesi_regjistrohuni" class="input-fusha" placeholder="Mbiemri" required>
+          <input type="password" name="register-password"  id="fjalekalimi_regjistrohuni" class="input-fusha" placeholder="Fjalëkalimi" required>
           <input type="checkbox" class="tick-kutia"> <span class="tickkr" >Unë pajtohem me kushtet dhe përmbajtjen e privatësisë</span>
-          <button type="submit" class="butoni-submit" onclick="validimiRegjistohuni()" >Regjistrohuni</button>
+          <button type="submit" class="butoni-submit" name="register-btn"  onclick="validimiRegjistohuni()" >Regjistrohuni</button>
 
       </form>
 
@@ -66,7 +79,7 @@
 </div>
 
    <!-- Fillimi i footerit   -->
-   <div class="footer">
+   <!-- <div class="footer">
     <div class="footer-column">
       <h4>Dyqani</h4>
         <ul>
@@ -96,12 +109,13 @@
             <li>Telefoni : 045499539</li>
        
           </ul>
-  </div>
+  </div> -->
 
+  <?php  include '../components/footer.php'  ?>
 
 <!-- Mbarimi i footerit   -->
 
 
-  <script src="./script.js"></script>
+  <script src="../js_code/script.js"></script>
 </body>
 </html>

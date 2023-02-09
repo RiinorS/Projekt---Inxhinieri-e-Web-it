@@ -3,34 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produktet - RINI Tech</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Produktet - Rini Tech</title>
+    <link rel ="icon" type="image/png" href="../images/favicon.jpg">
+    <link rel="stylesheet" href="../css_code/style.css">
+
+    
 </head>
 <body>
 
 <!-- Navigimi i faqes -->
-<header>
+ <header>
 
   <div class="logo">RINI <span>  Tech</span></div>
 
   <nav class="nav-bar">
 
-          <ul>
+                 <ul>
+                 <?php
+                  session_start();
+                    if(isset($_SESSION['roli']) && $_SESSION['roli'] == 1 ) {
+                  ?>
+                    <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
+
+                  <?php
+                  }
+
+                  ?>
               
-              <li> <a href="faqja.html" >Faqja </a>  </li>
-              <li> <a href="produktet.html" class="active" >Produktet  </a> </li>
-              <li> <a href="rrethnesh.html"> Rreth Nesh  </a> </li>
-              <li> <a href="kontakti.html"> Kontakti  </a> </li>
+              <li> <a href="index.php" >Faqja </a>  </li>
+              <li> <a href="produktet.php" class="active" >Produktet  </a> </li>
+              <li> <a href="rrethnesh.php"> Rreth Nesh  </a> </li>
+              <li> <a href="kontakti.php"> Kontakti  </a> </li>
               
           </ul>                
   </nav>
 
   <div class="icons">
-    <a href="kycuni-regjistrohuni.html"> <img src="./images/logIn.png"  width="19px"> Kycuni & Regjistrohuni</a>   
+  <a href="kycuni-regjistrohuni.php"> <img src="../images/log.png"  width="23px" height="17px"> Llogaria</a>   
   </div>
 
-</header>
-
+</header> 
 
 
 
@@ -40,7 +52,7 @@
 
     <div class="mbajtesi-produkteve">
         <div class="kartat">
-            <img src="./images/iphone14.jpg" width="200px" height="250px">
+            <img src="../images/iphone14.jpg" width="200px" height="250px">
             <div class="permbajtja-produkteve">
               <span class="titujt">Apple iPhone</span>
                 <p>Apple iPhone 14 Plus, 512GB</p>
@@ -55,7 +67,7 @@
             </div>
         </div>
         <div class="kartat">
-            <img src="./images/airpods3rdgen.png" width="250px" height="250px">
+            <img src="../images/airpods3rdgen.png" width="250px" height="250px">
             <div class="permbajtja-produkteve">
               <span class="titujt"> Apple AirPods</span>
                 <p>Apple AirPods (3rd gen.)</p>
@@ -69,7 +81,7 @@
             </div>
         </div>
         <div class="kartat">
-            <img src="./images/applewatch.jpg" width="250px" height="250px">
+            <img src="../images/applewatch.jpg" width="250px" height="250px">
             <div class="permbajtja-produkteve">
               <span class="titujt"> Apple Watch</span>
               <p>Apple Watch SE2 GPS 44mm</p>
@@ -86,7 +98,7 @@
 
 
         <div class="kartat">
-          <img src="./images/monitor.jpg" width="250px" height="250px">
+          <img src="../images/monitor.jpg" width="250px" height="250px">
           <div class="permbajtja-produkteve">
             <span class="titujt"> Monitor Dell</span>
               <p>Monitor Dell UltraSharp U2722D - LED 27"</p>
@@ -101,7 +113,7 @@
         </div>
 
         <div class="kartat">
-        <img src="./images/laplenovo.jpg" width="250px" height="250px">
+        <img src="../images/laplenovo.jpg" width="250px" height="250px">
         <div class="permbajtja-produkteve">
           <span class="titujt"> Laptop HP</span>
             <p> Laptop HP Essential 245 G8, 14", 8 GB RAM</p>
@@ -115,7 +127,7 @@
         </div>
       </div>
       <div class="kartat">
-        <img src="./images/0.jpg" width="250px" height="250px">
+        <img src="../images/0.jpg" width="250px" height="250px">
       <div class="permbajtja-produkteve">
         <span class="titujt"> Televizor Samsung</span>
           <p>Televizor Samsung UE55AU7092UXXH, 55", 4K
@@ -130,7 +142,7 @@
       </div>
     </div>
   <div class="kartat">
-    <img src="./images/mouseRazer.jpg" width="250px" height="250px">
+    <img src="../images/mouseRazer.jpg" width="250px" height="250px">
     <div class="permbajtja-produkteve">
       <span class="titujt"> Mouse Razer</span>
         <p>Mouse Razer DeathAdder  </p>
@@ -145,7 +157,7 @@
   </div>
 
   <div class="kartat">
-    <img src="./images/ps5controlller.jpg" width="250px" height="250px">
+    <img src="../images/ps5controlller.jpg" width="250px" height="250px">
     <div class="permbajtja-produkteve">
       <span class="titujt"> PS5 kontroller</span>
         <p>Kontroller Sony PS5 DualSense</p>
@@ -159,7 +171,7 @@
     </div>
   </div>
   <div class="kartat">
-    <img src="./images/kufjeSony.jpg" width="250px" height="250px">
+    <img src="../images/kufjeSony.jpg" width="250px" height="250px">
     <div class="permbajtja-produkteve">
         <span class="titujt"> Kufje Sony</span>
         <p>Kufje SONY WH-1000XM3</p>
@@ -173,7 +185,7 @@
     </div>
   </div>
   <div class="kartat">
-    <img src="./images/bNE.jpg" width="250px" height="250px">
+    <img src="../images/bNE.jpg" width="250px" height="250px">
     <div class="permbajtja-produkteve">
       <span class="titujt"> Fanellë  Bad News Eagles</span>
         <p>(Black Edition)</p>
@@ -187,7 +199,7 @@
     </div>
   </div>
   <div class="kartat">
-    <img src="./images/skuter.jpg" width="250px" height="250px">
+    <img src="../images/skuter.jpg" width="250px" height="250px">
     <div class="permbajtja-produkteve">
       <span class="titujt"> Skuter</span>
         <p>Skuter elektrik Xiaomi Mi Scooter</p>
@@ -201,7 +213,7 @@
     </div>
   </div>
   <div class="kartat">
-    <img src="./images/kgrafike.jpg" width="250px" height="250px">
+    <img src="../images/kgrafike.jpg" width="250px" height="250px">
     <div class="permbajtja-produkteve">
       <span class="titujt"> Kartelë grafike</span>
         <p>Kartelë grafike AMD Radeon</p>
@@ -219,7 +231,7 @@
   </div> 
 
    <!-- Fillimi i footerit   -->
-   <div class="footer">
+   <!-- <div class="footer">
     <div class="footer-column">
       <h4>Dyqani</h4>
         <ul>
@@ -248,8 +260,9 @@
             <li>Telefoni : 045499539</li>
        
           </ul>
-  </div>
+  </div> -->
 
+    <?php include '../components/footer.php'  ?>
 
 <!-- Mbarimi i footerit   -->
 
