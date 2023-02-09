@@ -77,13 +77,23 @@
         private function verifyLogin($username, $password) {
         
             $mapper = new UserMapper();
-            $user = $mapper->getUserbyUsername($username);
-
-            if($user == null ) return false;
-            else if(password_verify($password , $user['password'])) {
+            $user = $mapper->getUserByUsername($username);
+            if ($user == null || count($user) == 0) 
+                return false;
+            
+            else if (password_verify($password, $user['password'])) {
+                    if ($user['role'] == 1) {
+                        $obj = new SimpleUser($user['id'], $user['username'], $user['userlastname']  , $user['role'] ,$user['password']);
+                        $obj->setSession();
+                    }
+                    else {
+                    $obj = new SimpleUser($user['id'], $user['username'], $user['userlastname']  , $user['role'] ,$user['password']);
+                    $obj->setSession();
+                    }
+            
                 return true;
-            }
-            return false;
+            } 
+            else return false;
     
         }
     }   
@@ -106,23 +116,23 @@
         public function registerUser(){
 
 
-            // if($this -> username === "rinor" || $this-> username === "rinas") {
+              if($this -> username === "rinor" || $this-> username === "rinas") {
                 
-            //     $user = new Admin($this->username , $this->lastname , 1 , $this->password);
-            //     $mapper = new UserMapper();
-            //     $mapper->insertUser($user);
-            //     header("Location: ../php_code/kycuni-regjistrohuni.php");
+                  $user = new Admin($this->username , $this->lastname , 1 , $this->password);
+                  $mapper = new UserMapper();
+                  $mapper->insertUser($user);
+                  header("Location: ../php_code/kycuni-regjistrohuni.php");
 
 
 
-            // }
-            //else {  
+              }
+             else {  
 
                 $user = new SimpleUser($this->username , $this->lastname , 0 , $this->password );
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
                 header("Location: ../phpfaza2/kycuni-regjistrohuni.php");
-            //}
+              }
         } 
 
 
