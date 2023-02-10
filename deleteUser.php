@@ -1,5 +1,5 @@
 <?php
-include_once 'userMapper.php';
+include_once '../Projekt---Inxhinieri-e-Web-it/UserMapper.php';
 
 if (isset($_GET['id'])) {
     $userId = $_GET['id'];

@@ -1,7 +1,7 @@
 
 <?php
 
-    include_once '../phpfaza2/databaseConfig.php' ;
+    include_once '../Projekt---Inxhinieri-e-Web-it/databaseConfig.php' ;
 
     class UserMapper extends DatabasePDOConfiguration {
 
@@ -50,7 +50,7 @@
 
         public function insertUser($user){
 
-            $sql = "insert into user(username,userlastname ,role,password) values (:name ,:lastname,:role ,:password)";
+            $query = "insert into user(username,userlastname ,role,password) values (:name ,:lastname,:role ,:password)";
 
             
             $username = $user->getUsername();
@@ -60,7 +60,7 @@
             $role = $user->getRole();
 
 
-            $statement =$this->conn->prepare($sql);
+            $statement =$this->conn->prepare($query);
 
             $statement -> bindParam(":name" , $username) ;
             $statement -> bindParam(":lastname" , $lastname) ;

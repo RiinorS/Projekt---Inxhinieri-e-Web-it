@@ -3,9 +3,9 @@
 
 <?php
 
-    include_once '../phpfaza2/UserMapper.php';
-    include_once '../phpfaza2/admin.php';
-    include_once '../phpfaza2/simpleUser.php';
+    include_once '../Projekt---Inxhinieri-e-Web-it/UserMapper.php';
+    include_once '../Projekt---Inxhinieri-e-Web-it/admin.php';
+    include_once '../Projekt---Inxhinieri-e-Web-it/simpleUser.php';
 
 
     session_start();
@@ -21,7 +21,7 @@
     }
 
     else {
-        header("Location: ../php_code/kycuni-regjistrohuni.php");
+        header("Location: ../phpfaza2/kycuni-regjistrohuni ");
     }
 
 
