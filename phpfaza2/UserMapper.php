@@ -1,7 +1,7 @@
 
 <?php
 
-    include_once '../Projekt---Inxhinieri-e-Web-it/databaseConfig.php' ;
+    include_once '../phpfaza2/databaseConfig.php' ;
 
     class UserMapper extends DatabasePDOConfiguration {
 
@@ -11,15 +11,15 @@
 
         public function _construct() {
             
-            $this->conn = $this-> getConnection();
+            $this->conn = $this-> createConnection();
         }
 
 
         public function getUserById($userId){
 
-            $sql = " select * from user where userid = :id ";
+            $this->query = " SELECT * FROM user WHERE userid = :id ";
 
-            $statement = $this-> conn -> prepare($sql);
+            $statement = $this-> conn -> prepare($this->query);
             $statement -> bindParam(":id" , $userId);
             $statement -> execute();
             $result = $statement -> fetch (PDO :: FETCH_ASSOC);
@@ -29,7 +29,7 @@
 
         public function getUserbyUsername($username) {
 
-            $this->query = "select * from user where username=:username";
+            $this->query = "SELECT * FROM user WHERE username=:username";
             $statement = $this->conn->prepare($this->query);
             $statement->bindParam(":username", $username);
             $statement->execute();
@@ -40,7 +40,7 @@
         }
 
         public function getAllUsers(){
-            $this->query = "select * from user";
+            $this->query = "SELECT * from user";
             $statement = $this->conn->prepare($this->query);
             $statement->execute();
             $result = $statement->fetchAll();
@@ -50,7 +50,7 @@
 
         public function insertUser($user){
 
-            $query = "insert into user(username,userlastname ,role,password) values (:name ,:lastname,:role ,:password)";
+            $query = "INSERT INTO  user (username,userlastname ,role,password) values (:name ,:lastname,:role ,:password)";
 
             
             $username = $user->getUsername();
@@ -76,7 +76,7 @@
 
         public function edit(\SimpleUser $user, $id)
         {
-            $this->query = "update user set username=:username, userlastname:lastname where userid=:id";
+            $this->query = "UPDATE user SET username=:username, userlastname:lastname WHERE userid=:id";
             var_dump($user);
             $statement = $this->conn->prepare($this->query);
             $username = $user->getUsername();
@@ -95,7 +95,7 @@
 
         public function deleteUser($userId){
 
-            $this->query = "delete from user where userid=:id";
+            $this->query = "DELETE FROM user WHERE userid=:id";
             $statement = $this->conn->prepare($this->query);
             $statement->bindParam(":id", $userId);
 

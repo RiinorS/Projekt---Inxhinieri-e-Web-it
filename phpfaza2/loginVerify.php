@@ -3,9 +3,9 @@
 
 <?php
 
-    include_once '../Projekt---Inxhinieri-e-Web-it/UserMapper.php';
-    include_once '../Projekt---Inxhinieri-e-Web-it/admin.php';
-    include_once '../Projekt---Inxhinieri-e-Web-it/simpleUser.php';
+    include_once '../phpfaza2/UserMapper.php';
+    include_once '../phpfaza2/admin.php';
+    include_once '../phpfaza2/simpleUser.php';
 
 
     session_start();
@@ -114,23 +114,21 @@
         public function registerUser(){
 
 
-              if($this -> username === "rinor" || $this-> username === "rinas") {
+            // if($this -> username === "rinor" || $this-> username === "rinas") {
                 
-                  $user = new Admin($this->username , $this->lastname , $this->password , 1  );
-                  $mapper = new UserMapper();
-                  $mapper->insertUser($user);
-                  header("Location: ../php_code/kycuni-regjistrohuni.php");
+            //     $user = new Admin($this->username , $this->lastname , $this->password , 1  );
+            //     $mapper = new UserMapper();
+            //     $mapper->insertUser($user);
+            //     header("Location: ../php_code/kycuni-regjistrohuni.php");
 
+            // }
+            //  else {  
 
-
-              }
-             else {  
-
-                $user = new SimpleUser($this->username , $this->lastname ,  $this->password , 0);
+                $user = new SimpleUser($this->username , $this->lastname ,  0 , $this->password);
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
                 header("Location: ../phpfaza2/kycuni-regjistrohuni.php");
-              }
+              //}
         } 
 
 
