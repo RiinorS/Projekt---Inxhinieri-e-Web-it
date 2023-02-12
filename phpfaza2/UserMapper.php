@@ -50,7 +50,7 @@
 
         public function insertUser($user){
 
-            $query = "INSERT INTO  user (username,userlastname ,role,password) values (:name ,:lastname,:role ,:password)";
+            $query = "INSERT INTO  user(username,userlastname ,role,password) values (:name ,:lastname,:role ,:password)";
 
             
             $username = $user->getUsername();

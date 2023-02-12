@@ -18,10 +18,6 @@
         abstract protected function setSession();
         abstract protected function setCookie();
 
-        protected function getUsername() {
-            return $this->username;
-        }
-        
     }
 
 

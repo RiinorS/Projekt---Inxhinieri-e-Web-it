@@ -1,5 +1,5 @@
 <?php
-require_once '../phpfaza2/person.php';
+require_once 'person.php';
 
 class SimpleUser extends Person
 {
