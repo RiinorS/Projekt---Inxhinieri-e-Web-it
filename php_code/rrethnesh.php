@@ -29,7 +29,7 @@
 
                   ?>
 
-                  <li> <a href="index.php">Faqja </a>  </li>
+                  <li> <a href="faqja.php">Faqja </a>  </li>
                   <li> <a href="produktet.php"> Produktet  </a> </li>
                   <li> <a href="rrethnesh.php" class="active"> Rreth Nesh  </a> </li>
                   <li> <a href="kontakti.php"> Kontakti  </a> </li>
@@ -37,9 +37,10 @@
                 </ul>                
         </nav>
     
-        <div class="icons">
-        <a href="kycuni-regjistrohuni.php"> <img src="../images/log.png"  width="23px" height="17px"> Llogaria</a>   
-        </div>
+      <div class="icons">
+        <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
+        <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+      </div>
     
     </header> 
 

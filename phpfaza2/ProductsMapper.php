@@ -1,5 +1,5 @@
 <?php
-require_once '../phpfaza2/databaseConfig.php';
+require_once 'databaseConfig.php';
 
 class ProductsMapper {
 

@@ -18,24 +18,22 @@
   <!-- Navigimi i faqes -->
   <header>
 
-<div class="logo">RINI <span>  Tech</span></div>
+    <!-- <div class="logo">RINI <span>  Tech</span></div> -->
 
-<nav class="nav-bar">
+    <nav class="nav-bar">
 
-        <ul>
-          <li> <a href="../phpfaza2/dashboard.php" class="active"> Dashboard  </a> </li>
-          <li> <a href="../php_code/index.php" >Faqja </a>  </li>
-          <li> <a href="../php_code/produktet.php"> Produktet  </a> </li>
-          <li> <a href="../php_code/rrethnesh.php"> Rreth Nesh  </a> </li>
-          <li> <a href="../php_code/kontakti.php"> Kontakti  </a> </li>
-
-
-            
-        </ul>                
-</nav>
+      <ul>
+        <li> <a href="../phpfaza2/dashboard.php" class="active"> Dashboard  </a> </li>
+        <li> <a href="../php_code/index.php" >Faqja </a>  </li>
+        <li> <a href="../php_code/produktet.php"> Produktet  </a> </li>
+        <li> <a href="../php_code/rrethnesh.php"> Rreth Nesh  </a> </li>
+        <li> <a href="../php_code/kontakti.php"> Kontakti  </a> </li>   
+      </ul>                
+    </nav>
 
     <div class="icons">
-    <a href="../php_code/kycuni-regjistrohuni.php"> <img src="../images/log.png"  width="21px" height="17px"> Llogaria</a>   
+      <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
+      <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
     </div>
 
 </header> 
@@ -55,6 +53,37 @@
               
             </tr>
         </thead>
+        <tbody>
+        <?php
+    require_once 'UserMapper.php';
+$model = new UserMapper();
+$rows = $model->getAllUsers();
+foreach ($rows as $row) {
+    ?>
+    <tr>
+        <td>
+            <?php echo $row['userid'] ?>
+        </td>
+        <td>
+            <?php echo $row['username']; ?>
+        </td>
+        <td>
+            <?php echo $row['userlastname']; ?>
+        </td>
+        <td>
+            <?php echo $row['role']; ?>
+        </td>
+        <td>
+        &nbsp;<a href="edit.php?id=<?php echo $row['userid']; ?>"><i class="far fa-edit"></i></a> &nbsp;&nbsp;
+            <a href="delete.php?id=<?php echo $row['userid']; ?>"><i class="far fa-trash-alt"></i></a>
+        </td>
+    </tr>
+
+    <?php
+}
+
+?>
+        </tbody>
     </table>
 </div>
 

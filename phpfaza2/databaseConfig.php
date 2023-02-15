@@ -1,9 +1,9 @@
 
-<?php
+ <?php
 
     Class DatabasePDOConfiguration {
 
-        private $connection= null;
+        private $connection;
 
         private $host = "localhost";
         private $username = "root";
@@ -14,19 +14,20 @@
 
         public function createConnection() {
 
-            $this->connection = new PDO("mysql:host = $this->host;dbname=$this->dbname" ,  $this->username , $this->password);
+            $this->connection = new PDO("mysql:host=$this->host;dbname=$this->dbname" ,  $this->username , $this->password);
 
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO:: ERRMODE_EXCEPTION);
+            echo 'U krijua lidhja';
             
-            
-            
+        
         }
 
-        protected function getConnection() {
+        public function getConnection() {
 
            $this->createConnection();
            return $this->connection;
 
        }
-        }
+        } 
+
 

@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rini - Tech  </title>
+    <title>Kycu - Rini Tech  </title>
     <link rel ="icon" type="image/png" href="../images/favicon.jpg">
-    <link href="../css_code/style.css" rel="stylesheet" type="text/css">
+    <link href="../css_code/style.css" rel="stylesheet">
     
-
 </head>
 <body>
 
- 
-  <!-- Navigimi i faqes -->
-     <header>
 
-        <div class="logo">RINI <span>  Tech</span></div>
-    
-        <nav class="nav-bar">
+ <!-- Navigimi i faqes -->
 
-                <ul>
+ <header>
+
+  <div class="logo">RINI <span>  Tech</span></div>
+
+  <nav class="nav-bar">
+
+                  <ul>
                   <?php
                   session_start();
-                    if(isset($_SESSION['role']) && $_SESSION['roli'] == 1 ) {
+                    if(isset($_SESSION['roli']) && $_SESSION['roli'] == 1 ) {
                   ?>
                     <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
 
@@ -32,40 +32,56 @@
 
                   ?>
 
-                  
-                  <li> <a href="index.php" class="active" >Faqja </a>  </li>
-                  <li> <a href="produktet.php"> Produktet  </a> </li>
-                  <li> <a href="rrethnesh.php"> Rreth Nesh  </a> </li>
-                  <li> <a href="kontakti.php"> Kontakti  </a> </li>
+            <li> <a href="faqja.php" >Faqja </a>  </li>
+            <li> <a href="produktet.php"> Produktet  </a> </li>
+            <li> <a href="rrethnesh.php"> Rreth Nesh  </a> </li>
+            <li> <a href="kontakti.php"> Kontakti  </a> </li>
+              
+          </ul>                
+  </nav>
 
+  <div class="icons">
+  <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
+  <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>   
+   
+  </div>
+  <!-- <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>    -->
 
-                    
-                </ul>                
-        </nav>
+  <!-- <a href="#"> Çkyçuni </a> -->
 
-            <div class="icons">
-            <a href="kycuni-regjistrohuni.php"> <img src="../images/log.png"  width="21px" height="17px"> Llogaria</a>   
-            </div>
-
-    </header> 
-
-
-
-
-
-
-    <!-- Faqja kryesore -->
-
-
-   <!-- Fillimi i reklames se pare -->
-
-
-    <marquee scrollamount="10" bgcolor="red" direction="left" height="50px" width="100%"   font-size="x-large" ><font size="large"></font>
-      <h1> Porositni produktet për të cilat keni pritur tërë vitin!</h1>
-    </marquee>
+</header> 
 
 
 
+  <!-- Faqja Kycuni - Regjistrohuni -->
+
+<div class="mbajtesikr">
+  <div class="formakr">
+      <div class="butonatkr">
+          <div id="butonikr"></div>
+          <button type="button" class="nderrimibutonave" onclick="kycuni()"  >  Kyçuni</button>
+          <button type="button" class="nderrimibutonave" onclick="regjistrohuni()" > Regjistrohuni</button>
+      </div>
+
+      <form action="../phpfaza2/loginVerify.php"  id="kycuni" class="input-grupi" method="post" onsubmit= " return valido()" >
+          <input type="text" id="perdoruesi_kycuni"  class="input-fusha" name="username"  placeholder="Perdoruesi" >
+          <input type="password" id="fjalekalimi_kycuni"  class="input-fusha" name="password" placeholder="Fjalekalimi" >
+          <button type="submit" id="butoni-kycu" class="butoni-submit" name= "login-btn"  onclick="validimiKycuni()" >Kyçuni</button>
+
+      </form>
+
+      <form action="../phpfaza2/loginVerify.php" id="regjistrohuni"  method="post" class="input-grupi">
+          <input type="text" name="register-username"  id="email_regjistrohuni" class="input-fusha" placeholder="Emri" >
+          <input type="text" name="register-lastname"  id="perdoruesi_regjistrohuni" class="input-fusha" placeholder="Mbiemri" >
+          <input type="password" name="register-password"  id="fjalekalimi_regjistrohuni" class="input-fusha" placeholder="Fjalëkalimi" >
+          <input type="checkbox" class="tick-kutia"> <span class="tickkr" >Unë pajtohem me kushtet dhe përmbajtjen e privatësisë</span>
+          <button type="submit" class="butoni-submit" name="register-btn"  onclick="validimiRegjistohuni()" >Regjistrohuni</button>
+
+      </form>
+
+  </div>
+
+</div>
 
 
 
@@ -75,95 +91,53 @@
 
 
 
-   <!-- Fillimi i reklames se dyte me slider  -->
 
 
-    <div id="slideri "> 
-      <img src="" id = "slider" >
-    </div>
-       
-
-    <button class="butoni-blej" onclick="redirect()">Blej tani</button>
 
 
-    
-    <!-- Mbarimi i reklames se dyte me slider dhe butonin blej -->
 
 
-    <!-- Fillimi i dy kompanive te produkteve -->
 
-    <div class="3produktet" >
-            
-        <ul class="kompanite">
 
-            <li>Produkte nga Apple</li>
-            <li>Produkte nga Hyper X</li>
-            <li>Produkte nga Xiaomi</li>
 
-        </ul>
-    </div>
+   <!-- Fillimi i footerit   -->
+   <!-- <div class="footer">
+    <div class="footer-column">
+      <h4>Dyqani</h4>
+        <ul>
+          <li><a href="faqja.html">Faqja</a></li>
+          <li><a href="produktet.html">Produkte</a></li>
+          <li><a href="rrethnesh.html">Rreth nesh</a></li>
+          <li><a href="kontakti.html">Kontakti</a></li>
 
-    <div class="reklama3">
-
-        
-       
-
-        <div class="kompania">
-          <img src="../images/fromApple.jpg" alt="Apple" style="width:100%">
-        </div>
-        <div class="kompania">
-          <img src="../images/fromHyperX.jpg" alt="HyperX" style="width:100%">
-        </div>
-        <div class="kompania">
-          <img src="../images/fromXiaomi.png" alt="Xiaomi" style="width:100%">
-        </div>
-
+          </ul>
     </div>
 
-    <!-- Fillimi i footerit   -->
-    <!-- <div class="footer">
-      <div class="footer-column">
-        <h4>Dyqani</h4>
+    <div class="footer-column">
           <ul>
-            <li><a href="faqja.html">Faqja</a></li>
-            <li><a href="produktet.html">Produkte</a></li>
-            <li><a href="rrethnesh.html">Rreth nesh</a></li>
-            <li><a href="kontakti.html">Kontakti</a></li>
+            <h4>Shërbime</h4>
+            <li>Dërgesa të shpejta</li>
+            <li>Pagesa të sigurta</li>
+            <li>Produkte origjinale</li>
+          </ul>
+    </div>
+    
 
-            </ul>
-      </div>
+    <div class="footer-column">
+          <ul>
+            <h4>Informata</h4>
+            <li>Adresa : Rr."Skenderbeu" - Lipjan</li>
+            <li>Email : infoRini-Tech@gmail.com</li>
+            <li>Telefoni : 045499539</li>
+       
+          </ul>
+  </div> -->
 
-      <div class="footer-column">
-            <ul>
-              <h4>Shërbime</h4>
-              <li>Dërgesa të shpejta</li>
-              <li>Pagesa të sigurta</li>
-              <li>Produkte origjinale</li>
-            </ul>
-      </div>
+  <?php  include '../components/footer.php'  ?>
 
-      <div class="footer-column">
-            <ul>
-              <h4>Informata</h4>
-              <li>Adresa : Rr."Skenderbeu" - Lipjan</li>
-              <li>Email : infoRini-Tech@gmail.com</li>
-              <li>Telefoni : 045499539</li>
-         
-            </ul>
-    </div> -->
+<!-- Mbarimi i footerit   -->
 
 
-   <?php include '../components/footer.php' ;  ?> 
-  
-
-  <!-- Mbarimi i footerit   -->
-
-  
-
-
-
-
-
-<script src="../js_code/script.js"></script>
+  <script src="../js_code/script.js"></script>
 </body>
 </html>

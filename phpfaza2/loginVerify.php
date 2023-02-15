@@ -3,9 +3,9 @@
 
 <?php
 
-    include_once '../phpfaza2/UserMapper.php';
-    include_once '../phpfaza2/admin.php';
-    include_once '../phpfaza2/simpleUser.php';
+    include_once 'UserMapper.php';
+    include_once 'admin.php';
+    include_once 'simpleUser.php';
 
 
     session_start();
@@ -21,7 +21,7 @@
     }
 
     else {
-        header("Location: ../phpfaza2/kycuni-regjistrohuni ");
+        header("Location:../php_code/gabimverify.php");
     }
 
 
@@ -47,15 +47,15 @@
            
 
             if($this->verifyEmptyData($this->username, $this->password)){
-                header("Location:../php_code/kycuni-regjistrohuni.php");
-            }
-
-            else if($this->verifyLogin($this->username, $this->password) ){
                 header("Location:../php_code/index.php");
             }
 
+            else if($this->verifyLogin($this->username, $this->password) ){
+                header("Location:../php_code/faqja.php");
+            }
+
             else {
-                header("Location:../php_code/kycuni-regjistrohuni.php");
+                header("Location:../php_code/gabimverify.php");
             }
 
         }
@@ -81,11 +81,11 @@
             
             else if (password_verify($password, $user['password'])) {
                     if ($user['role'] == 1) {
-                        $obj = new Admin($user['id'], $user['username'], $user['userlastname']  , $user['role'] ,$user['password']);
+                        $obj = new Admin($user['username'], $user['userlastname']  , $user['role'] ,$user['password']);
                         $obj->setSession();
                     }
                     else {
-                    $obj = new SimpleUser($user['id'], $user['username'], $user['userlastname']  , $user['role'] ,$user['password']);
+                    $obj = new SimpleUser($user['username'], $user['userlastname']  , $user['role'] ,$user['password']);
                     $obj->setSession();
                     }
             
@@ -114,21 +114,21 @@
         public function registerUser(){
 
 
-            // if($this -> username === "rinor" || $this-> username === "rinas") {
+            if($this -> username === "rinor" || $this-> username === "rinas") {
                 
-            //     $user = new Admin($this->username , $this->lastname , $this->password , 1  );
-            //     $mapper = new UserMapper();
-            //     $mapper->insertUser($user);
-            //     header("Location: ../php_code/kycuni-regjistrohuni.php");
+                $user = new Admin($this->username , $this->lastname , $this->password , 1  );
+                $mapper = new UserMapper();
+                $mapper->insertUser($user);
+                header("Location: ../php_code/faqja.php");
 
-            // }
-            //  else {  
+            }
+             else {  
 
                 $user = new SimpleUser($this->username , $this->lastname ,  0 , $this->password);
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
-                header("Location: ../phpfaza2/kycuni-regjistrohuni.php");
-              //}
+                header("Location: ../php_code/faqja.php");
+              }
         } 
 
 
