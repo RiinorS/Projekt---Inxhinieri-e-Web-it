@@ -17,7 +17,7 @@
             $this->connection = new PDO("mysql:host=$this->host;dbname=$this->dbname" ,  $this->username , $this->password);
 
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO:: ERRMODE_EXCEPTION);
-            echo 'U krijua lidhja';
+            //echo 'U krijua lidhja';
             
         
         }

@@ -9,7 +9,7 @@
 
 
         public function __construct() {
-            $this->conn = $this->conn->getConnection();
+            $this->conn = $this->getConnection();
         }
 
 
