@@ -128,7 +128,7 @@
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
                 header("Location: ../php_code/faqja.php");
-              }
+            }
         } 
 
 
