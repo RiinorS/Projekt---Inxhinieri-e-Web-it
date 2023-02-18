@@ -1,142 +1,209 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Rini Tech  </title>
-    <link rel ="icon" type="image/png" href="../images/favicon.jpg">
-    <link href="../css_code/style.css" rel="stylesheet" type="text/css">
-    
+    <?php include '../components/menu-anash.php';  ?>
 
-</head>
-<body>
+    <div class="mbajtesi">
+
+        <div class="permbajtja">
+
+            
 
 
+            <div class="kartat">
+                    <div class="karta">
+                        <div class="kutia">
+                            <h1>5000+</h1>
+                            <h3>Produkte</h3>
+                        </div>
 
-  <!-- Navigimi i faqes -->
-  <header>
+                        <div class="icon">
+                            <img src="../images/bag.png" width="70px" height= "70px" >
+                        </div>
 
-    <!-- <div class="logo">RINI <span>  Tech</span></div> -->
+                    </div>
 
-    <nav class="nav-bar">
+                    <div class="karta">
+                        <div class="kutia">
+                            <h1>500+</h1>
+                            <h3>Klient</h3>
+                        </div>
 
-      <ul>
-        <li> <a href="../phpfaza2/dashboard.php" class="active"> Dashboard  </a> </li>
-        <li> <a href="../php_code/index.php" >Faqja </a>  </li>
-        <li> <a href="../php_code/produktet.php"> Produktet  </a> </li>
-        <li> <a href="../php_code/rrethnesh.php"> Rreth Nesh  </a> </li>
-        <li> <a href="../php_code/kontakti.php"> Kontakti  </a> </li>   
-      </ul>                
-    </nav>
+                        <div class="icon">
+                            <img src="../images/client.png" width="70px" height= "70px" >
+                        </div>
 
-    <div class="icons">
-      <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
-      <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+                    </div>
+
+                    <div class="karta">
+                        <div class="kutia">
+                            <h1>1000+</h1>
+                            <h3>Porosi</h3>
+                        </div>
+
+                        <div class="icon">
+                            <img src="../images/delivery.png" width="70px" height= "70px" >
+                        </div>
+
+                    </div>
+
+                    <div class="karta">
+                        <div class="kutia">
+                            <h1>800+</h1>
+                            <h3>Vizitorë</h3>
+                        </div>
+
+                        <div class="icon">
+                           
+                         <img src="../images/visit.png" width="70px" height= "70px" >
+                        </div>
+
+                    </div>
+            </div>
+
+            <div class="permbajtja2">
+
+                <div class="porosite-e-fundit"> 
+
+                    <div class="titulli">
+                    
+                        <h2>Porositë e fundit</h2>
+
+
+                    </div>
+
+                    <table>
+
+                        <tr>
+
+                            <th>Klienti</th>
+                            <th>Produkti</th>
+                            <th>Sasia</th>
+                            <th>Totali</th>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Jona Rrahmani</td>
+                            <td>Kamerë GoPro HERO11</td>
+                            <td>1</td>
+                            <td>749.50 €</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Fazli Thaqi</td>
+                            <td>Apple AirPods</td>
+                            <td>1</td>
+                            <td>259.00 €</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Vesa Rrahmani</td>
+                            <td>Kufje JBL</td>
+                            <td>2</td>
+                            <td>301.50 €</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Yll Shillova</td>
+                            <td>Mouse Razer</td>
+                            <td>4</td>
+                            <td>158.00 €</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Dijane Hoti</td>
+                            <td>Tastierë Preyon</td>
+                            <td>1</td>
+                            <td>62.50 €</td>
+
+                        </tr>
+                        
+
+                    </table>
+
+                </div>
+
+
+
+                
+
+
+
+
+
+
+                <div class="klientet-e-rinje">
+
+                    <div class="porosite-e-fundit"> 
+
+                        <div class="titulli">
+                        <h2>Klientët e rinjë</h2>
+
+                    </div>
+
+                    <table>
+                        <tr>
+                            <th>Profili</th>
+                            <th>Emri</th>
+                            <th>Mbiemri</th>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td><img src="../images/avatarsh.png" width="25px" height="25px"  ></td>
+                            <td>Shpresim</td>
+                            <td>Syla</td>
+
+                        </tr>
+
+                        <tr>
+
+                        <td><img src="../images/avatarrion.png" width="25px" height="25px"  ></td>
+                            <td>Rion</td>
+                            <td>Reqica</td>
+
+                        </tr>
+
+                        <tr>
+
+                        <td><img src="../images/avatare.png" width="25px" height="25px"  ></td>
+                            <td>Elion</td>
+                            <td>Aliu</td>
+
+                        </tr>
+
+                        <tr>
+
+                        
+
+                    </table>
+
+
+                </div>
+
+                </div>
+               
+
+
+            </div>
+        </div>
     </div>
 
-</header> 
 
-
-<!-- -- Krijimi i faqes dashboard -->
-
-
-<div>
-    <table class="content-table">
-        <thead>
-            <tr>
-              <th>Foto</th>
-              <th>Titulli</th>
-              <th>Pershkrimi</th>
-              <th>Cmimi</th>
-              
-            </tr>
-        </thead>
-        <tbody>
-        <?php
-    require_once 'UserMapper.php';
-$model = new UserMapper();
-$rows = $model->getAllUsers();
-foreach ($rows as $row) {
-    ?>
-    <tr>
-        <td>
-            <?php echo $row['userid'] ?>
-        </td>
-        <td>
-            <?php echo $row['username']; ?>
-        </td>
-        <td>
-            <?php echo $row['userlastname']; ?>
-        </td>
-        <td>
-            <?php echo $row['role']; ?>
-        </td>
-        <td>
-        &nbsp;<a href="edit.php?id=<?php echo $row['userid']; ?>"><i class="far fa-edit"></i></a> &nbsp;&nbsp;
-            <a href="delete.php?id=<?php echo $row['userid']; ?>"><i class="far fa-trash-alt"></i></a>
-        </td>
-    </tr>
-
-    <?php
-}
-
-?>
-        </tbody>
-    </table>
-</div>
-
-
-<!-- Dashboard CSS -->
-
-<style>
-*{
-  font-family: sans-serif; 
-}
-
-.content-table {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  width: 100%;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-
-.content-table thead tr {
-  background-color: black;
-  color: white;
-  text-align: left;
-  font-weight: bold;
-}
-
-.content-table th,
-.content-table td {
-  padding: 16px 65px;
-}
-
-.link{
-    text-decoration: none;
-    color: red;
-    font-size: 17px;
-}
-.first-link{
-  color: black;
-  font-size: 22px;
-  padding-left: 50%;
-  position: relative;
-  top: 20px;
-}
-.top-links{
-    font-size: 30px;
-    color: black;
-    padding: 30px;
-    text-decoration: none;
-}
-</style>
+    
 
 
 
-
-
+    
+</body>
+</html>

@@ -114,7 +114,7 @@
         public function registerUser(){
 
 
-            if($this -> username === "rinor" || $this-> username === "rinas") {
+            if($this -> username === "Rinor" || $this-> username === "Rinas") {
                 
                 $user = new Admin($this->username , $this->lastname , $this->password , 1  );
                 $mapper = new UserMapper();

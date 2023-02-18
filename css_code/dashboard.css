@@ -1,0 +1,202 @@
+*{
+    font-family: sans-serif;
+}
+
+ /* Navbar matjas */
+
+.menu-anash{
+    position:fixed;
+    background: black;
+    width: 20vw;
+    min-height: 102vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: -8px;
+    margin-top: -8px;
+}
+
+.menu-anash .brand {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: x-large;
+    margin-top: 75px;
+    margin-bottom: 30px;
+}
+
+
+.menu-anash li {
+
+    font-size: 24px;
+    padding: 15px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-anash  li :hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* Permbajtja 1 */
+
+.mbajtesi{
+    position: fixed;
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+}
+
+.mbajtesi .permbajtja {
+    position: relative;
+    margin-top: -3vh;
+    min-height: 102vh;
+    background: #f1f1f1;
+    overflow-y: scroll;
+
+}
+
+.mbajtesi .permbajtja .kartat {
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mbajtesi .permbajtja .kartat .karta {
+    width: 185px;
+    height: 150px;
+    background: white;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1,h2{
+    color: gray;
+}
+
+h3{
+    color: black;
+}
+
+ /* Permbajtja 2 */
+
+
+.mbajtesi .permbajtja .permbajtja2 {
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.mbajtesi .permbajtja .permbajtja2 .porosite-e-fundit{
+    min-height: 50vh;
+    flex: 5;
+    background: white;
+    margin: 0 25px 25px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mbajtesi .permbajtja .permbajtja2 .klientet-e-rinj {
+    flex: 2;
+    background: white;
+    min-height: 50vh;
+    margin: 0 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Permbajtja 3 - porosite e fundit */
+
+.titulli{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 2px solid #999;
+}
+
+table{
+
+    padding: 10px;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+span{
+    color: white;
+}
+
+@media screen and (max-width : 1050px) {
+    .menu-anash li {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width : 940px) {
+    .menu-anash li span {
+        display: none;
+    }
+    
+    .menu-anash .brand{
+        font-size: 16px;
+    }
+
+    .menu-anash .brand img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu-anash {
+        align-items: center;
+    }
+
+    .menu-anash li img {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+
+@media screen and (max-width : 536px) {
+    .brand h1 {
+        font-size: 16px;
+    }
+
+    .mbajtesi .permbajtja .kartat {
+        justify-content: center;
+    }
+
+    .menu-anash li img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mbajtesi .permbajtja .permbajtja2 .porosite-e-fundit table th:nth-child(2),
+    .mbajtesi .permbajtja .permbajtja2 .porosite-e-fundit table td:nth-child(2){
+        display:none;
+    }
+}

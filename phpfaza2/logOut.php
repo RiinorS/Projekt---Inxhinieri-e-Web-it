@@ -1,4 +1,4 @@
 <?php
 session_start();
 session_destroy();
-header('Location:  ../php_code/kycuni-regjistrohuni.php');
+header('Location:  ../php_code/index.php');

@@ -67,8 +67,45 @@
             $statement -> bindParam(":password" , $password) ;
 
             $statement -> execute();
-           echo " <script?> alert ('Perdoruesi eshte shtuar me sukses!'); </script> ";
 
+            
+
+
+        }
+
+        public function edit(\SimpleUser $user, $id){
+
+           $sql= "UPDATE user SET username=:username, userlastname=:lastname ,  password =:password WHERE userid=:id";
+            //  var_dump($user);
+            $statement = $this->conn->prepare($sql);
+            $username = $user->getUsername();
+            $lastname = $user->getLastname();
+            
+            $password = $user->getPassword();
+
+            $statement->bindParam(":username", $username);
+            $statement->bindParam(":lastname", $lastname);
+           
+            $statement->bindParam(":password", $password);
+
+
+            $statement->bindParam(":id", $id);
+
+            $statement->execute();
+
+
+        }
+
+
+        public function deleteUser($userId){
+
+            $query = "DELETE FROM user WHERE userid=:id";
+            $statement = $this->conn->prepare($query);
+            $statement->bindParam(":id", $userId);
+
+            $statement->execute();
+
+            
 
         }
     }

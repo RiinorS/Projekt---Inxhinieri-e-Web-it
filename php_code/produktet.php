@@ -14,7 +14,7 @@
 <!-- Navigimi i faqes -->
  <header>
 
-  <div class="logo">RINI <span>  Tech</span></div>
+  <div class="logo">RINI <span class="tech">  Tech</span></div>
 
   <nav class="nav-bar">
 

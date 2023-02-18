@@ -1,32 +1,12 @@
-<?php
 
-include_once '../phpfaza2/UserMapper.php';
-include_once '../phpfaza2/simpleUser.php';
 
-include_once '../components/menu-anash.php';
-
-if (isset($_GET['username']) && isset($_GET['username'])) {
-    $userId = $_GET['id'];
-    $username = $_GET['username'];
-    $userlastname = $_GET['lastname'];
-    $password = $_GET['password'];
-    
-    $simpleUser = new SimpleUser($username, $userlastname ,0 , "" );
-    $mapper = new UserMapper();
-    $mapper->edit($simpleUser, $userId);
-    
-}
-?>
 
 <div class="mbajtesi-popup">
-
-
     <div class="popup" id="popup" >
-        
-        <img src="../images/tick-edit.png">
-        <h2>Sukses!</h2>
-        <p>Ju keni ndryshuar të dhënat e përdoruesit</p>
-        <button type="button" onclick="closeEditPopup()" >Vazhdo</button>
+        <img src="../images/tick.png">
+        <h2>Sukses</h2>
+        <p>Ju keni ndryshuar te dhenat e perdoruesit</p>
+        <button type="button" onclick="closeDeletePopup()" >Vazhdo</button>
     </div>
 
 
@@ -44,7 +24,7 @@ if (isset($_GET['username']) && isset($_GET['username'])) {
 .mbajtesi-popup{
     width: 100%;
     height: 100vh;
-    background: white;
+    background: #f1f1f1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,43 +32,41 @@ if (isset($_GET['username']) && isset($_GET['username'])) {
 
 .popup{
     width: 400px;
-    background: white;
+    background: #fff;
     border-radius: 6px;
     position: absolute;
-    top: 30%;
-    left: 43%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) scale(0.1) ;
     text-align: center;
     padding: 0 30px 30px ;
     color: #333;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
-
+.open-deletepopup{
+    top: 50%;
+    transform: translate(-50% , -50%) scale(1) ;
+}
 
 
 .popup img {
     width: 100px;
-   
-    margin-top: -50px ;
+    margin-top: -15%;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
 
 .popup h2 {
     font-size : 38px;
     font-weight : 500;
     margin: 30px 0 10px;
-    color: black;
 }
-
 
 .popup button {
     width: 100%;
     margin-top : 50px ;
     padding: 10px 0;
-    background: orange;
+    background: #6fd649;
     color: #fff;
     border: 0;
     outline: none;
@@ -103,9 +81,15 @@ if (isset($_GET['username']) && isset($_GET['username'])) {
 
 <script>
 
+let popup = document.getElementById("popup");
+
+function openEditPopup(){
+    popup.classList.add("open-editpopup");
+
+}
 
 function closeEditPopup(){
-    
+    popup.classList.remove("open-editpopup");
     window.location = 'perdoruesit.php';
 }
 
