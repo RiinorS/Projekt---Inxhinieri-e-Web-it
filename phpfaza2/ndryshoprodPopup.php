@@ -1,27 +1,15 @@
 <?php
-include_once '../phpfaza2/UserMapper.php';
 include_once '../components/menu-anash.php';
-
-
-if (isset($_GET['id'])) {
-    $userId = $_GET['id'];
-    $mapper = new UserMapper();
-    $mapper->deleteUser($userId);
-    // header("Location:../phpfaza2/perdoruesit.php");
-    // header("Location:../phpfaza2/popup.php");
-}
-
 ?>
-
 <div class="mbajtesi-popup">
 
 
     <div class="popup" id="popup" >
         
-        <img src="../images/tick-delete.png">
+        <img src="../images/tick-edit.png">
         <h2>Sukses!</h2>
-        <p>Ju keni fshirë të dhënat e përdoruesit</p>
-        <button type="button" onclick="closeFshijePopup()" >Vazhdo</button>
+        <p>Ju keni ndryshuar të dhënat e produktit</p>
+        <button type="button" onclick="closeNdryshoPopup()" >Vazhdo</button>
     </div>
 
 
@@ -81,9 +69,9 @@ if (isset($_GET['id'])) {
 
 .popup button {
     width: 100%;
-    margin-top : 43px ;
+    margin-top : 50px ;
     padding: 10px 0;
-    background: red;
+    background: orange;
     color: #fff;
     border: 0;
     outline: none;
@@ -99,9 +87,9 @@ if (isset($_GET['id'])) {
 <script>
 
 
-function closeFshijePopup(){
+function closeNdryshoPopup(){
     
-    window.location = 'perdoruesit.php';
+    window.location = 'produktetdash.php';
 }
 
-</script>
+</script> 

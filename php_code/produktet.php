@@ -1,3 +1,5 @@
+<?php require_once '../phpfaza2/ProductsMapper.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -126,14 +128,14 @@
                 <button>Shto në shportë</button>
             </div>
         </div>
-      </div>
-      <div class="kartat">
+        </div>
+        <div class="kartat">
         <img src="../images/0.jpg" width="250px" height="250px">
-      <div class="permbajtja-produkteve">
+        <div class="permbajtja-produkteve">
         <span class="titujt"> Televizor Samsung</span>
           <p>Televizor Samsung UE55AU7092UXXH, 55", 4K
           </p>
-      </div>
+        </div>
       <div class="pershkrimi-produkteve">
           <div class="cmimi-produkteve">449.50 €</div>
           <div class="butoni-shporta">
@@ -226,7 +228,50 @@
             <button>Shto në shportë</button>
         </div>
     </div>
+
   </div>
+
+
+
+
+  <?php
+
+  $products = new ProductsMapper();
+  $all = $products -> readData();
+  for($i = 0 ; $i < count($all) ; $i++ ){
+
+    echo '
+  
+    <div class="kartat">
+      <img src="' .$all[$i]['foto'] . '" width="250px" height="250px">
+      <div class="permbajtja-produkteve">
+      <span class="titujt"> '.$all[$i]['titulli'] .'</span>
+        <p>'.$all[$i]['pershkrimi'] .'</p>
+      </div>
+      
+      <div class="pershkrimi-produkteve">
+        <div class="cmimi-produkteve">'.$all[$i]['cmimi'] .'</div>
+        <div class="butoni-shporta">
+            
+        <button>Shto në shportë</button>
+        </div>
+    </div>
+
+  </div>
+  
+  
+  
+    ';
+  }
+
+
+
+
+
+
+
+  ?>
+
 
 
   </div> 

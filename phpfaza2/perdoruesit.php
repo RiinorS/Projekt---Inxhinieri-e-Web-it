@@ -146,12 +146,7 @@ button.fshij {
 </style>
 
 <script>
-  function openDeletePopup(){
-    popup.classList.add("open-deletepopup")
-
-  }
-
-
+  
   function redirectShtoPerdorues(){
     window.location = 'shtoPerdorues.php';
   }

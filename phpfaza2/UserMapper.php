@@ -49,7 +49,8 @@
 
         public function insertUser($user){
 
-            $sql = "INSERT INTO  user(username,userlastname ,role,password) values (:name ,:lastname,:role ,:password)";
+            $sql = "INSERT INTO  user(username,userlastname ,role,password) values
+            (:name ,:lastname,:role ,:password)";
 
             
             $username = $user->getUsername();

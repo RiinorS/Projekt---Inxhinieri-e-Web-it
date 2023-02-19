@@ -1,14 +1,12 @@
 <?php
-include_once '../phpfaza2/UserMapper.php';
+include_once '../phpfaza2/ProductsMapper.php';
 include_once '../components/menu-anash.php';
 
 
 if (isset($_GET['id'])) {
-    $userId = $_GET['id'];
-    $mapper = new UserMapper();
-    $mapper->deleteUser($userId);
-    // header("Location:../phpfaza2/perdoruesit.php");
-    // header("Location:../phpfaza2/popup.php");
+    $productId = $_GET['id'];
+    $mapper = new ProductsMapper();
+    $mapper->delete($productId);
 }
 
 ?>
@@ -20,7 +18,7 @@ if (isset($_GET['id'])) {
         
         <img src="../images/tick-delete.png">
         <h2>Sukses!</h2>
-        <p>Ju keni fshirë të dhënat e përdoruesit</p>
+        <p>Ju keni fshirë të dhënat e produktit</p>
         <button type="button" onclick="closeFshijePopup()" >Vazhdo</button>
     </div>
 
@@ -101,7 +99,7 @@ if (isset($_GET['id'])) {
 
 function closeFshijePopup(){
     
-    window.location = 'perdoruesit.php';
+    window.location = 'produktetdash.php'; 
 }
 
 </script>

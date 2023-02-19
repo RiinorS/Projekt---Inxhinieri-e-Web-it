@@ -1,19 +1,19 @@
 <?php
-require_once 'databaseConfig.php';
+include_once 'databaseConfig.php';
 
-class ProductsMapper {
+class ProductsMapper extends DatabasePDOConfiguration {
 
-    public $db;
 
-    public function _construct(){
+    private $conn;
 
-        $this->db = new DatabasePDOConfiguration;
 
+    public function __construct() {
+        $this->conn = $this->getConnection();
     }
 
     public function readData(){
 
-        $query = $this->db->pdo->query('select * from produkte');
+        $query = $this->conn->query('SELECT * FROM produkte');
 
         return $query->fetchAll();
 
@@ -21,7 +21,8 @@ class ProductsMapper {
 
     public function insert($request){
 
-        $query = $this->db->conn->prepare('INSERT INTO produkte ( foto , titulli , pershkrimi , cmimi) values 
+        $request['foto'] = '../images/' .$request['foto'];
+        $query = $this->conn->prepare('INSERT INTO produkte ( foto , titulli , pershkrimi , cmimi) values 
         ( :foto , :titulli , :pershkrimi , :cmimi)');
 
         $query->bindParam(':foto' , $request['foto']);
@@ -31,49 +32,50 @@ class ProductsMapper {
 
         $query->execute();
 
-        return header('Location: ../phpfaza2/dashboard.php');
 
 
     }
 
 
-    public function edit($productid){
+    public function edit($productId){
 
-        $query = $this->db->conn->prepare('SELECT * FROM produkte WHERE id = :id ');
-        $query->bindParam(':id' , $productid);
+        $query = $this->conn->prepare('SELECT * FROM produkte WHERE productid = :id ');
+        $query->bindParam(':id' , $productId);
         $query->execute();
 
         return $query->fetch();
 
     }
 
-    public function update($request , $productid) {
+    public function update($request , $productId) {
 
 
-        $query = $this->db->conn->prepare('UPDATE produkte SET foto = :foto , titulli = :titulli , pershkrimi = :pershkrimi , cmimi = :cmimi WHERE productid = :productid');
+        $query = $this->conn->prepare('UPDATE produkte SET foto = :foto , titulli = :titulli , 
+            pershkrimi = :pershkrimi , cmimi = :cmimi WHERE productid = :id'
+        );
 
         $query->bindParam(':foto' , $request['foto']);
         $query->bindParam(':titulli' , $request['titulli']);
         $query->bindParam(':pershkrimi' , $request['pershkrimi']);
-        $query->bindParam(':cmimi' , $request['foto']);
+        $query->bindParam(':cmimi' , $request['cmimi']);
 
-        $query->bindParam(':productid' , $productid);
+        $query->bindParam(':id' , $productId);
 
 
         $query->execute();
-        return header('Location: ../phpfaza2/dashboard.php');
+        // return header('Location: ../phpfaza2/dashboard.php');
 
         
     }
 
 
-    public function delete($productid) {
+    public function delete($productId) {
 
-        $query = $this->db->conn->prepare('DELETE FROM produkte WHERE productid = :productid');
+        $query = $this->conn->prepare('DELETE FROM produkte WHERE productid = :id');
 
-        $query->bindParam('productid' , $productid);
+        $query->bindParam(':id' , $productId);
         $query->execute();
-        return header('Location: ../phpfaza2/dashboard.php');
+        // return header('Location: ../phpfaza2/dashboard.php');
 
 
     }
