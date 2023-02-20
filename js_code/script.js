@@ -187,64 +187,65 @@ kycuni();
 
     // emri dhe mbiemri te kene te pakten 3 karaktere
 
-function kontakti(){
+// function kontakti(){
 
-    const perdoruesi_kontakto = document.getElementById('perdoruesi_kontakto').value;
-    const email_kontakto = document.getElementById('email_kontakto').value;
-    const numri_kontakto = document.getElementById('numri_kontakto').value;
-    const mesazhi_kontakto = document.getElementById('mesazhi_kontakto').value;
-
-
-    // perdoruesi duhet te jete me minimum 6 karaktere, maksimumi 16 karaktere , duhet te kete te pakten nje numer 
-    // dhe te pakten nje shkronje te madhe
+//     const perdoruesi_kontakto = document.getElementById('perdoruesi_kontakto').value;
+//     const email_kontakto = document.getElementById('email_kontakto').value;
+//     const numri_kontakto = document.getElementById('numri_kontakto').value;
+//     const mesazhi_kontakto = document.getElementById('mesazhi_kontakto').value;
 
 
-    var regPerdoruesi = /^(?=.{6,16}$)(?=.*[A-Z])(?=.*[0-9])/;
-
-    var regex_Perdoruesi = regPerdoruesi.test(perdoruesi_kontakto);
-
-    if(!regex_Perdoruesi){
-        alert("Ju lutem plotësoni fushën e përdoruesit me të dhëna të sakta!");
-    }
+//     // perdoruesi duhet te jete me minimum 6 karaktere, maksimumi 16 karaktere , duhet te kete te pakten nje numer 
+//     // dhe te pakten nje shkronje te madhe
 
 
+//     var regPerdoruesi = /^(?=.{6,16}$)(?=.*[A-Z])(?=.*[0-9])/;
 
-    
+//     var regex_Perdoruesi = regPerdoruesi.test(perdoruesi_kontakto);
 
-    // email-a duhet te kete minimum 5 karaktere, duhet te permbaje te pakten nje numer, te permbaje '@' dhe te perfundoje me 
-    //   'com' ose 'net'
+//     if(!regex_Perdoruesi){
+//         alert("Ju lutem plotësoni fushën e përdoruesit me të dhëna të sakta!");
+//     }
 
-    var regEm = /^(?=.{5,})(?=.*[0-9])(?=.*@).*\.(com|net)$/;
-
-    var regex_Email = regEm.test(email_kontakto);
-
-    if(!regex_Email){
-        alert("Ju lutem plotësoni fushën e email-it me të dhëna të sakta!");
-    }
 
 
     
 
-    // numri duhet te jete me 9 numra nga 3 here secila 3 numra
+//     // email-a duhet te kete minimum 5 karaktere, duhet te permbaje te pakten nje numer, te permbaje '@' dhe te perfundoje me 
+//     //   'com' ose 'net'
 
-    var regNr = /[0-9]{3}-[0-9]{3}-[0-9]{3}/;
+//     var regEm = /^(?=.{5,})(?=.*[0-9])(?=.*@).*\.(com|net)$/;
 
-    var regex_Numri = regNr.test(numri_kontakto);
+//     var regex_Email = regEm.test(email_kontakto);
 
-    if(!regex_Numri){
-        alert("Ju lutem plotësoni fushën e numrit me të dhëna të sakta!");
-    }
-
-
-    // mesazhi duhet te kete minimumi 10 fjale
-
-    var regMsg = /^\b.{1,}\b(.{1,}\b){9,}$/;
-
-    var regex_Mesazhi = regMsg.test(mesazhi_kontakto);
-
-    if(!regex_Mesazhi){
-        alert("Ju lutem plotësoni fushën e mesazhit me të dhëna të sakta!");
-    }
+//     if(!regex_Email){
+//         alert("Ju lutem plotësoni fushën e email-it me të dhëna të sakta!");
+//     }
 
 
-}
+    
+
+//     // numri duhet te jete me 9 numra nga 3 here secila 3 numra
+
+//     var regNr = /[0-9]{3}-[0-9]{3}-[0-9]{3}/;
+
+//     var regex_Numri = regNr.test(numri_kontakto);
+
+//     if(!regex_Numri){
+//         alert("Ju lutem plotësoni fushën e numrit me të dhëna të sakta!");
+//     }
+
+
+//     // mesazhi duhet te kete minimumi 10 fjale
+
+//     var regMsg = /^\b.{1,}\b(.{1,}\b){9,}$/;
+
+//     var regex_Mesazhi = regMsg.test(mesazhi_kontakto);
+
+//     if(!regex_Mesazhi){
+//         alert("Ju lutem plotësoni fushën e mesazhit me të dhëna të sakta!");
+//     }
+
+
+// }
+

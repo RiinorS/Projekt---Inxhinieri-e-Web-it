@@ -24,7 +24,10 @@
     font-size: x-large;
     margin-top: 75px;
     margin-bottom: 30px;
+
 }
+
+
 
 
 .menu-anash li {
@@ -37,15 +40,7 @@
 
 }
 
-.menu-anash  li :hover {
-    background: white;
-    color: black;
-    cursor: pointer;
-}
-a {
-    text-decoration: none;
-    color: white;
-}
+
 
 
 

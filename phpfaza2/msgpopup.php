@@ -1,6 +1,8 @@
 <?php
-include_once '../components/menu-anash.php';
+include_once '../components/header.php';
 ?>
+<link href="../css_code/style.css" rel="stylesheet" type="text/css">
+
 <div class="mbajtesi-popup">
 
 
@@ -8,12 +10,16 @@ include_once '../components/menu-anash.php';
         
         <img src="../images/tick-insert.png">
         <h2>Sukses!</h2>
-        <p>Ju keni shtuar të dhënat e përdoruesit</p>
-        <button type="button" onclick="closeShtoPopup()" >Vazhdo</button>
+        <p>Faleminderit që na kontaktuat</p>
+        <button type="button" onclick="closeMSG()" >Kthehu tek faqja</button>
     </div>
 
 
 </div>
+
+<?php
+include_once '../components/footer.php';
+?>
 
 <style>
 
@@ -38,8 +44,8 @@ include_once '../components/menu-anash.php';
     background: white;
     border-radius: 6px;
     position: absolute;
-    top: 30%;
-    left: 43%;
+    top: 43%;
+    left: 35%;
     text-align: center;
     padding: 0 30px 30px ;
     color: #333;
@@ -87,9 +93,9 @@ include_once '../components/menu-anash.php';
 <script>
 
 
-function closeShtoPopup(){
+function closeMSG(){
     
-    window.location = 'perdoruesit.php';
+    window.location.href = '../php_code/faqja.php';
 }
 
 </script> 

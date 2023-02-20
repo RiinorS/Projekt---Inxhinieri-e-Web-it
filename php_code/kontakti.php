@@ -77,35 +77,50 @@
   
       </div>
   
+    <?php
+
+    require '../phpfaza2/MessagesMapper.php';
+
+    if (isset($_POST['dergo-btn'])) {
+    
+    
+    $mapper = new MessagesMapper();
+    $mapper->insert($_POST);
+
+    header("Location:../phpfaza2/msgpopup.php");
+    }
+    
+    ?>
+
   
-  
-  
-      <div class="kontakt-forma">
+    
+
+    <form class="kontakt-forma" method="post" >
         <h1>Na kontaktoni</h1>
         <div id="prapavija-formave" class="tekst-infot">
-          <label>Perdoruesi :</label>
-          <input type="text"  id="perdoruesi_kontakto" name="" value="" placeholder="Shënoni përdoruesin">
+          <label>Përdoruesi :</label>
+          <input type="text"  id="perdoruesi_kontakto" name="perdoruesi" value="" placeholder="Shënoni përdoruesin">
         </div>
   
         <div id="prapavija-formave" class="tekst-infot">
           <label>Email :</label>
-          <input type="email" id="email_kontakto" name="" value="" placeholder="Shënoni email-en tuaj">
+          <input type="email" id="email_kontakto" name="email" value="" placeholder="Shënoni email-en tuaj">
         </div>
   
         <div id="prapavija-formave" class="tekst-infot">
           <label>Numri i telefonit :</label>
-          <input type="text" id="numri_kontakto" name="" value="" placeholder="Shënoni numrin tuaj të telefonit ">
+          <input type="text" id="numri_kontakto" name="numri" value="" placeholder="Shënoni numrin tuaj të telefonit ">
         </div>
   
         <div id="prapavija-formave"class="tekst-infot">
           <label>Mesazhi juaj :</label>
        
-          <textarea id="mesazhi_kontakto" ></textarea>
+          <textarea id="mesazhi_kontakto" name="mesazhi" ></textarea>
         
         </div>
-        <button type="submit" class="dergo" onclick="kontakti()">Dërgoni</button> 
+        <button type="submit" class="dergo"  name="dergo-btn"  >Dërgoni</button> 
       </div>
-    </div>
+    </form>
 
 
 

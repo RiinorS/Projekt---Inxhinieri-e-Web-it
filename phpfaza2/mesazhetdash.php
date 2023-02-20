@@ -1,4 +1,4 @@
-<?php include_once '../phpfaza2/ProductsMapper.php';
+<?php include_once '../phpfaza2/MessagesMapper.php';
 include_once '../components/menu-anash.php';  ?>
 
 <!DOCTYPE html>
@@ -9,18 +9,18 @@ include_once '../components/menu-anash.php';  ?>
   <thead>
     
     <div class="koka-tabeles">
-        <h2>Produktet e regjistruara</h2>
-        <button class="shto-perdoruesin" onclick="redirectShtoPerdorues()"  >Shto produkt</button>
+        <h2>Mesazhet</h2>
     </div>
     <tr>
       <th>ID</th>
-      <th>Foto</th>
-      <th>Titulli</th>
-      <th>Përshkrimi</th>
-      <th>Cmimi</th>
+      <th>Përdoruesi</th>
+      <th>Email</th>
+      <th>Numri i telefonit</th>
+      <th>Mesazhi</th>
+      <th>Veprimi</th>
+
 
       
-      <th colspan="2" style="text-align: center;" >Veprimi</th>
     </tr>
   </thead>
   <tbody>
@@ -29,34 +29,33 @@ include_once '../components/menu-anash.php';  ?>
 
     <?php
        
-        $model = new ProductsMapper();
+        $model = new MessagesMapper();
         $rows = $model->readData();
         foreach ($rows as $row) { 
     ?> 
         <tr>
             <td>
-                <?php echo $row['productid'] ?>
+                <?php echo $row['msgid'] ?>
             </td>
             <td>
-                <?php echo $row['foto'] ?>
-            </td>
-            
-            <td>
-                <?php echo $row['titulli']; ?>
+                <?php echo $row['perdoruesi'] ?>
             </td>
             
             <td>
-                <?php echo $row['pershkrimi']; ?>
+                <?php echo $row['email']; ?>
             </td>
             
             <td>
-                <?php echo $row['cmimi']; ?>
+                <?php echo $row['numri']; ?>
+            </td>
+            
+            <td>
+                <?php echo $row['mesazhi']; ?>
             </td>
             
            
-            <td> <a href="ndryshoProdukt.php?id=<?php echo $row['productid']; ?>"> <button class="ndrysho">Ndrysho</button></a></td>
-            <td> <a href="fshijProdukt.php?id=<?php echo $row['productid']; ?>"> <button class="fshij" >Fshij</button></a></td>
-        </tr>
+            <td> <a href="fshijMesazh.php?id=<?php echo $row['msgid']; ?>"> <button class="fshij" >Fshij</button></a></td>
+        </tr> 
 
 
     <?php
@@ -150,9 +149,3 @@ button.fshij {
 
 </style>
 
-<script>
-  
-  function redirectShtoPerdorues(){
-    window.location = 'shtoProdukt.php';
-  }
-</script>

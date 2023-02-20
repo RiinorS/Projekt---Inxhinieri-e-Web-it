@@ -216,13 +216,13 @@
     </div>
   </div>
   <div class="kartat">
-    <img src="../images/kgrafike.jpg" width="250px" height="250px">
+    <img src="../images/jbl.jpg" width="250px" height="250px">
     <div class="permbajtja-produkteve">
-      <span class="titujt"> Kartelë grafike</span>
-        <p>Kartelë grafike AMD Radeon</p>
+      <span class="titujt"> JBL </span>
+        <p>Zmadhues zëri JBL, 4.2 W</p>
     </div>
     <div class="pershkrimi-produkteve">
-        <div class="cmimi-produkteve">399.50 €</div>
+        <div class="cmimi-produkteve">58.35 €</div>
         <div class="butoni-shporta">
             
             <button>Shto në shportë</button>
@@ -243,7 +243,7 @@
     echo '
   
     <div class="kartat">
-      <img src="' .$all[$i]['foto'] . '" width="250px" height="250px">
+      <img src="' .$all[$i]['foto'] . '" width="230px" height="230px">
       <div class="permbajtja-produkteve">
       <span class="titujt"> '.$all[$i]['titulli'] .'</span>
         <p>'.$all[$i]['pershkrimi'] .'</p>

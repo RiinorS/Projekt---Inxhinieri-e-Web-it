@@ -75,7 +75,6 @@ class ProductsMapper extends DatabasePDOConfiguration {
 
         $query->bindParam(':id' , $productId);
         $query->execute();
-        // return header('Location: ../phpfaza2/dashboard.php');
 
 
     }
