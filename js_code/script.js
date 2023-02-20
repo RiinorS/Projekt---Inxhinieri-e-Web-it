@@ -77,7 +77,7 @@ function kycuni(){
 
 kycuni();
 
-function validimiKycuni(){
+//function validimiKycuni(){
 
     //const perdoruesi_kycuni = document.getElementById('perdoruesi_kycuni').value;
    // const fjalekalimi_kycuni = document.getElementById('fjalekalimi_kycuni').value;
@@ -152,7 +152,7 @@ function validimiKycuni(){
     //     alert("Ju lutem plotësoni fushën e fjalëkalimit me të dhëna të sakta!");
     // }
 
-}
+//}
 
     const regPerdoruesi = /^[a-zA-Z0-9]{3,}$/;
     const regFjalekalimi = /^[A-Z]+$/;
@@ -225,7 +225,7 @@ function kontakti(){
 
     
 
-    // numri duhet te jete me 9 shumra nga 3 here secila 3 numra
+    // numri duhet te jete me 9 numra nga 3 here secila 3 numra
 
     var regNr = /[0-9]{3}-[0-9]{3}-[0-9]{3}/;
 

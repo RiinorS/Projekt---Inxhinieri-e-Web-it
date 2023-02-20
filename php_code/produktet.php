@@ -23,7 +23,7 @@
                  <ul>
                  <?php
                   session_start();
-                    if(isset($_SESSION['roli']) && $_SESSION['roli'] == 1 ) {
+                    if(isset($_SESSION['role']) && $_SESSION['role'] == 1 ) {
                   ?>
                     <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
 
@@ -42,7 +42,7 @@
 
   <div class="icons">
     <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
-    <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+    <a href="../phpfaza2/logOut.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
   </div>
 
 </header> 
@@ -250,7 +250,7 @@
       </div>
       
       <div class="pershkrimi-produkteve">
-        <div class="cmimi-produkteve">'.$all[$i]['cmimi'] .'</div>
+        <div class="cmimi-produkteve">'.$all[$i]['cmimi'] .' € </div>
         <div class="butoni-shporta">
             
         <button>Shto në shportë</button>

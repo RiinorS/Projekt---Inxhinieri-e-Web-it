@@ -39,7 +39,7 @@
     
       <div class="icons">
         <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
-        <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+        <a href="../phpfaza2/logOut.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
       </div>
     
     </header> 

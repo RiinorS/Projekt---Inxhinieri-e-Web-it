@@ -42,7 +42,7 @@
 
    <div class="icons">
       <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
-      <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+      <a href="../phpfaza2/logOut.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
     </div>
 
 </header> 
@@ -94,7 +94,7 @@
   
         <div id="prapavija-formave" class="tekst-infot">
           <label>Numri i telefonit :</label>
-          <input type="number" id="numri_kontakto" name="" value="" placeholder="Shënoni numrin tuaj të telefonit ">
+          <input type="text" id="numri_kontakto" name="" value="" placeholder="Shënoni numrin tuaj të telefonit ">
         </div>
   
         <div id="prapavija-formave"class="tekst-infot">
