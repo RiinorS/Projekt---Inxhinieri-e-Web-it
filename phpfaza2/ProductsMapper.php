@@ -80,6 +80,21 @@ class ProductsMapper extends DatabasePDOConfiguration {
     }
 
 
+    public function getProductById($productId) {
+        
+        
+        $query = "SELECT * FROM produkte WHERE productid = :id ";
+        $stmt = $this->conn->prepare($query);
+        
+        $stmt->bindParam(':id', $productId);
+        $stmt->execute();
+        
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+
+        
+      }
+
+
 
 
 

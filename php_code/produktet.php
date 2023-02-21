@@ -65,7 +65,7 @@
                 <div class="cmimi-produkteve">1,787.50 €</div>
                 <div class="butoni-shporta">
                    
-                   <button>Shto në shportë</button>
+                   <button onclick="blejtani()" >Shto në shportë</button>
                 </div>
             </div>
         </div>
@@ -253,7 +253,7 @@
         <div class="cmimi-produkteve">'.$all[$i]['cmimi'] .' € </div>
         <div class="butoni-shporta">
             
-        <button>Shto në shportë</button>
+        <button onclick="blejtani()" >Blej tani</button>
         </div>
     </div>
 
@@ -314,3 +314,12 @@
 
 </body>
 </html>
+
+<script>
+
+function blejtani(){
+  window.location.href='../phpfaza2/blejtani.php';
+}
+
+
+</script>

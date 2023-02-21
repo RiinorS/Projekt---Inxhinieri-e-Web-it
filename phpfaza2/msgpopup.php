@@ -2,6 +2,7 @@
 include_once '../components/header.php';
 ?>
 <link href="../css_code/style.css" rel="stylesheet" type="text/css">
+<link rel ="icon" type="image" href="../images/favicon.jpg">
 
 <div class="mbajtesi-popup">
 
@@ -9,8 +10,8 @@ include_once '../components/header.php';
     <div class="popup" id="popup" >
         
         <img src="../images/tick-insert.png">
-        <h2>Sukses!</h2>
-        <p>Faleminderit që na kontaktuat</p>
+        <h2>Mesazhi u dërgua me sukses!</h2>
+        <p>Faleminderit që na kontaktuat!</p>
         <button type="button" onclick="closeMSG()" >Kthehu tek faqja</button>
     </div>
 

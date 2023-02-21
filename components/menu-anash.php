@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Dashboard - Rini Tech</title>
 
     <link rel ="icon" type="image/png" href="../images/favicon.jpg">
@@ -15,7 +15,7 @@
     <div  class="menu-anash">
 
         <div class="brand"  >
-        <a href="../phpfaza2/dashboard.php">  <img src="../images/dashboard.png" width="22x" height="22px" >&nbsp; Dashboard
+        <img src="../images/dashboard.png" width="22x" height="22px" >&nbsp; Dashboard
         </div>
 
         
