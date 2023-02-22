@@ -21,6 +21,7 @@
         
         <li> <a href="../phpfaza2/perdoruesit.php"> <img src="../images/customers.png" width="22px" height="25px" >&nbsp; <span>Përdoruesit</span></a> </li>
         <li> <a href="../phpfaza2/produktetdash.php"> <img src="../images/prod.png" width="22px" height="25px" >&nbsp; <span>Produktet</span> </a>  </li>
+        <li> <a href="../phpfaza2/porositedash.php"> <img src="../images/cart.png" width="22px" height="20px" >&nbsp; <span> Porositë</span></a>  </li>
         <li> <a href="../phpfaza2/mesazhetdash.php"> <img src="../images/msg.png" width="22px" height="20px" >&nbsp; <span> Mesazhet</span></a>  </li>
         <li> <a href="../php_code/faqja.php">  <img src="../images/faqja.png" width="22px" height="20px" >&nbsp; <span>Faqja</span></a>  </li>
        

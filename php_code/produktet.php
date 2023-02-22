@@ -255,7 +255,7 @@
           
         <form method="get" action="../phpfaza2/blejtani2.php">
                     <input type="hidden" name="id" value="' . $all[$i]['productid'] . '">
-                    <button type="submit" class="blej-btn" name="blej-btn">Blej tani</button>
+                    <button type="submit" class="blej-btn" name="blej-btn">Blej</button>
                 </form>
 
         </div>

@@ -2,6 +2,7 @@
 
     
 <!-- Navigimi i faqes -->
+<link rel ="icon" type="image" href="../images/favicon.jpg">
 
 <header>
 

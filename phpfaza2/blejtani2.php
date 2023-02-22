@@ -1,17 +1,16 @@
 <?php 
     include '../components/header.php';
     include '../phpfaza2/ProductsMapper.php';
+    include '../phpfaza2/OrdersMapper.php';
+
 ?>
-    <link rel ="icon" type="image/png" href="../images/favicon.jpg">
+
+<title>Blej tani - Rini Tech  </title>
+
     <link href="../css_code/style.css" rel="stylesheet" type="text/css">
 
 
   
-
-
-
-
-    
     <?php
   if (isset($_GET['id'])) {
     $productId = $_GET['id'];
@@ -48,6 +47,31 @@
           </div>';
   }
 ?>
+
+
+<?php
+
+
+if (isset($_POST['blej-btn'])) {
+    
+    
+  $mapper = new OrdersMapper();
+  $mapper->insert($_POST);
+
+  header("Location:../phpfaza2/porosiapopup.php");
+  }
+  
+  ?>
+
+
+
+
+
+
+?>
+
+
+
 
 <style>
 
