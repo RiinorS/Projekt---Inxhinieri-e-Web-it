@@ -252,8 +252,12 @@
       <div class="pershkrimi-produkteve">
         <div class="cmimi-produkteve">'.$all[$i]['cmimi'] .' € </div>
         <div class="butoni-shporta">
-            
-        <button onclick="blejtani()" >Blej tani</button>
+          
+        <form method="get" action="../phpfaza2/blejtani.php">
+                    <input type="hidden" name="id" value="' . $all[$i]['productid'] . '">
+                    <button type="submit" name="blej-btn">Blej tani</button>
+                </form>
+
         </div>
     </div>
 
@@ -267,12 +271,9 @@
 
 
 
-
-
-
   ?>
 
-
+<!-- <button name="blej-btn"  onclick="blejtani()"   >Blej tani</button>  -->
 
   </div> 
 
@@ -314,12 +315,3 @@
 
 </body>
 </html>
-
-<script>
-
-function blejtani(){
-  window.location.href='../phpfaza2/blejtani.php';
-}
-
-
-</script>

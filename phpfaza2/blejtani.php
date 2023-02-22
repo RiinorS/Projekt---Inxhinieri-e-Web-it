@@ -12,34 +12,40 @@
 
 
     
-  <?php
-$products = new ProductsMapper();
+<?php
 
-$productId = $_GET['productid'];
-$product = $products->getProductById($productId);
-
-
-if(!$product) {
+if (isset($_GET['id'])) {
+  $productId = $_GET['id'];
+  $products = new ProductsMapper();
+  $product = $products->getProductById($productId);
+  
   echo '
+  
   <div class="kartat">
-      <img src="' .$product['foto'] . '" width="230px" height="230px">
-      <div class="permbajtja-produkteve">
-        <span class="titujt"> '.$product['titulli'] .'</span>
-        <p>'.$product['pershkrimi'] .'</p>
-      </div>
-      
-      <div class="pershkrimi-produkteve">
-        <div class="cmimi-produkteve">'.$product['cmimi'] .' € </div>
-      </div>
-
+    <img src="' .$product['foto'] . '" width="230px" height="230px">
+    <div class="permbajtja-produkteve">
+    <span class="titujt"> '.$product['titulli'] .'</span>
+      <p>'.$product['pershkrimi'] .'</p>
     </div>
-  ';
-}
-else {
-  echo 'errori';
-}
+    
+    <div class="pershkrimi-produkteve">
+      <div class="cmimi-produkteve">'.$product['cmimi'] .' € </div>
+      
+  </div>
 
+</div>
+
+
+
+  ';
+
+}
 ?>
+
+
+
+
+
 
     <div class='mbajtesi-shto'>
         
