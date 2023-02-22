@@ -53,8 +53,8 @@
 
 
 
-    <div class="mbajtesi-produkteve">
-        <div class="kartat">
+     <div class="mbajtesi-produkteve">
+        <!-- <div class="kartat">
             <img src="../images/iphone14.jpg" width="200px" height="250px">
             <div class="permbajtja-produkteve">
               <span class="titujt">Apple iPhone</span>
@@ -229,7 +229,7 @@
         </div>
     </div>
 
-  </div>
+  </div> --> 
 
 
 
@@ -253,9 +253,9 @@
         <div class="cmimi-produkteve">'.$all[$i]['cmimi'] .' € </div>
         <div class="butoni-shporta">
           
-        <form method="get" action="../phpfaza2/blejtani.php">
+        <form method="get" action="../phpfaza2/blejtani2.php">
                     <input type="hidden" name="id" value="' . $all[$i]['productid'] . '">
-                    <button type="submit" name="blej-btn">Blej tani</button>
+                    <button type="submit" class="blej-btn" name="blej-btn">Blej tani</button>
                 </form>
 
         </div>

@@ -6,7 +6,7 @@
     <link href="../css_code/style.css" rel="stylesheet" type="text/css">
 
 
-
+  
 
 
 
@@ -31,12 +31,12 @@ if (isset($_GET['id'])) {
     <div class="pershkrimi-produkteve">
       <div class="cmimi-produkteve">'.$product['cmimi'] .' € </div>
       
+    </div>
+
+
+
+
   </div>
-
-</div>
-
-
-
   ';
 
 }
@@ -75,6 +75,12 @@ if (isset($_GET['id'])) {
 ?>
 
     <style>
+
+  .kartat{
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
     .mbajtesi-shto {
   margin: 0 auto;
   max-width: 800px;
