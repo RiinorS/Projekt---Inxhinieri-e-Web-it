@@ -42,7 +42,7 @@
 
   <div class="icons">
   <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
-  <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>   
+  <!-- <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>    -->
    
   </div>
   <!-- <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>    -->
@@ -64,7 +64,7 @@
       </div>
 
       <form action="../phpfaza2/loginVerify.php"  id="kycuni" class="input-grupi" method="post" onsubmit= " return valido()" >
-          <input type="text" id="perdoruesi_kycuni"  class="input-fusha" name="username"  placeholder="Perdoruesi" >
+          <input type="text" id="perdoruesi_kycuni"  class="input-fusha" name="username"  placeholder="Emri" >
           <input type="password" id="fjalekalimi_kycuni"  class="input-fusha" name="password" placeholder="Fjalekalimi" >
           <button type="submit" id="butoni-kycu" class="butoni-submit" name= "login-btn"  onclick="validimiKycuni()" >Kyçuni</button>
 

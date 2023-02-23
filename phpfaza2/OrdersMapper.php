@@ -39,10 +39,9 @@ class OrdersMapper extends DatabasePDOConfiguration {
     }
 
 
-
     public function delete($porosiaId) {
 
-        $query = $this->conn->prepare('DELETE FROM produkte WHERE porosiaid = :id');
+        $query = $this->conn->prepare('DELETE FROM porosite WHERE porosiaid = :id');
 
         $query->bindParam(':id' , $porosiaId);
         $query->execute();

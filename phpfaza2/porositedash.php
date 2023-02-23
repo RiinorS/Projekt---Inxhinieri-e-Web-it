@@ -59,7 +59,7 @@ include_once '../components/menu-anash.php';  ?>
             </td>
 
            
-            <td> <a href="fshijProdukt.php?id=<?php echo $row['porosiaid']; ?>"> <button class="fshij" >Fshij</button></a></td>
+            <td> <a href="fshijPorosi.php?id=<?php echo $row['porosiaid']; ?>"> <button class="fshij" >Fshij</button></a></td>
         </tr> 
 
 

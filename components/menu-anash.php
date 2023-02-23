@@ -15,7 +15,7 @@
     <div  class="menu-anash">
 
         <div class="brand"  >
-        <img src="../images/dashboard.png" width="22x" height="22px" >&nbsp; Dashboard
+        <img src="../images/dashboard.png" width="22x" height="22px" onclick="dashboard()" >&nbsp; Dashboard
         </div>
 
         
@@ -26,3 +26,9 @@
         <li> <a href="../php_code/faqja.php">  <img src="../images/faqja.png" width="22px" height="20px" >&nbsp; <span>Faqja</span></a>  </li>
        
     </div>
+
+    <script>
+        function dashboard(){
+            window.location = '../phpfaza2/dashboard.php';
+        }
+    </script>

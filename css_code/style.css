@@ -304,6 +304,9 @@ header{
 .butoni-shporta button:first-child{
     margin-right: 10px;
 }
+
+
+
 .butoni-shporta button:last-child{
     background:black;
     color: #fff;
