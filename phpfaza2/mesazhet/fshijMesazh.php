@@ -1,16 +1,18 @@
 <?php
-include_once '../phpfaza2/UserMapper.php';
-include_once '../components/menu-anash.php';
+include_once '../phpfaza2/dbconnect/MessagesMapper.php';
+include_once '../components/header.php';
+
 
 
 if (isset($_GET['id'])) {
-    $userId = $_GET['id'];
-    $mapper = new UserMapper();
-    $mapper->deleteUser($userId);
-    
+    $msgId = $_GET['id'];
+    $mapper = new MessagesMapper();
+    $mapper->delete($msgId);
 }
 
 ?>
+<link href="../css_code/style.css" rel="stylesheet" type="text/css">
+
 
 <div class="mbajtesi-popup">
 
@@ -19,12 +21,15 @@ if (isset($_GET['id'])) {
         
         <img src="../images/tick-delete.png">
         <h2>Sukses!</h2>
-        <p>Ju keni fshirë të dhënat e përdoruesit</p>
+        <p>Ju keni fshirë mesazhin e klientit</p>
         <button type="button" onclick="closeFshijePopup()" >Vazhdo</button>
     </div>
 
 
 </div>
+<?php
+include_once '../components/footer.php';
+?>
 
 <style>
 
@@ -49,8 +54,8 @@ if (isset($_GET['id'])) {
     background: white;
     border-radius: 6px;
     position: absolute;
-    top: 30%;
-    left: 43%;
+    top: 43%;
+    left: 35%;
     text-align: center;
     padding: 0 30px 30px ;
     color: #333;
@@ -100,7 +105,7 @@ if (isset($_GET['id'])) {
 
 function closeFshijePopup(){
     
-    window.location = 'perdoruesit.php';
+    window.location.href = 'phpfaza2/mesazhet/mesazhetdash.php'; 
 }
 
 </script>

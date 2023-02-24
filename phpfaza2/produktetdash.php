@@ -1,5 +1,6 @@
-<?php include_once '../phpfaza2/ProductsMapper.php';
-include_once '../components/menu-anash.php';  ?>
+<?php require '../phpfaza2/ProductsMapper.php';
+include '../phpfaza2/menu-anash.php';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -153,6 +154,6 @@ button.fshij {
 <script>
   
   function redirectShtoPerdorues(){
-    window.location = 'shtoProdukt.php';
+    window.location.href = 'phpfaza2/produktet/shtoProdukt.php';
   }
 </script>

@@ -1,18 +1,15 @@
 <?php
-include_once '../phpfaza2/MessagesMapper.php';
-include_once '../components/header.php';
-
+include_once '../phpfaza2/dbconnect/ProductsMapper.php';
+include_once '../components/menu-anash.php';
 
 
 if (isset($_GET['id'])) {
-    $msgId = $_GET['id'];
-    $mapper = new MessagesMapper();
-    $mapper->delete($msgId);
+    $productId = $_GET['id'];
+    $mapper = new ProductsMapper();
+    $mapper->delete($productId);
 }
 
 ?>
-<link href="../css_code/style.css" rel="stylesheet" type="text/css">
-
 
 <div class="mbajtesi-popup">
 
@@ -21,15 +18,12 @@ if (isset($_GET['id'])) {
         
         <img src="../images/tick-delete.png">
         <h2>Sukses!</h2>
-        <p>Ju keni fshirë mesazhin e klientit</p>
+        <p>Ju keni fshirë të dhënat e produktit</p>
         <button type="button" onclick="closeFshijePopup()" >Vazhdo</button>
     </div>
 
 
 </div>
-<?php
-include_once '../components/footer.php';
-?>
 
 <style>
 
@@ -54,8 +48,8 @@ include_once '../components/footer.php';
     background: white;
     border-radius: 6px;
     position: absolute;
-    top: 43%;
-    left: 35%;
+    top: 30%;
+    left: 43%;
     text-align: center;
     padding: 0 30px 30px ;
     color: #333;
@@ -105,7 +99,7 @@ include_once '../components/footer.php';
 
 function closeFshijePopup(){
     
-    window.location = 'mesazhetdash.php'; 
+    window.location.href = 'phpfaza2/produktet/produktetdash.php'; 
 }
 
 </script>

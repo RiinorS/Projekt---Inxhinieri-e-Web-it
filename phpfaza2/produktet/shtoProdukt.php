@@ -1,5 +1,5 @@
 <?php
-include_once '../phpfaza2/ProductsMapper.php';  
+include_once '../phpfaza2/dbconnect/ProductsMapper.php';  
 require '../components/menu-anash.php';
 
 

@@ -1,5 +1,5 @@
-<?php include_once '../phpfaza2/MessagesMapper.php';
-include_once '../components/menu-anash.php';  ?>
+<?php require_once '../phpfaza2/MessagesMapper.php';
+require_once '../phpfaza2/menu-anash.php';  ?>
 
 <!DOCTYPE html>
 <html>

@@ -1,7 +1,7 @@
 
 <?php
 
-    include_once 'databaseConfig.php' ;
+include_once '../phpfaza2/databaseConfig.php';
 
     class UserMapper extends DatabasePDOConfiguration {
 

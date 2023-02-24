@@ -1,7 +1,7 @@
 <?php 
-    include '../components/header.php';
-    include '../phpfaza2/ProductsMapper.php';
-    include '../phpfaza2/OrdersMapper.php';
+    require '../components/header.php';
+    require '../phpfaza2/ProductsMapper.php';
+    require_once '../phpfaza2/OrdersMapper.php';
 
 ?>
 
@@ -56,7 +56,7 @@ if (isset($_POST['blej-btn'])) {
   $mapper = new OrdersMapper();
   $mapper->insert($_POST);
 
-  header("Location:../phpfaza2/porosiapopup.php");
+  header("Location:../phpfaza2/porosite/porosiapopup.php");
   }
 ?>
 

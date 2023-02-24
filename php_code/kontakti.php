@@ -79,7 +79,7 @@
   
     <?php
 
-    require '../phpfaza2/MessagesMapper.php';
+    require '../phpfaza2/dbconnect/MessagesMapper.php';
 
     if (isset($_POST['dergo-btn'])) {
     
@@ -87,7 +87,7 @@
     $mapper = new MessagesMapper();
     $mapper->insert($_POST);
 
-    header("Location:../phpfaza2/msgpopup.php");
+    header("Location:../phpfaza2/mesazhet/msgpopup.php");
     }
     
     ?>

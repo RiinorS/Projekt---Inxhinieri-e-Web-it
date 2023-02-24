@@ -6,10 +6,10 @@ include_once '../components/menu-anash.php';
 
     <div class="popup" id="popup" >
         
-        <img src="../images/tick-edit.png">
+        <img src="../images/tick-insert.png">
         <h2>Sukses!</h2>
-        <p>Ju keni ndryshuar të dhënat e produktit</p>
-        <button type="button" onclick="closeNdryshoPopup()" >Vazhdo</button>
+        <p>Ju keni shtuar të dhënat e përdoruesit</p>
+        <button type="button" onclick="closeShtoPopup()" >Vazhdo</button>
     </div>
 
 
@@ -71,7 +71,7 @@ include_once '../components/menu-anash.php';
     width: 100%;
     margin-top : 50px ;
     padding: 10px 0;
-    background: orange;
+    background: green;
     color: #fff;
     border: 0;
     outline: none;
@@ -87,9 +87,9 @@ include_once '../components/menu-anash.php';
 <script>
 
 
-function closeNdryshoPopup(){
+function closeShtoPopup(){
     
-    window.location = 'produktetdash.php';
+    window.location.href = 'phpfaza2/perdoruesit/perdoruesit.php';
 }
 
 </script> 

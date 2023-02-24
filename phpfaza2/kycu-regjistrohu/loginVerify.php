@@ -3,9 +3,9 @@
 
 <?php
 
-    include_once 'UserMapper.php';
-    include_once 'admin.php';
-    include_once 'simpleUser.php';
+    require_once '../phpfaza2/views/UserMapper.php';
+    require_once '../phpfaza2/kycu-regjistrohu/admin.php';
+    require_once '../phpfaza2/kycu-regjistrohu/simpleUser.php';
 
 
     session_start();
@@ -21,7 +21,7 @@
     }
 
     else {
-        header("Location:../php_code/gabimverify.php");
+        header("Location:../php_code/index.php");
     }
 
 
@@ -118,7 +118,7 @@
                 $user = new Admin($this->username , $this->lastname  , 1 , "Administrator" , $this->password);
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
-                header("Location: ../phpfaza2/dashboard.php");
+                header("Location:../phpfaza2/views/dashboard.php");
 
             }
 
@@ -129,7 +129,7 @@
                 $user = new SimpleUser($this->username , $this->lastname , 0 , "Përdorues" ,  $this->password);
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
-                header("Location: ../php_code/faqja.php");
+                header("Location:../php_code/faqja.php");
             }
         } 
 

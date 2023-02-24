@@ -1,4 +1,4 @@
-<?php include '../components/menu-anash.php';  ?>
+<?php require_once '../phpfaza2/menu-anash.php';  ?>
 <!DOCTYPE html>
 <html>
   
@@ -24,7 +24,7 @@
 
 
     <?php
-        require_once 'UserMapper.php';
+        require '../phpfaza2/UserMapper.php';
         $model = new UserMapper();
         $rows = $model->getAllUsers();
         foreach ($rows as $row) {
@@ -148,6 +148,6 @@ button.fshij {
 <script>
   
   function redirectShtoPerdorues(){
-    window.location = 'shtoPerdorues.php';
+    window.location.href = '../phpfaza2/perdoruesit/shtoPerdorues.php';
   }
 </script>

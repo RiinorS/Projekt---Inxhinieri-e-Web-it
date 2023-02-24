@@ -25,7 +25,7 @@
                   session_start();
                     if(isset($_SESSION['role']) && $_SESSION['role'] == 1 ) {
                   ?>
-                    <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
+                    <li> <a href="../phpfaza2/views/dashboard.php"> Dashboard  </a> </li>
 
                   <?php
                   }
@@ -63,14 +63,14 @@
           <button type="button" class="nderrimibutonave" onclick="regjistrohuni()" > Regjistrohuni</button>
       </div>
 
-      <form action="../phpfaza2/loginVerify.php"  id="kycuni" class="input-grupi" method="post" onsubmit= " return valido()" >
+      <form action="../phpfaza2/kycu-regjistrohu/loginVerify.php"  id="kycuni" class="input-grupi" method="post" onsubmit= " return valido()" >
           <input type="text" id="perdoruesi_kycuni"  class="input-fusha" name="username"  placeholder="Emri" >
           <input type="password" id="fjalekalimi_kycuni"  class="input-fusha" name="password" placeholder="Fjalekalimi" >
           <button type="submit" id="butoni-kycu" class="butoni-submit" name= "login-btn"  onclick="validimiKycuni()" >Kyçuni</button>
 
       </form>
 
-      <form  name="FormaRegjistrohuni"  action="../phpfaza2/loginVerify.php" id="regjistrohuni"  method="post" class="input-grupi" >
+      <form  name="FormaRegjistrohuni"  action="../phpfaza2/kycu-regjistrohu/loginVerify.php" id="regjistrohuni"  method="post" class="input-grupi" >
           <input type="text" name="register-username"  id="email_regjistrohuni" class="input-fusha" placeholder="Emri" >
           <input type="text" name="register-lastname"  id="perdoruesi_regjistrohuni" class="input-fusha" placeholder="Mbiemri" >
           <input type="password" name="register-password"  id="fjalekalimi_regjistrohuni" class="input-fusha" placeholder="Fjalëkalimi" >

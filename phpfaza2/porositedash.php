@@ -1,5 +1,5 @@
-<?php include_once '../phpfaza2/OrdersMapper.php';
-include_once '../components/menu-anash.php';  ?>
+<?php require '../phpfaza2/OrdersMapper.php';
+require '../phpfaza2/menu-anash.php';  ?>
 
 <!DOCTYPE html>
 <html>
