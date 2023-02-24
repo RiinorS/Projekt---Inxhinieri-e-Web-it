@@ -49,15 +49,17 @@
 
         public function insertUser($user){
 
-            $sql = "INSERT INTO  user(username,userlastname ,role,password) values
-            (:name ,:lastname,:role ,:password)";
+            $sql = "INSERT INTO  user(username,userlastname ,role , roleName ,password) values
+            (:name ,:lastname,:role , :roleName,:password )";
 
             
             $username = $user->getUsername();
             $lastname = $user->getLastname();
+            $role = $user->getRole();
+            $roleName = $user->getRoleName();
             $pass = $user->getPassword();
             $password = password_hash($pass, PASSWORD_BCRYPT);
-            $role = $user->getRole();
+            
 
 
             $statement =$this->conn->prepare($sql);
@@ -65,6 +67,7 @@
             $statement -> bindParam(":name" , $username) ;
             $statement -> bindParam(":lastname" , $lastname) ;
             $statement -> bindParam(":role" , $role) ;
+            $statement -> bindParam(":roleName" , $roleName) ;
             $statement -> bindParam(":password" , $password) ;
 
             $statement -> execute();

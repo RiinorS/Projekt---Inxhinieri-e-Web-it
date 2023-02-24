@@ -50,8 +50,8 @@ class ProductsMapper extends DatabasePDOConfiguration {
     public function update($request , $productId) {
 
 
-        $query = $this->conn->prepare('UPDATE produkte SET foto = :foto , titulli = :titulli , 
-            pershkrimi = :pershkrimi , cmimi = :cmimi WHERE productid = :id'
+        $query = $this->conn->prepare('UPDATE produkte SET foto=:foto , titulli=:titulli , 
+            pershkrimi=:pershkrimi , cmimi=:cmimi WHERE productid =:id'
         );
 
         $query->bindParam(':foto' , $request['foto']);
@@ -63,10 +63,12 @@ class ProductsMapper extends DatabasePDOConfiguration {
 
 
         $query->execute();
-        // return header('Location: ../phpfaza2/dashboard.php');
 
         
     }
+
+
+    
 
 
     public function delete($productId) {

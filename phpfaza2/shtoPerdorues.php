@@ -9,7 +9,7 @@ if (isset($_POST['shto-btn'])) {
     $lastname = $_POST['lastname'];
     $password = $_POST['password'];
 
-    $user = new SimpleUser($username, $lastname, 0, $password);
+    $user = new SimpleUser($username , $lastname, 0, "Përdorues" , $password);
 
     $mapper = new UserMapper();
     $mapper->insertUser($user);

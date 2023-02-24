@@ -41,7 +41,7 @@
   </nav>
 
   <div class="icons">
-    <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
+    <!-- <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a> -->
     <a href="../phpfaza2/logOut.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
   </div>
 
@@ -255,7 +255,7 @@
           
         <form method="get" action="../phpfaza2/blejtani2.php">
                     <input type="hidden" name="id" value="' . $all[$i]['productid'] . '">
-                    <button type="submit" class="blej-btn" name="blej-btn">Blej</button>
+                    <button style="padding-left:15px;padding-right:15px;" type="submit" class="blej-btn" name="blej-btn">Blej</button>
                 </form>
 
         </div>

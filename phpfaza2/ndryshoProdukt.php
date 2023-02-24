@@ -1,17 +1,19 @@
 <?php
-include_once '../phpfaza2/ProductsMapper.php';  
+require_once '../phpfaza2/ProductsMapper.php';  
 require '../components/menu-anash.php';
 
-    if (isset($_GET['id'])) {
-        $productId = $_GET['id'];
-        
-    }
-    $mapper = new ProductsMapper();
-    $product = $mapper->edit($productId);
+if (isset($_GET['id'])) {
+  $productId = $_GET['id'];
+}
 
-    if(isset($_POST['ndrysho-btn'])){
-        $mapper->update($_POST , $productId);
-    }
+
+  $mapper = new ProductsMapper();
+  $product = $mapper ->edit($productId);
+
+
+  if(isset($_POST['ndrysho-buton'])){
+    $mapper->update($_POST,$productId);
+  }
 ?>
    
 
@@ -32,7 +34,7 @@ require '../components/menu-anash.php';
                 <label class="label" for="">Cmimi</label>
                 <input type="text" name='cmimi' class="input" placeholder="Cmimi" value="<?php echo $product['cmimi']; ?>" />
 
-                <input id="ndrysho-btn" type="submit" name="ndrysho-btn"  class="input submit" value="Ndrysho"  />
+                <input id="ndrysho-btn" type="submit" name="ndrysho-buton"  class="input submit" value="Ndrysho"  />
             </div>
         </form>
     </div>

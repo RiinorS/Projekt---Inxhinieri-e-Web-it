@@ -23,7 +23,7 @@
                   <ul>
                   <?php
                   session_start();
-                    if(isset($_SESSION['roli']) && $_SESSION['roli'] == 1 ) {
+                    if(isset($_SESSION['role']) && $_SESSION['role'] == 1 ) {
                   ?>
                     <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
 
@@ -41,7 +41,7 @@
   </nav>
 
   <div class="icons">
-  <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
+  <!-- <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a> -->
   <!-- <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>    -->
    
   </div>
@@ -70,12 +70,12 @@
 
       </form>
 
-      <form action="../phpfaza2/loginVerify.php" id="regjistrohuni"  method="post" class="input-grupi">
+      <form  name="FormaRegjistrohuni"  action="../phpfaza2/loginVerify.php" id="regjistrohuni"  method="post" class="input-grupi" >
           <input type="text" name="register-username"  id="email_regjistrohuni" class="input-fusha" placeholder="Emri" >
           <input type="text" name="register-lastname"  id="perdoruesi_regjistrohuni" class="input-fusha" placeholder="Mbiemri" >
           <input type="password" name="register-password"  id="fjalekalimi_regjistrohuni" class="input-fusha" placeholder="Fjalëkalimi" >
           <input type="checkbox" class="tick-kutia"> <span class="tickkr" >Unë pajtohem me kushtet dhe përmbajtjen e privatësisë</span>
-          <button type="submit" class="butoni-submit" name="register-btn"  onclick="validimiRegjistohuni()" >Regjistrohuni</button>
+          <button type="submit" class="butoni-submit" name="register-btn"   >Regjistrohuni</button>
 
       </form>
 

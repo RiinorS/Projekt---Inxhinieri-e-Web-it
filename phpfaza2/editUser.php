@@ -11,7 +11,7 @@ if (isset($_GET['username']) && isset($_GET['username'])) {
     $userlastname = $_GET['lastname'];
     $password = $_GET['password'];
     
-    $simpleUser = new SimpleUser($username, $userlastname ,0 , "" );
+    $simpleUser = new SimpleUser($username, $userlastname ,0 , "Përdorues" , $password );
     $mapper = new UserMapper();
     $mapper->edit($simpleUser, $userId);
     

@@ -55,7 +55,7 @@
             }
 
             else {
-                header("Location:../php_code/gabimverify.php");
+                header("Location:../php_code/index.php");
             }
 
         }
@@ -81,11 +81,11 @@
             
             else if (password_verify($password, $user['password'])) {
                     if ($user['role'] == 1) {
-                        $obj = new Admin($user['username'], $user['userlastname']  , $user['role'] ,$user['password']);
+                        $obj = new Admin($user['username'], $user['userlastname']  , $user['role'] ,$user['roleName'] ,$user['password']);
                         $obj->setSession();
                     }
                     else {
-                    $obj = new SimpleUser($user['username'], $user['userlastname']  , $user['role'] ,$user['password']);
+                    $obj = new SimpleUser($user['username'], $user['userlastname']  , $user['role'] , $user['roleName'] ,$user['password']);
                     $obj->setSession();
                     }
             
@@ -114,17 +114,19 @@
         public function registerUser(){
 
 
-            if($this -> username === "Rinor" || $this-> username === "Rinas") {
-                
-                $user = new Admin($this->username , $this->lastname , $this->password , 1  );
+            if($this->username === "Rinor" || $this->username === "Rinas") {
+                $user = new Admin($this->username , $this->lastname  , 1 , "Administrator" , $this->password);
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
-                header("Location: ../php_code/faqja.php");
+                header("Location: ../phpfaza2/dashboard.php");
 
             }
+
+            
+
              else {  
 
-                $user = new SimpleUser($this->username , $this->lastname ,  0 , $this->password);
+                $user = new SimpleUser($this->username , $this->lastname , 0 , "Përdorues" ,  $this->password);
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
                 header("Location: ../php_code/faqja.php");

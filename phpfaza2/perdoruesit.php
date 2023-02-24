@@ -43,7 +43,7 @@
             </td>
             
             <td>
-                <?php echo $row['role']; ?>
+                <?php echo $row['roleName']; ?>
             </td>
             
            

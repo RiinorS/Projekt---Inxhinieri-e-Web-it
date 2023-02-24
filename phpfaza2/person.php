@@ -7,12 +7,16 @@
         protected $userlastname;
         protected $password;
         protected $role;
+        protected $roleName;
 
-        function __construct($username, $userlastname, $role, $password) {
+
+
+        function __construct($username, $userlastname , $role, $roleName, $password ) {
             $this->username = $username;
             $this->userlastname = $userlastname;
-            $this->password = $password;
             $this->role = $role;
+            $this->roleName = $roleName;
+            $this->password = $password;
         }
 
         abstract protected function setSession();

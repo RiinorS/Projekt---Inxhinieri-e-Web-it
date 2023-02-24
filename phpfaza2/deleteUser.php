@@ -7,8 +7,7 @@ if (isset($_GET['id'])) {
     $userId = $_GET['id'];
     $mapper = new UserMapper();
     $mapper->deleteUser($userId);
-    // header("Location:../phpfaza2/perdoruesit.php");
-    // header("Location:../phpfaza2/popup.php");
+    
 }
 
 ?>

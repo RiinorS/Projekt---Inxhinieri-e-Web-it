@@ -28,7 +28,6 @@ if (isset($_GET['id'])) {
                 <input type="text" name='lastname' class="input" placeholder="Mbiemri" value=<?php echo $user['userlastname']; ?> />
                 <label class="label" for="">Passwordi</label>
                 <input type="password" name='password' class="input" placeholder="Passwordi" value=<?php echo $user['password']; ?> />
-               
 
                 <input id="ndrysho-btn" type="submit" name="ndrysho-btn"  class="input submit" value="Ndrysho"  />
             </div>
