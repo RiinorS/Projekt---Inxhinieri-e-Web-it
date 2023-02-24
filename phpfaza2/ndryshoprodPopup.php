@@ -1,35 +1,19 @@
 <?php
-include_once '../phpfaza2/dbconnect/MessagesMapper.php';
-include_once '../components/header.php';
-
-
-
-if (isset($_GET['id'])) {
-    $msgId = $_GET['id'];
-    $mapper = new MessagesMapper();
-    $mapper->delete($msgId);
-}
-
+include_once '../components/menu-anash.php';
 ?>
-<link href="../css_code/style.css" rel="stylesheet" type="text/css">
-
-
 <div class="mbajtesi-popup">
 
 
     <div class="popup" id="popup" >
         
-        <img src="../images/tick-delete.png">
+        <img src="../images/tick-edit.png">
         <h2>Sukses!</h2>
-        <p>Ju keni fshirë mesazhin e klientit</p>
-        <button type="button" onclick="closeFshijePopup()" >Vazhdo</button>
+        <p>Ju keni ndryshuar të dhënat e produktit</p>
+        <button type="button" onclick="closeNdryshoPopup()" >Vazhdo</button>
     </div>
 
 
 </div>
-<?php
-include_once '../components/footer.php';
-?>
 
 <style>
 
@@ -54,8 +38,8 @@ include_once '../components/footer.php';
     background: white;
     border-radius: 6px;
     position: absolute;
-    top: 43%;
-    left: 35%;
+    top: 30%;
+    left: 43%;
     text-align: center;
     padding: 0 30px 30px ;
     color: #333;
@@ -85,9 +69,9 @@ include_once '../components/footer.php';
 
 .popup button {
     width: 100%;
-    margin-top : 43px ;
+    margin-top : 50px ;
     padding: 10px 0;
-    background: red;
+    background: orange;
     color: #fff;
     border: 0;
     outline: none;
@@ -103,9 +87,9 @@ include_once '../components/footer.php';
 <script>
 
 
-function closeFshijePopup(){
+function closeNdryshoPopup(){
     
-    window.location.href = 'phpfaza2/mesazhet/mesazhetdash.php'; 
+    window.location.href = 'phpfaza2/produktetdash.php';
 }
 
-</script>
+</script> 

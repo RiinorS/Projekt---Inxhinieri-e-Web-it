@@ -1,15 +1,32 @@
 <?php
-include_once '../components/menu-anash.php';
+
+require_once 'UserMapper.php';
+require_once 'simpleUser.php';
+
+include_once 'menu-anash.php';
+
+if (isset($_GET['username']) && isset($_GET['username'])) {
+    $userId = $_GET['id'];
+    $username = $_GET['username'];
+    $userlastname = $_GET['lastname'];
+    $password = $_GET['password'];
+    
+    $simpleUser = new SimpleUser($username, $userlastname ,0 , "Përdorues" , $password );
+    $mapper = new UserMapper();
+    $mapper->edit($simpleUser, $userId);
+    
+}
 ?>
+
 <div class="mbajtesi-popup">
 
 
     <div class="popup" id="popup" >
         
-        <img src="../images/tick-insert.png">
+        <img src="../images/tick-edit.png">
         <h2>Sukses!</h2>
-        <p>Ju keni shtuar të dhënat e përdoruesit</p>
-        <button type="button" onclick="closeShtoPopup()" >Vazhdo</button>
+        <p>Ju keni ndryshuar të dhënat e përdoruesit</p>
+        <button type="button" onclick="closeEditPopup()" >Vazhdo</button>
     </div>
 
 
@@ -71,7 +88,7 @@ include_once '../components/menu-anash.php';
     width: 100%;
     margin-top : 50px ;
     padding: 10px 0;
-    background: green;
+    background: orange;
     color: #fff;
     border: 0;
     outline: none;
@@ -87,9 +104,9 @@ include_once '../components/menu-anash.php';
 <script>
 
 
-function closeShtoPopup(){
+function closeEditPopup(){
     
-    window.location.href = 'phpfaza2/perdoruesit/perdoruesit.php';
+    window.location.href = 'phpfaza2/perdoruesit.php';
 }
 
 </script> 

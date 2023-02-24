@@ -1,25 +1,15 @@
 <?php
-include_once '../phpfaza2/dbconnect/OrdersMapper.php';
 include_once '../components/menu-anash.php';
-
-
-if (isset($_GET['id'])) {
-    $porosiaId = $_GET['id'];
-    $mapper = new OrdersMapper();
-    $mapper->delete($porosiaId);
-}
-
 ?>
-
 <div class="mbajtesi-popup">
 
 
     <div class="popup" id="popup" >
         
-        <img src="../images/tick-delete.png">
+        <img src="../images/tick-insert.png">
         <h2>Sukses!</h2>
-        <p>Ju keni fshirë të dhënat e porosisë</p>
-        <button type="button" onclick="closeFshijePopup()" >Vazhdo</button>
+        <p>Ju keni shtuar të dhënat e produktit</p>
+        <button type="button" onclick="closeShtoPopup()" >Vazhdo</button>
     </div>
 
 
@@ -79,9 +69,9 @@ if (isset($_GET['id'])) {
 
 .popup button {
     width: 100%;
-    margin-top : 43px ;
+    margin-top : 50px ;
     padding: 10px 0;
-    background: red;
+    background: green;
     color: #fff;
     border: 0;
     outline: none;
@@ -97,9 +87,9 @@ if (isset($_GET['id'])) {
 <script>
 
 
-function closeFshijePopup(){
+function closeShtoPopup(){
     
-    window.location.href = 'phpfaza2/porosite/porositedash.php'; 
+    window.location.href = 'phpfaza2/produktetdash.php'; 
 }
 
-</script>
+</script> 

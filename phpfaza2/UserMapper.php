@@ -1,7 +1,8 @@
 
 <?php
 
-include_once '../phpfaza2/databaseConfig.php';
+
+require '../phpfaza2/UserMapper.php';
 
     class UserMapper extends DatabasePDOConfiguration {
 
@@ -11,7 +12,6 @@ include_once '../phpfaza2/databaseConfig.php';
         public function __construct() {
             $this->conn = $this->getConnection();
         }
-
 
         public function getUserById($userId){
 
@@ -72,9 +72,6 @@ include_once '../phpfaza2/databaseConfig.php';
 
             $statement -> execute();
 
-            
-
-
         }
 
         public function edit(\SimpleUser $user, $id){
@@ -97,7 +94,6 @@ include_once '../phpfaza2/databaseConfig.php';
 
             $statement->execute();
 
-
         }
 
 
@@ -109,7 +105,6 @@ include_once '../phpfaza2/databaseConfig.php';
 
             $statement->execute();
 
-            
 
         }
     }

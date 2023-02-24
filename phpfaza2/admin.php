@@ -1,5 +1,5 @@
 <?php
-require_once 'phpfaza2/kycu-regjistrohu/person.php';
+require_once 'person.php';
 
 
 class Admin extends Person

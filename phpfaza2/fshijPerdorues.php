@@ -1,21 +1,15 @@
 <?php
-
-include_once '../phpfaza2/dbconnect/UserMapper.php';
-include_once '../phpfaza2/kycu-regjistrohu/simpleUser.php';
-
+include_once '/UserMapper.php';
 include_once '../components/menu-anash.php';
 
-if (isset($_GET['username']) && isset($_GET['username'])) {
+
+if (isset($_GET['id'])) {
     $userId = $_GET['id'];
-    $username = $_GET['username'];
-    $userlastname = $_GET['lastname'];
-    $password = $_GET['password'];
-    
-    $simpleUser = new SimpleUser($username, $userlastname ,0 , "Përdorues" , $password );
     $mapper = new UserMapper();
-    $mapper->edit($simpleUser, $userId);
+    $mapper->deleteUser($userId);
     
 }
+
 ?>
 
 <div class="mbajtesi-popup">
@@ -23,10 +17,10 @@ if (isset($_GET['username']) && isset($_GET['username'])) {
 
     <div class="popup" id="popup" >
         
-        <img src="../images/tick-edit.png">
+        <img src="../images/tick-delete.png">
         <h2>Sukses!</h2>
-        <p>Ju keni ndryshuar të dhënat e përdoruesit</p>
-        <button type="button" onclick="closeEditPopup()" >Vazhdo</button>
+        <p>Ju keni fshirë të dhënat e përdoruesit</p>
+        <button type="button" onclick="closeFshijePopup()" >Vazhdo</button>
     </div>
 
 
@@ -86,9 +80,9 @@ if (isset($_GET['username']) && isset($_GET['username'])) {
 
 .popup button {
     width: 100%;
-    margin-top : 50px ;
+    margin-top : 43px ;
     padding: 10px 0;
-    background: orange;
+    background: red;
     color: #fff;
     border: 0;
     outline: none;
@@ -104,9 +98,9 @@ if (isset($_GET['username']) && isset($_GET['username'])) {
 <script>
 
 
-function closeEditPopup(){
+function closeFshijePopup(){
     
     window.location.href = 'phpfaza2/perdoruesit/perdoruesit.php';
 }
 
-</script> 
+</script>

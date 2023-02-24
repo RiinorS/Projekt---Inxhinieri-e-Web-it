@@ -3,9 +3,9 @@
 
 <?php
 
-    require_once '../phpfaza2/views/UserMapper.php';
-    require_once '../phpfaza2/kycu-regjistrohu/admin.php';
-    require_once '../phpfaza2/kycu-regjistrohu/simpleUser.php';
+    require 'UserMapper.php';
+    require_once 'admin.php';
+    require_once 'simpleUser.php';
 
 
     session_start();
@@ -118,7 +118,7 @@
                 $user = new Admin($this->username , $this->lastname  , 1 , "Administrator" , $this->password);
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
-                header("Location:../phpfaza2/views/dashboard.php");
+                header("Location:../phpfaza2/dashboard.php");
 
             }
 

@@ -1,7 +1,7 @@
 <?php 
     require '../components/header.php';
-    require '../phpfaza2/ProductsMapper.php';
-    require_once '../phpfaza2/OrdersMapper.php';
+    require 'ProductsMapper.php';
+    require_once 'OrdersMapper.php';
 
 ?>
 

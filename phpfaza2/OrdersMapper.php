@@ -1,5 +1,5 @@
 <?php
-include_once '../phpfaza2/databaseConfig.php';
+include_once 'databaseConfig.php';
 
 class OrdersMapper extends DatabasePDOConfiguration {
 

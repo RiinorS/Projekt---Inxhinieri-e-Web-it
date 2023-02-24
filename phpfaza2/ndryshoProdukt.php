@@ -1,40 +1,40 @@
 <?php
-include_once '../phpfaza2/dbconnect/ProductsMapper.php';  
+require_once 'ProductsMapper.php';  
 require '../components/menu-anash.php';
 
-
-if (isset($_POST['shto-btn'])) {
-    
-    
-    $mapper = new ProductsMapper();
-    $mapper->insert($_POST);
-
-    header("Location:../phpfaza2/shtoprodPopup.php");
+if (isset($_GET['id'])) {
+  $productId = $_GET['id'];
 }
+
+
+  $mapper = new ProductsMapper();
+  $product = $mapper ->edit($productId);
+
+
+  if(isset($_POST['ndrysho-buton'])){
+    $mapper->update($_POST,$productId);
+  }
 ?>
    
 
 
   
 
-   <div class='mbajtesi-shto'>
+  <div class='mbajtesi-ndrysho'>
         
-        <form class="forma-shto"  method="POST">
+        <form class="forma-ndrysho" action="ndryshoprodPopup.php" method="post">
             <div class="login forms form-style">
-            <h1>Shto produktin</h1>
-                
+            <h1>Ndrysho produktin</h1>
                 <label class="label" for="">Foto</label>
-                <input type="file" name='foto' class="input" placeholder="Foto"  />
+                <input type="file" name='foto' class="input" placeholder="Foto" value="<?php echo $product['foto']; ?> "/>
                 <label class="label" for="">Titulli</label>
-                <input type="text" name='titulli' class="input" placeholder="Titulli"  />
+                <input type="text" name='titulli' class="input" placeholder="Titulli" value="<?php echo $product['titulli']; ?> "/>
                 <label class="label" for="">Përshkrimi</label>
-                <input type="text" name='pershkrimi' class="input" placeholder="Përshkrimi"  />
+                <input type="text" name='pershkrimi' class="input" placeholder="Përshkrimi" value="<?php echo $product['pershkrimi']; ?> "/>
                 <label class="label" for="">Cmimi</label>
-                <input type="text" name='cmimi' class="input" placeholder="Cmimi"  />
-                
-               
+                <input type="text" name='cmimi' class="input" placeholder="Cmimi" value="<?php echo $product['cmimi']; ?>" />
 
-                <input id="shto-btn" type="submit" name="shto-btn"  class="input submit" value="Shto"  />
+                <input id="ndrysho-btn" type="submit" name="ndrysho-buton"  class="input submit" value="Ndrysho"  />
             </div>
         </form>
     </div>
@@ -44,7 +44,7 @@ if (isset($_POST['shto-btn'])) {
     
 
     <style>
-    .mbajtesi-shto {
+    .mbajtesi-ndrysho {
   margin: 0 auto;
   max-width: 800px;
   padding-left: 250px;
@@ -55,12 +55,12 @@ h1 {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 25px;
-  padding-left: 130px;
+  padding-left: 114px;
   color: black;
   
 }
 
-.forma-shto {
+.forma-ndrysho {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +102,7 @@ h1 {
 }
 
 .submit {
-  background-color: green ;
+  background-color: orange ;
   color: white;
   border: none;
   border-radius: 5px;
@@ -124,3 +124,5 @@ h1 {
 
 </style>
  
+
+

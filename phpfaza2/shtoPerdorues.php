@@ -1,35 +1,41 @@
 <?php
-include_once '../phpfaza2/dbconnect/UserMapper.php';  
-require '../components/menu-anash.php';
-if (isset($_GET['id'])) {
-    $userId = $_GET['id'];
+require 'UserMapper.php';  
+require 'simpleUser.php';
+require_once '../components/header.php';
+if (isset($_POST['shto-btn'])) {
+    
+    
+    $username = $_POST['username'];
+    $lastname = $_POST['lastname'];
+    $password = $_POST['password'];
+
+    $user = new SimpleUser($username , $lastname, 0, "Përdorues" , $password);
+
     $mapper = new UserMapper();
-    $user = $mapper->getUserByID($userId);
-}
+    $mapper->insertUser($user);
 
-
-
-
+    header("Location:../phpfaza2/shto.php");}
 ?>
    
 
 
   
 
-   <div class='mbajtesi-ndrysho'>
+   <div class='mbajtesi-shto'>
         
-        <form class="forma-ndrysho" action="../phpfaza2/ndryshoPerdoruesPopup.php" method="get">
+        <form class="forma-shto"  method="post">
             <div class="login forms form-style">
-            <h1>Ndrysho përdoruesin</h1>
-                <input type="text" style="display:none;" value=<?php echo $userId; ?> name="id" />
+            <h1>Shto përdoruesin</h1>
+                
                 <label class="label" for="">Emri</label>
-                <input type="text" name='username' class="input" placeholder="Emri" value=<?php echo $user['username']; ?> />
+                <input type="text" name='username' class="input" placeholder="Emri"  />
                 <label class="label" for="">Mbiemri</label>
-                <input type="text" name='lastname' class="input" placeholder="Mbiemri" value=<?php echo $user['userlastname']; ?> />
+                <input type="text" name='lastname' class="input" placeholder="Mbiemri"  />
                 <label class="label" for="">Passwordi</label>
-                <input type="password" name='password' class="input" placeholder="Passwordi" value=<?php echo $user['password']; ?> />
+                <input type="password" name='password' class="input" placeholder="Passwordi"  />
+               
 
-                <input id="ndrysho-btn" type="submit" name="ndrysho-btn"  class="input submit" value="Ndrysho"  />
+                <input id="shto-btn" type="submit" name="shto-btn"  class="input submit" value="Shto"  />
             </div>
         </form>
     </div>
@@ -39,7 +45,7 @@ if (isset($_GET['id'])) {
     
 
     <style>
-    .mbajtesi-ndrysho {
+    .mbajtesi-shto {
   margin: 0 auto;
   max-width: 800px;
   padding-left: 250px;
@@ -50,12 +56,12 @@ h1 {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 25px;
-  padding-left: 114px;
+  padding-left: 130px;
   color: black;
   
 }
 
-.forma-ndrysho {
+.forma-shto {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,7 +103,7 @@ h1 {
 }
 
 .submit {
-  background-color: orange ;
+  background-color: green ;
   color: white;
   border: none;
   border-radius: 5px;
@@ -119,5 +125,3 @@ h1 {
 
 </style>
  
-
-

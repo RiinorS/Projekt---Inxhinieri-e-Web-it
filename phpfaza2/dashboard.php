@@ -1,5 +1,5 @@
 
-    <?php include '../phpfaza2/menu-anash.php';  ?>
+    <?php include '../components/menu-anash.php';  ?>
 
     <div class="mbajtesi">
 

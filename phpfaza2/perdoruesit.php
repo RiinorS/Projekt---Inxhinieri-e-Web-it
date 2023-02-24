@@ -1,4 +1,4 @@
-<?php require_once '../phpfaza2/menu-anash.php';  ?>
+<?php require_once '../components/menu-anash.php';  ?>
 <!DOCTYPE html>
 <html>
   
@@ -24,7 +24,7 @@
 
 
     <?php
-        require '../phpfaza2/UserMapper.php';
+        require 'UserMapper.php';
         $model = new UserMapper();
         $rows = $model->getAllUsers();
         foreach ($rows as $row) {
@@ -46,9 +46,9 @@
                 <?php echo $row['roleName']; ?>
             </td>
             
-           
-            <td> <a href="ndrysho.php?id=<?php echo $row['userid']; ?>"> <button class="ndrysho">Ndrysho</button></a></td>
-            <td> <a href="deleteUser.php?id=<?php echo $row['userid']; ?>"> <button class="fshij" >Fshij</button></a></td>
+          
+            <td> <a href="ndryshoPerdorues.php?id=<?php echo $row['userid']; ?>"> <button class="ndrysho">Ndrysho</button></a></td>
+            <td> <a href="fshijPerdorues.php?id=<?php echo $row['userid']; ?>"> <button class="fshij" >Fshij</button></a></td>
         </tr>
 
     <?php
@@ -148,6 +148,6 @@ button.fshij {
 <script>
   
   function redirectShtoPerdorues(){
-    window.location.href = '../phpfaza2/perdoruesit/shtoPerdorues.php';
+    window.location.href = '../phpfaza2/shtoPerdorues.php';
   }
 </script>

@@ -1,20 +1,16 @@
 <?php
-include_once '../phpfaza2/UserMapper.php';  
-include_once '../phpfaza2/simpleUser.php';
+include_once '../phpfaza2/ProductsMapper.php';  
 require '../components/menu-anash.php';
+
+
 if (isset($_POST['shto-btn'])) {
     
     
-    $username = $_POST['username'];
-    $lastname = $_POST['lastname'];
-    $password = $_POST['password'];
+    $mapper = new ProductsMapper();
+    $mapper->insert($_POST);
 
-    $user = new SimpleUser($username , $lastname, 0, "Përdorues" , $password);
-
-    $mapper = new UserMapper();
-    $mapper->insertUser($user);
-
-    header("Location:../phpfaza2/shto.php");}
+    header("Location:../phpfaza2/shtoprodPopup.php");
+}
 ?>
    
 
@@ -23,16 +19,19 @@ if (isset($_POST['shto-btn'])) {
 
    <div class='mbajtesi-shto'>
         
-        <form class="forma-shto"  method="post">
+        <form class="forma-shto"  method="POST">
             <div class="login forms form-style">
-            <h1>Shto përdoruesin</h1>
+            <h1>Shto produktin</h1>
                 
-                <label class="label" for="">Emri</label>
-                <input type="text" name='username' class="input" placeholder="Emri"  />
-                <label class="label" for="">Mbiemri</label>
-                <input type="text" name='lastname' class="input" placeholder="Mbiemri"  />
-                <label class="label" for="">Passwordi</label>
-                <input type="password" name='password' class="input" placeholder="Passwordi"  />
+                <label class="label" for="">Foto</label>
+                <input type="file" name='foto' class="input" placeholder="Foto"  />
+                <label class="label" for="">Titulli</label>
+                <input type="text" name='titulli' class="input" placeholder="Titulli"  />
+                <label class="label" for="">Përshkrimi</label>
+                <input type="text" name='pershkrimi' class="input" placeholder="Përshkrimi"  />
+                <label class="label" for="">Cmimi</label>
+                <input type="text" name='cmimi' class="input" placeholder="Cmimi"  />
+                
                
 
                 <input id="shto-btn" type="submit" name="shto-btn"  class="input submit" value="Shto"  />
@@ -49,7 +48,7 @@ if (isset($_POST['shto-btn'])) {
   margin: 0 auto;
   max-width: 800px;
   padding-left: 250px;
-  padding-top: 80px ;
+  padding-top: 40px ;
 }
 
 h1 {
