@@ -1,6 +1,6 @@
 <?php
-include_once '/ProductsMapper.php';
-include_once '../components/menu-anash.php';
+require 'ProductsMapper.php';
+include '../components/menu-anash.php';
 
 
 if (isset($_GET['id'])) {
@@ -99,7 +99,7 @@ if (isset($_GET['id'])) {
 
 function closeFshijePopup(){
     
-    window.location.href = 'phpfaza2/produktet/produktetdash.php'; 
+    window.location.href = 'produktetdash.php'; 
 }
 
 </script>

@@ -56,7 +56,7 @@ if (isset($_POST['blej-btn'])) {
   $mapper = new OrdersMapper();
   $mapper->insert($_POST);
 
-  header("Location:../phpfaza2/porosite/porosiapopup.php");
+  header("Location:../phpfaza2/porosiapopup.php");
   }
 ?>
 

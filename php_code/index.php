@@ -63,18 +63,18 @@
           <button type="button" class="nderrimibutonave" onclick="regjistrohuni()" > Regjistrohuni</button>
       </div>
 
-      <form action="../phpfaza2/loginVerify.php"  id="kycuni" class="input-grupi" method="post" onsubmit= " return valido()" >
+      <form action="../phpfaza2/loginVerify.php"  id="kycuni" class="input-grupi" method="post">
           <input type="text" id="perdoruesi_kycuni"  class="input-fusha" name="username"  placeholder="Emri" >
           <input type="password" id="fjalekalimi_kycuni"  class="input-fusha" name="password" placeholder="Fjalekalimi" >
-          <button type="submit" id="butoni-kycu" class="butoni-submit" name= "login-btn"  onclick="validimiKycuni()" >Kyçuni</button>
+          <button type="submit" id="butoni-kycu" class="butoni-submit" name= "login-btn"   >Kyçuni</button>
 
       </form>
 
-      <form  name="FormaRegjistrohuni"  action="../phpfaza2/loginVerify.php" id="regjistrohuni"  method="post" class="input-grupi" >
-          <input type="text" name="register-username"  id="email_regjistrohuni" class="input-fusha" placeholder="Emri" >
-          <input type="text" name="register-lastname"  id="perdoruesi_regjistrohuni" class="input-fusha" placeholder="Mbiemri" >
-          <input type="password" name="register-password"  id="fjalekalimi_regjistrohuni" class="input-fusha" placeholder="Fjalëkalimi" >
-          <input type="checkbox" class="tick-kutia"> <span class="tickkr" >Unë pajtohem me kushtet dhe përmbajtjen e privatësisë</span>
+      <form   action="../phpfaza2/loginVerify.php" id="regjistrohuni"  method="post" class="input-grupi" onsubmit="return validimiRegjistrohuni()" >
+          <input type="text" name="register-username"  id="email_regjistrohuni" class="input-fusha" placeholder="Emri" required >
+          <input type="text" name="register-lastname"  id="perdoruesi_regjistrohuni" class="input-fusha" placeholder="Mbiemri" required  >
+          <input type="password" name="register-password"  id="fjalekalimi_regjistrohuni" class="input-fusha" placeholder="Fjalëkalimi" required>
+          <input type="checkbox" class="tick-kutia" required > <span class="tickkr" >Unë pajtohem me kushtet dhe përmbajtjen e privatësisë</span>
           <button type="submit" class="butoni-submit" name="register-btn"   >Regjistrohuni</button>
 
       </form>
@@ -82,20 +82,6 @@
   </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

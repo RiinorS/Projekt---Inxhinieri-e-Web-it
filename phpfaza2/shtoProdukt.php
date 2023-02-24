@@ -1,6 +1,6 @@
 <?php
-include_once '../phpfaza2/ProductsMapper.php';  
-require '../components/menu-anash.php';
+require 'ProductsMapper.php';  
+include '../components/menu-anash.php';
 
 
 if (isset($_POST['shto-btn'])) {
@@ -24,13 +24,13 @@ if (isset($_POST['shto-btn'])) {
             <h1>Shto produktin</h1>
                 
                 <label class="label" for="">Foto</label>
-                <input type="file" name='foto' class="input" placeholder="Foto"  />
+                <input type="file" name='foto' class="input"   />
                 <label class="label" for="">Titulli</label>
-                <input type="text" name='titulli' class="input" placeholder="Titulli"  />
+                <input type="text" name='titulli' class="input"   />
                 <label class="label" for="">Përshkrimi</label>
-                <input type="text" name='pershkrimi' class="input" placeholder="Përshkrimi"  />
+                <input type="text" name='pershkrimi' class="input"  />
                 <label class="label" for="">Cmimi</label>
-                <input type="text" name='cmimi' class="input" placeholder="Cmimi"  />
+                <input type="text" name='cmimi' class="input"   />
                 
                
 

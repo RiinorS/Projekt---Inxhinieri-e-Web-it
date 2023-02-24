@@ -1,6 +1,6 @@
 <?php
-include_once '/UserMapper.php';
-include_once '../components/menu-anash.php';
+require 'UserMapper.php';
+include '../components/menu-anash.php';
 
 
 if (isset($_GET['id'])) {
@@ -100,7 +100,7 @@ if (isset($_GET['id'])) {
 
 function closeFshijePopup(){
     
-    window.location.href = 'phpfaza2/perdoruesit/perdoruesit.php';
+    window.location.href = 'perdoruesit.php';
 }
 
 </script>

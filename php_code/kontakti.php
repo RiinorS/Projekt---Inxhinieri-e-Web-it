@@ -42,7 +42,7 @@
 
    <div class="icons">
       <!-- <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a> -->
-      <a href="../phpfaza2/logOut.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+      <a href="../php_code/ckycuni.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
     </div>
 
 </header> 
@@ -79,7 +79,7 @@
   
     <?php
 
-    require '../phpfaza2/dbconnect/MessagesMapper.php';
+    require '../phpfaza2/MessagesMapper.php';
 
     if (isset($_POST['dergo-btn'])) {
     
@@ -87,7 +87,7 @@
     $mapper = new MessagesMapper();
     $mapper->insert($_POST);
 
-    header("Location:../phpfaza2/mesazhet/msgpopup.php");
+    header("Location:../phpfaza2/msgpopup.php");
     }
     
     ?>
@@ -98,27 +98,27 @@
     <form class="kontakt-forma" method="post" >
         <h1>Na kontaktoni</h1>
         <div id="prapavija-formave" class="tekst-infot">
-          <label>Përdoruesi :</label>
-          <input type="text"  id="perdoruesi_kontakto" name="perdoruesi" value="" placeholder="Shënoni përdoruesin">
+          <label>Emri :</label>
+          <input type="text"  id="perdoruesi_kontakto" name="perdoruesi" value="" placeholder="Shënoni emrin" >
         </div>
   
         <div id="prapavija-formave" class="tekst-infot">
           <label>Email :</label>
-          <input type="email" id="email_kontakto" name="email" value="" placeholder="Shënoni email-en tuaj">
+          <input type="email" id="email_kontakto" name="email" value="" placeholder="Shënoni email-en tuaj"  >
         </div>
   
         <div id="prapavija-formave" class="tekst-infot">
           <label>Numri i telefonit :</label>
-          <input type="text" id="numri_kontakto" name="numri" value="" placeholder="Shënoni numrin tuaj të telefonit ">
+          <input type="text" id="numri_kontakto" name="numri" value="" placeholder="Shënoni numrin tuaj të telefonit" >
         </div>
   
         <div id="prapavija-formave"class="tekst-infot">
           <label>Mesazhi juaj :</label>
-       
-          <textarea id="mesazhi_kontakto" name="mesazhi" ></textarea>
+        
+          <textarea id="mesazhi_kontakto" name="mesazhi"  ></textarea>
         
         </div>
-        <button type="submit" class="dergo"  name="dergo-btn"  >Dërgoni</button> 
+        <button type="submit" class="dergo"  name="dergo-btn" onclick="kontakti()" >Dërgoni</button> 
       </div>
     </form>
 

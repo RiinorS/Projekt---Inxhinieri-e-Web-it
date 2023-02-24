@@ -1,4 +1,4 @@
-<?php require_once '../components/menu-anash.php';  ?>
+<?php include '../components/menu-anash.php';  ?>
 <!DOCTYPE html>
 <html>
   
@@ -24,7 +24,7 @@
 
 
     <?php
-        require 'UserMapper.php';
+        require '../phpfaza2/UserMapper.php';
         $model = new UserMapper();
         $rows = $model->getAllUsers();
         foreach ($rows as $row) {

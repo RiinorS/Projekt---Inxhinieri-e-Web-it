@@ -1,4 +1,5 @@
-<?php require '/ProductsMapper.php';
+<?php
+require 'ProductsMapper.php';
 include '../components/menu-anash.php';
 ?>
 
@@ -11,14 +12,14 @@ include '../components/menu-anash.php';
     
     <div class="koka-tabeles">
         <h2>Produktet e regjistruara</h2>
-        <button class="shto-perdoruesin" onclick="redirectShtoPerdorues()"  >Shto produkt</button>
+        <button class="shto-perdoruesin" onclick="redirectShtoProdukt()"  >Shto produkt</button>
     </div>
     <tr>
       <th>ID</th>
       <th>Foto</th>
       <th>Titulli</th>
       <th>Përshkrimi</th>
-      <th>Cmimi</th>
+      <th>Çmimi</th>
 
       
       <th colspan="2" style="text-align: center;" >Veprimi</th>
@@ -153,7 +154,7 @@ button.fshij {
 
 <script>
   
-  function redirectShtoPerdorues(){
-    window.location.href = 'phpfaza2/shtoProdukt.php';
+  function redirectShtoProdukt(){
+    window.location.href = 'shtoProdukt.php';
   }
 </script>

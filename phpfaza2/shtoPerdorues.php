@@ -1,7 +1,7 @@
 <?php
 require 'UserMapper.php';  
 require 'simpleUser.php';
-require_once '../components/header.php';
+include '../components/menu-anash.php';
 if (isset($_POST['shto-btn'])) {
     
     
@@ -14,7 +14,7 @@ if (isset($_POST['shto-btn'])) {
     $mapper = new UserMapper();
     $mapper->insertUser($user);
 
-    header("Location:../phpfaza2/shto.php");}
+    header("Location:../phpfaza2/shtoPerdoruesPopup.php");}
 ?>
    
 
@@ -28,11 +28,11 @@ if (isset($_POST['shto-btn'])) {
             <h1>Shto përdoruesin</h1>
                 
                 <label class="label" for="">Emri</label>
-                <input type="text" name='username' class="input" placeholder="Emri"  />
+                <input type="text" name='username' class="input"   />
                 <label class="label" for="">Mbiemri</label>
-                <input type="text" name='lastname' class="input" placeholder="Mbiemri"  />
+                <input type="text" name='lastname' class="input"  />
                 <label class="label" for="">Passwordi</label>
-                <input type="password" name='password' class="input" placeholder="Passwordi"  />
+                <input type="password" name='password' class="input"  />
                
 
                 <input id="shto-btn" type="submit" name="shto-btn"  class="input submit" value="Shto"  />

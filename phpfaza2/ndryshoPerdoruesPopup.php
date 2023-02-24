@@ -1,9 +1,9 @@
 <?php
 
-require_once 'UserMapper.php';
-require_once 'simpleUser.php';
+require 'UserMapper.php';
+require 'simpleUser.php';
 
-include_once 'menu-anash.php';
+include '../components/menu-anash.php';
 
 if (isset($_GET['username']) && isset($_GET['username'])) {
     $userId = $_GET['id'];
@@ -106,7 +106,7 @@ if (isset($_GET['username']) && isset($_GET['username'])) {
 
 function closeEditPopup(){
     
-    window.location.href = 'phpfaza2/perdoruesit.php';
+    window.location.href = 'perdoruesit.php';
 }
 
 </script> 

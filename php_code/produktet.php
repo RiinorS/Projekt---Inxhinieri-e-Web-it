@@ -42,7 +42,7 @@
 
   <div class="icons">
     <!-- <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a> -->
-    <a href="../phpfaza2/logOut.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+    <a href="../php_code/ckycuni.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
   </div>
 
 </header> 
@@ -253,9 +253,9 @@
         <div class="cmimi-produkteve">'.$all[$i]['cmimi'] .' € </div>
         <div class="butoni-shporta">
           
-        <form method="get" action="../phpfaza2/porosite/blejtani.php">
+        <form method="get" action="../phpfaza2/blejtani.php">
                     <input type="hidden" name="id" value="' . $all[$i]['productid'] . '">
-                    <button style="padding-left:15px;padding-right:15px;" type="submit" class="blej-btn" name="blej-btn">Blej</button>
+                    <button style="padding-left:15px;padding-right:15px;" type="submit" class="blej-btn" name="blej-btn">Blej tani</button>
                 </form>
 
         </div>

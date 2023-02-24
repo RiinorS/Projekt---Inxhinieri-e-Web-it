@@ -1,5 +1,5 @@
 <?php
-include_once '../components/menu-anash.php';
+include '../components/menu-anash.php';
 ?>
 <div class="mbajtesi-popup">
 

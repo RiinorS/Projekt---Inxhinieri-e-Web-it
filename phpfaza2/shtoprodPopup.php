@@ -1,5 +1,5 @@
 <?php
-include_once '../components/menu-anash.php';
+include '../components/menu-anash.php';
 ?>
 <div class="mbajtesi-popup">
 
@@ -9,7 +9,7 @@ include_once '../components/menu-anash.php';
         <img src="../images/tick-insert.png">
         <h2>Sukses!</h2>
         <p>Ju keni shtuar të dhënat e produktit</p>
-        <button type="button" onclick="closeShtoPopup()" >Vazhdo</button>
+        <button type="button" onclick="closeShtoProdukt()" >Vazhdo</button>
     </div>
 
 
@@ -87,9 +87,9 @@ include_once '../components/menu-anash.php';
 <script>
 
 
-function closeShtoPopup(){
+function closeShtoProdukt(){
     
-    window.location.href = 'phpfaza2/produktetdash.php'; 
+    window.location.href = '../phpfaza2/produktetdash.php'; 
 }
 
 </script> 

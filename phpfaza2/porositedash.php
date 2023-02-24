@@ -1,5 +1,6 @@
-<?php require 'OrdersMapper.php';
-require 'menu-anash.php';  ?>
+<?php
+require 'OrdersMapper.php';
+include '../components/header.php';  ?>
 
 <!DOCTYPE html>
 <html>

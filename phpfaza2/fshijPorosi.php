@@ -1,6 +1,6 @@
 <?php
-include_once '/OrdersMapper.php';
-include_once '../components/menu-anash.php';
+require 'OrdersMapper.php';
+include '../components/menu-anash.php';
 
 
 if (isset($_GET['id'])) {
@@ -99,7 +99,7 @@ if (isset($_GET['id'])) {
 
 function closeFshijePopup(){
     
-    window.location.href = 'phpfaza2/porosite/porositedash.php'; 
+    window.location.href = 'porositedash.php'; 
 }
 
 </script>

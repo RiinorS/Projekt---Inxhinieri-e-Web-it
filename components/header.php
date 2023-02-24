@@ -7,7 +7,7 @@
 <header>
 
         <div class="logo">RINI <span class="tech" >  Tech</span></div>
-    
+
         <nav class="nav-bar">
 
                 <ul>
@@ -21,8 +21,7 @@
         </nav>
 
         <div class="icons">
-          <a href="../php_code/index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
-          <a href="../phpfaza2/logOut.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+          <a href="../php_code/ckycuni.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
         </div>
 
 </header>

@@ -2,11 +2,9 @@
 <!-- -- Kodi per verifikimin e butonit kycuni per kycje dhe regjistrim -->
 
 <?php
-
     require 'UserMapper.php';
-    require_once 'admin.php';
-    require_once 'simpleUser.php';
-
+    require 'admin.php';
+    require 'simpleUser.php';
 
     session_start();
 
@@ -17,59 +15,41 @@
     else if (isset($_POST['register-btn'])) {
         $register = new RegisterLogic($_POST);
         $register->registerUser();
-
     }
-
     else {
         header("Location:../php_code/index.php");
     }
 
-
     class LoginLogic{
-
 
         private $username = "";
         private $password = "";
 
-        
+
         public  function __construct($formData){
             $this-> username = $formData['username'];
             $this-> password = $formData['password'];
         }
         
-            
-        
-        
-
-
         public function verify() {
-
-           
 
             if($this->verifyEmptyData($this->username, $this->password)){
                 header("Location:../php_code/index.php");
             }
-
             else if($this->verifyLogin($this->username, $this->password) ){
                 header("Location:../php_code/faqja.php");
             }
-
             else {
                 header("Location:../php_code/index.php");
             }
-
         }
-
 
         private function verifyEmptyData($username , $password) {
 
             if(empty($username) || empty($password)){
-    
                 return true;
-    
             }
             return false;
-    
         }
 
         private function verifyLogin($username, $password) {
@@ -88,11 +68,9 @@
                     $obj = new SimpleUser($user['username'], $user['userlastname']  , $user['role'] , $user['roleName'] ,$user['password']);
                     $obj->setSession();
                     }
-            
                 return true;
             } 
             else return false;
-    
         }
     }   
 
@@ -102,7 +80,6 @@
         private $lastname = "";
         private $password = "";
 
-        
         public  function __construct($formData){
 
             $this-> username = $formData['register-username'];
@@ -110,21 +87,15 @@
             $this-> password = $formData['register-password'];
         }
 
-
         public function registerUser(){
-
 
             if($this->username === "Rinor" || $this->username === "Rinas") {
                 $user = new Admin($this->username , $this->lastname  , 1 , "Administrator" , $this->password);
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
                 header("Location:../phpfaza2/dashboard.php");
-
             }
-
-            
-
-             else {  
+            else {  
 
                 $user = new SimpleUser($this->username , $this->lastname , 0 , "Përdorues" ,  $this->password);
                 $mapper = new UserMapper();
@@ -132,9 +103,6 @@
                 header("Location:../php_code/faqja.php");
             }
         } 
-
-
-
     }
 ?>
     
