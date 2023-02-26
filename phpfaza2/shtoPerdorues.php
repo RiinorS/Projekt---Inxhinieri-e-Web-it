@@ -39,35 +39,52 @@ if (isset($_POST['shto-btn'])) {
             </div>
         </form>
     </div>
-
-    <?php 
+    <?php
       echo 
-        '<script>
-            document.getElementById("shtoperdorues").addEventListener("submit", function(event) {
-            var emri = document.getElementById("shto-emer").value;
-            var mbiemri = document.getElementById("shto-mbiemer").value;
-            var fjalekalimi = document.getElementById("shto-fjalekalim").value;
-  
+      '<script>
+          document.getElementById("shtoperdorues").addEventListener("submit", function(event) {
+          var emri = document.getElementById("shto-emer").value;
+          var mbiemri = document.getElementById("shto-mbiemer").value;
+          var fjalekalimi = document.getElementById("shto-fjalekalim").value;
 
-            if (emri == "") {
-              alert("Ju lutem kontrolloni që emri mos të jetë i zbrazët!");
-              event.preventDefault(); 
-            }    
 
-            if (mbiemri == "") {
-              alert("Ju lutem kontrolloni që mbiemri mos të jetë i zbrazët!");
-              event.preventDefault(); 
-            }
+          var regEm = /^[a-zA-Z]{3,}$/;
 
-            if (fjalekalimi == "") {
-              alert("Ju lutem kontrolloni që fjalekalimi mos të jetë i zbrazët!");
-              event.preventDefault(); 
-            }
+          var regexEmri = regEm.test(emri);
 
-          });
-        </script>';
-    ?>
+          if(!regexEmri){
+            alert("Ju lutem kontrolloni që emri të përmbajë minimum 3 shkronja!");
+            event.preventDefault();
+          }
 
+
+          // mbiemri te kete te pakten 3 shkronja
+
+
+          var regMb = /^[a-zA-Z]{3,}$/;
+
+          var regex_Mbiemri = regMb.test(mbiemri);
+
+          if(!regex_Mbiemri){
+            alert("Ju lutem kontrolloni që mbiemri të përmbajë minimum 3 shkronja!");
+            event.preventDefault(); 
+          }
+
+
+          // fjalekalimi duhet te kete minimum 5 karaktere dhe te permbaje 1 numer
+
+          var regFjalekalimi = /^[a-zA-Z]{3,}.*\d/;
+
+          var regex_Fjalekalimi = regFjalekalimi.test(fjalekalimi);
+
+          if(!regex_Fjalekalimi){
+            alert("Ju lutem kontrolloni që fjalëkalimi të përmbajë minimum 3 shkronja dhe te paktën 1 numer!");
+            event.preventDefault(); 
+          }
+
+        });
+      </script>';
+  ?>
 
 
     

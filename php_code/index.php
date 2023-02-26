@@ -17,10 +17,16 @@
 
  <header>
 
-  <div class="logo">RINI <span class="tech">  Tech</span></div>
+  <div class="logo">
+    RINI <span class="tech">  Tech</span>
+  </div>
+
+  <!-- <a class="flash" href="produktet.php" > Flash Zbritje ! </a> -->
+  <div class="logo">
+   &nbsp; Flash  Zbritje !</span>
+  </div>
 
   <nav class="nav-bar">
-
           <ul>
               
             <li> <a href="faqja.php" >Faqja </a>  </li>
@@ -58,55 +64,58 @@
           <input type="text" name="register-username"  id="email_regjistrohuni" class="input-fusha" placeholder="Emri"  >
           <input type="text" name="register-lastname"  id="perdoruesi_regjistrohuni" class="input-fusha" placeholder="Mbiemri"   >
           <input type="password" name="register-password"  id="fjalekalimi_regjistrohuni" class="input-fusha" placeholder="Fjalëkalimi" >
-          <input type="checkbox" class="tick-kutia"  > <span class="tickkr" >Unë pajtohem me kushtet dhe përmbajtjen e privatësisë</span>
+          <input type="checkbox" class="tick-kutia"  id="checkbox_privacy"> <span class="tickkr" >Unë pajtohem me kushtet dhe përmbajtjen e privatësisë</span>
           <button type="submit" class="butoni-submit" name="register-btn"   >Regjistrohuni</button>
 
       </form>
 <?php
       echo 
       '<script>
-          document.getElementById("regjistrohuni").addEventListener("submit", function(event) {
+        document.getElementById("regjistrohuni").addEventListener("submit", function(event) {
           var emri = document.getElementById("email_regjistrohuni").value;
           var mbiemri = document.getElementById("perdoruesi_regjistrohuni").value;
           var fjalekalimi = document.getElementById("fjalekalimi_regjistrohuni").value;
+          var checkbox = document.getElementById("checkbox_privacy");
 
 
           var regEm = /^[a-zA-Z]{3,}$/;
 
-    var regexEmri = regEm.test(emri);
+          var regexEmri = regEm.test(emri);
 
-    if(!regexEmri){
-        alert("Ju lutem kontrolloni që emri të përmbajë minimum 3 shkronja!");
-        event.preventDefault(); 
-
-      }
-
-
-    // mbiemri te kete te pakten 3 shkronja
+          if(!regexEmri){
+            alert("Ju lutem kontrolloni që emri të përmbajë minimum 3 shkronja!");
+            event.preventDefault(); 
+          }
 
 
-    var regMb = /^[a-zA-Z]{3,}$/;
-
-    var regex_Mbiemri = regMb.test(mbiemri);
-
-    if(!regex_Mbiemri){
-        alert("Ju lutem kontrolloni që mbiemri të përmbajë minimum 3 shkronja!");
-        event.preventDefault(); 
-
-    }
+          // mbiemri te kete te pakten 3 shkronja
 
 
-    // fjalekalimi duhet te kete minimum 5 karaktere dhe te permbaje 1 numer
+          var regMb = /^[a-zA-Z]{3,}$/;
 
-    var regFjalekalimi = /^[a-zA-Z]{3,}.*\d/;
+          var regex_Mbiemri = regMb.test(mbiemri);
 
-    var regex_Fjalekalimi = regFjalekalimi.test(fjalekalimi);
+          if(!regex_Mbiemri){
+            alert("Ju lutem kontrolloni që mbiemri të përmbajë minimum 3 shkronja!");
+            event.preventDefault(); 
+          }
 
-    if(!regex_Fjalekalimi){
-        alert("Ju lutem kontrolloni që fjalëkalimi të përmbajë minimum 3 shkronja dhe te paktën 1 numer!");
-        event.preventDefault(); 
 
-    }
+          // fjalekalimi duhet te kete minimum 5 karaktere dhe te permbaje 1 numer
+
+          var regFjalekalimi = /^[a-zA-Z]{3,}.*\d/;
+
+          var regex_Fjalekalimi = regFjalekalimi.test(fjalekalimi);
+
+          if(!regex_Fjalekalimi){
+            alert("Ju lutem kontrolloni që fjalëkalimi të përmbajë minimum 3 shkronja dhe te paktën 1 numer!");
+            event.preventDefault(); 
+          }
+
+          if (!checkbox.checked) {
+            alert("Ju lutem pajtohuni me kushtet dhe përmbajtjen e privatësisë!");
+            event.preventDefault();
+          }
 
         });
       </script>';

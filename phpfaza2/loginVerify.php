@@ -91,6 +91,7 @@
 
             if($this->username === "Rinor" || $this->username === "Rinas") {
                 $user = new Admin($this->username , $this->lastname  , 1 , "Administrator" , $this->password);
+                $user->setSession();
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
                 header("Location:../phpfaza2/dashboard.php");
@@ -98,6 +99,7 @@
             else {  
 
                 $user = new SimpleUser($this->username , $this->lastname , 0 , "Përdorues" ,  $this->password);
+                $user->setSession();
                 $mapper = new UserMapper();
                 $mapper->insertUser($user);
                 header("Location:../php_code/faqja.php");

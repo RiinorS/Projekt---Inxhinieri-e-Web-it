@@ -37,9 +37,9 @@ header{
 }
 
 
+
 .nav-bar ul {
-    display: flex;
-  
+    display: flex;  
     
 }
 
@@ -152,7 +152,7 @@ header{
     color: white;
     display: flex;
     justify-content: space-between;
-    padding: 5px 200px;
+    padding: 5px 100px;
     font-size: x-large;
     
 }
@@ -170,7 +170,7 @@ header{
 /* Fillimi i footerit  */
 
 
-.footer {
+/* .footer {
     width: 100%;
     background-color: black;
     color: white;
@@ -215,7 +215,7 @@ header{
 
   .footer-column{
     color: gray;
-  }
+  } */
 
 
   /* Mbarimi i footerit  */
