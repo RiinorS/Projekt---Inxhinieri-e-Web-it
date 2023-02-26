@@ -15,7 +15,7 @@ include '../components/menu-anash.php';
         <button class="shto-perdoruesin" onclick="redirectShtoProdukt()"  >Shto produkt</button>
     </div>
     <tr>
-      <th>ID</th>
+      <th>Produkti ID</th>
       <th>Foto</th>
       <th>Titulli</th>
       <th>Përshkrimi</th>

@@ -22,14 +22,16 @@ class OrdersMapper extends DatabasePDOConfiguration {
     public function insert($request){
 
         // $request['foto'] = '../images/' .$request['foto'];
-        $query = $this->conn->prepare('INSERT INTO porosite ( emri , mbiemri , adresa , komuna , numri) values 
-        ( :emri , :mbiemri , :adresa , :komuna , :numri)');
+        $query = $this->conn->prepare('INSERT INTO porosite ( emri , mbiemri , adresa , komuna , numri , produkti)
+         values ( :emri , :mbiemri , :adresa , :komuna , :numri , :produkti)');
 
         $query->bindParam(':emri' , $request['emri']);
         $query->bindParam(':mbiemri' , $request['mbiemri']);
         $query->bindParam(':adresa' , $request['adresa']);
         $query->bindParam(':komuna' , $request['komuna']);
         $query->bindParam(':numri' , $request['numri']);
+        $query->bindParam(':produkti' , $request['produkti']);
+
 
 
         $query->execute();

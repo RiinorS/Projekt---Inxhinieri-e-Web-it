@@ -1,5 +1,5 @@
 
-<!-- -- Kodi per verifikimin e butonit kycuni per kycje dhe regjistrim -->
+<!-- -- Kodi per verifikimin e butonit  per kycje dhe regjistrim -->
 
 <?php
     require 'UserMapper.php';
@@ -14,7 +14,7 @@
     }
     else if (isset($_POST['register-btn'])) {
         $register = new RegisterLogic($_POST);
-        $register->registerUser();
+        $register->register();
     }
     else {
         header("Location:../php_code/index.php");
@@ -102,7 +102,28 @@
                 $mapper->insertUser($user);
                 header("Location:../php_code/faqja.php");
             }
-        } 
+        }
+        
+        private function verifyEmptyData2($username , $lastname , $password) {
+
+            if(empty($username) || empty($lastname) || empty($password)){
+                return true;
+            }
+            return false;
+        }
+
+
+        public function register() {
+
+            if($this->verifyEmptyData2($this->username, $this->lastname ,$this->password)){
+                header("Location:../php_code/index.php");
+            }
+            else if($this->registerUser($this->username, $this->lastname ,$this->password)) {
+                header("Location:../php_code/faqja.php");
+            }
+            
+        }
+        
     }
 ?>
     

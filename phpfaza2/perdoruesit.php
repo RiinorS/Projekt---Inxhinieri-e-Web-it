@@ -11,7 +11,7 @@
         <button class="shto-perdoruesin" onclick="redirectShtoPerdorues()"  >Shto përdorues</button>
     </div>
     <tr>
-      <th>ID</th>
+      <th>Përdoruesi ID</th>
       <th>Emri</th>
       <th>Mbiemri</th>
       <th>Roli</th>

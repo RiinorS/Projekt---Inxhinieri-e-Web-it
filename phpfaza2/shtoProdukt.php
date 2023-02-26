@@ -19,18 +19,18 @@ if (isset($_POST['shto-btn'])) {
 
    <div class='mbajtesi-shto'>
         
-        <form class="forma-shto"  method="POST">
+        <form class="forma-shto"  method="POST" id="shto-form" onsubmit="return validimiShtoProdukt()" >
             <div class="login forms form-style">
             <h1>Shto produktin</h1>
                 
                 <label class="label" for="">Foto</label>
-                <input type="file" name='foto' class="input"   />
+                <input type="file" id="shto-foto" name='foto' class="input"   />
                 <label class="label" for="">Titulli</label>
-                <input type="text" name='titulli' class="input"   />
+                <input type="text" id="shto-titull" name='titulli' class="input"   />
                 <label class="label" for="">Përshkrimi</label>
-                <input type="text" name='pershkrimi' class="input"  />
+                <input type="text" id="shto-pershkrim" name='pershkrimi' class="input"  />
                 <label class="label" for="">Cmimi</label>
-                <input type="text" name='cmimi' class="input"   />
+                <input type="text" id="shto-cmim" name='cmimi' class="input"   />
                 
                
 
@@ -39,12 +39,45 @@ if (isset($_POST['shto-btn'])) {
         </form>
     </div>
 
+    <?php 
+      echo 
+        '<script>
+            document.getElementById("shto-form").addEventListener("submit", function(event) {
+            var foto = document.getElementById("shto-foto").value;
+            var titulli = document.getElementById("shto-titull").value;
+            var pershkrimi = document.getElementById("shto-pershkrim").value;
+            var cmimi = document.getElementById("shto-cmim").value;
+  
+
+            if (foto == "") {
+              alert("Ju lutem kontrolloni që foto mos të jetë e zbrazët!");
+              event.preventDefault(); 
+            }    
+
+            if (titulli == "") {
+              alert("Ju lutem kontrolloni që titulli mos të jetë i zbrazët!");
+              event.preventDefault(); 
+            }
+
+            if (pershkrimi == "") {
+              alert("Ju lutem kontrolloni që përshkrimi mos të jetë i zbrazët!");
+              event.preventDefault(); 
+            }
+
+            if (cmimi == "") {
+              alert("Ju lutem kontrolloni që cmimi mos të jetë i zbrazët!");
+              event.preventDefault(); 
+            } 
+
+          });
+        </script>';
+    ?>
 
 
     
 
-    <style>
-    .mbajtesi-shto {
+<style>
+.mbajtesi-shto {
   margin: 0 auto;
   max-width: 800px;
   padding-left: 250px;
@@ -119,8 +152,6 @@ h1 {
 }
 
 
-
-
-
 </style>
+
  

@@ -1,10 +1,14 @@
+<?php
+ session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rini - Tech  </title>
+    <title>Faqja - Rini Tech  </title>
     <link rel ="icon" type="image/png" href="../images/favicon.jpg">
     <link href="../css_code/style.css" rel="stylesheet" type="text/css">
     
@@ -14,41 +18,48 @@
 
  
   <!-- Navigimi i faqes -->
-     <header>
+<header>
 
-        <div class="logo">RINI <span class="tech">  Tech</span></div>
+  <div class="logo">RINI <span class="tech">  Tech</span></div>
     
-        <nav class="nav-bar">
+  <nav class="nav-bar">
 
-                <ul>
-                  <?php
-                  session_start();
-                    if(isset($_SESSION['role']) && $_SESSION['role'] == 1 ) {
-                  ?>
-                    <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
+    <ul>
+      <?php
+          if(isset($_SESSION['role']) && $_SESSION['role'] == 1 ) {
+      ?>
+      <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
 
-                  <?php
-                  } 
-
-                  ?>
-
+      <?php
+        } 
+      ?>
                   
-                  <li> <a href="faqja.php" class="active" >Faqja </a>  </li>
-                  <li> <a href="produktet.php"> Produktet  </a> </li>
-                  <li> <a href="rrethnesh.php"> Rreth Nesh  </a> </li>
-                  <li> <a href="kontakti.php"> Kontakti  </a> </li>
+      <li> <a href="faqja.php" class="active" >Faqja </a>  </li>
+      <li> <a href="produktet.php"> Produktet  </a> </li>
+      <li> <a href="rrethnesh.php"> Rreth Nesh  </a> </li>
+      <li> <a href="kontakti.php"> Kontakti  </a> </li>
+    
+    </ul>                
+  </nav>
 
+  <div class="icons">
+    <?php
+      if(!isset($_SESSION['role']) ) {
+    ?>
 
-                    
-                </ul>                
-        </nav>
-
-        <div class="icons">
-          <!-- <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a> -->
-          <a href="../php_code/ckycuni.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
-        </div>
-
-    </header> 
+    <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
+        
+    <?php
+      }
+      else {
+    ?>
+    <a href="../php_code/ckycuni.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+    <?php
+      }
+    ?>
+  </div>
+  
+</header> 
 
 
 

@@ -75,8 +75,8 @@
                         <tr>
 
                             <th>Klienti</th>
-                            <th>Produkti</th>
-                            <th>Sasia</th>
+                            <th colspan="2"  >Produkti</th>
+
                             <th>Totali</th>
 
                         </tr>
@@ -84,26 +84,26 @@
                         <tr>
 
                             <td>Jona Rrahmani</td>
-                            <td>Kamerë GoPro HERO11</td>
-                            <td>1</td>
-                            <td>749.50 €</td>
+                            <td>Kufje JBL</td>
+                            <td> <img src="../images/kufjeJBL.jpg " width="30px" height="30px" > </td>
+                            <td>36.17 €</td>
 
                         </tr>
 
                         <tr>
 
                             <td>Fazli Thaqi</td>
-                            <td>Apple AirPods</td>
-                            <td>1</td>
-                            <td>259.00 €</td>
+                            <td>Mouse Razer</td>
+                            <td> <img src="../images/mouseRazer.jpg " width="30px" height="30px" > </td>
+                            <td>39.50 €</td>
 
                         </tr>
 
                         <tr>
 
                             <td>Vesa Rrahmani</td>
-                            <td>Kufje JBL</td>
-                            <td>2</td>
+                            <td>Zmadhues zëri JBL</td>
+                            <td> <img src="../images/jbl.jpg " width="30px" height="30px" > </td>
                             <td>301.50 €</td>
 
                         </tr>
@@ -111,18 +111,18 @@
                         <tr>
 
                             <td>Yll Shillova</td>
-                            <td>Mouse Razer</td>
-                            <td>4</td>
-                            <td>158.00 €</td>
+                            <td>Fanellë  Bad News Eagles</td>
+                            <td> <img src="../images/bNE.jpg " width="30px" height="30px" > </td>
+                            <td>49.50 €</td>
 
                         </tr>
 
                         <tr>
 
                             <td>Dijane Hoti</td>
-                            <td>Tastierë Preyon</td>
-                            <td>1</td>
-                            <td>62.50 €</td>
+                            <td>ÇANTË PULSE</td>
+                            <td> <img src="../images/cantepulse.jpg " width="30px" height="30px" > </td>
+                            <td>31.68 €</td>
 
                         </tr>
                         
@@ -145,44 +145,50 @@
                     <div class="porosite-e-fundit"> 
 
                         <div class="titulli">
-                        <h2>Klientët e rinjë</h2>
+                        <h2>Best sellers</h2>
 
                     </div>
 
                     <table>
                         <tr>
-                            <th>Profili</th>
+                            <th>Produkti</th>
                             <th>Emri</th>
-                            <th>Mbiemri</th>
+                            <th>Cmimi</th>
 
                         </tr>
 
 
                         <tr>
 
-                            <td><img src="../images/avatarsh.png" width="25px" height="25px"  ></td>
-                            <td>Shpresim</td>
-                            <td>Syla</td>
+                            <td><img src="../images/kufjeJBL.jpg" width="39px" height="39px"  ></td>
+                            <td>Kufje JBL</td>
+                            <td>36.17 €</td>
 
                         </tr>
 
                         <tr>
 
-                        <td><img src="../images/avatarrion.png" width="25px" height="25px"  ></td>
-                            <td>Rion</td>
-                            <td>Reqica</td>
+                            <td><img src="../images/cantepulse.jpg" width="39px" height="39px"  ></td>
+                            <td>ÇANTË PULSE</td>
+                            <td>31.68 €</td>
 
                         </tr>
 
                         <tr>
 
-                        <td><img src="../images/avatare.png" width="25px" height="25px"  ></td>
-                            <td>Elion</td>
-                            <td>Aliu</td>
+                            <td><img src="../images/mouseRazer.jpg" width="39px" height="39px"  ></td>
+                            <td>Mouse Razer	</td>
+                            <td>39.50 €</td>
 
                         </tr>
 
                         <tr>
+
+                            <td><img src="../images/airpods3rdgen.png" width="39px" height="39px"  ></td>
+                            <td>Apple AirPods	</td>
+                            <td>259.00 €</td>
+
+                        </tr>
 
                         
 

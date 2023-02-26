@@ -63,7 +63,7 @@ class ProductsMapper extends DatabasePDOConfiguration {
 
 
         $query->execute();
-
+        return $query->fetch();
         
     }
 
@@ -94,20 +94,7 @@ class ProductsMapper extends DatabasePDOConfiguration {
         return $stmt->fetch(PDO::FETCH_ASSOC);
 
         
-      }
-
-
-
-
-
-
+    }
 }
-
-
-
-
-
-
-
 
 ?>

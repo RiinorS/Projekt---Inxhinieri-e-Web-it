@@ -22,17 +22,17 @@ if (isset($_GET['id'])) {
 
   <div class='mbajtesi-ndrysho'>
         
-        <form class="forma-ndrysho" action="ndryshoprodPopup.php" method="post">
+        <form class="forma-ndrysho" action="ndryshoprodPopup.php" method="post" id="ndrysho-produkt" >
             <div class="login forms form-style">
             <h1>Ndrysho produktin</h1>
                 <label class="label" for="">Foto</label>
-                <input type="file" name='foto' class="input" placeholder="Foto" value="<?php echo $product['foto']; ?> "/>
+                <input type="file" id="ndrysho-foto" name='foto' class="input" placeholder="Foto" value="<?php echo $product['foto']; ?> "/>
                 <label class="label" for="">Titulli</label>
-                <input type="text" name='titulli' class="input" placeholder="Titulli" value="<?php echo $product['titulli']; ?> "/>
+                <input type="text" id="ndrysho-titull" name='titulli' class="input" placeholder="Titulli" value="<?php echo $product['titulli']; ?> "/>
                 <label class="label" for="">Përshkrimi</label>
-                <input type="text" name='pershkrimi' class="input" placeholder="Përshkrimi" value="<?php echo $product['pershkrimi']; ?> "/>
+                <input type="text" id="ndrysho-pershkrim" name='pershkrimi' class="input" placeholder="Përshkrimi" value="<?php echo $product['pershkrimi']; ?> "/>
                 <label class="label" for="">Cmimi</label>
-                <input type="text" name='cmimi' class="input" placeholder="Cmimi" value="<?php echo $product['cmimi']; ?>" />
+                <input type="text" id="ndrysho-cmim" name='cmimi' class="input" placeholder="Cmimi" value="<?php echo $product['cmimi']; ?>" />
 
                 <input id="ndrysho-btn" type="submit" name="ndrysho-buton"  class="input submit" value="Ndrysho"  />
             </div>
@@ -40,7 +40,45 @@ if (isset($_GET['id'])) {
     </div>
 
 
+    
+    <?php 
+      echo 
+        '<script>
+            document.getElementById("ndrysho-produkt").addEventListener("submit", function(event) {
+            var foto = document.getElementById("ndrysho-foto").value;
+            var titulli = document.getElementById("ndrysho-titull").value;
+            var pershkrimi = document.getElementById("ndrysho-pershkrim").value;
+            var cmimi = document.getElementById("ndrysho-cmim").value;
+  
 
+            if (foto == "") {
+              alert("Ju lutem kontrolloni që foto mos të jetë e zbrazët!");
+              event.preventDefault(); 
+            }    
+
+            if (titulli == "") {
+              alert("Ju lutem kontrolloni që titulli mos të jetë i zbrazët!");
+              event.preventDefault(); 
+            }
+
+            if (pershkrimi == "") {
+              alert("Ju lutem kontrolloni që përshkrimi mos të jetë i zbrazët!");
+              event.preventDefault(); 
+            }
+
+            if (cmimi == "") {
+              alert("Ju lutem kontrolloni që cmimi mos të jetë i zbrazët!");
+              event.preventDefault(); 
+            } 
+
+          });
+        </script>';
+    ?>
+
+
+
+
+  
     
 
     <style>

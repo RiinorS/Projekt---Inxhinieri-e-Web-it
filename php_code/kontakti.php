@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,39 +16,49 @@
 <body>
     
    
-  <!-- Navigimi i faqes -->
-   <header>
+<!-- Navigimi i faqes -->
+<header>
+    
+  <div class="logo">RINI <span class="tech">  Tech</span></div>
+    
+  <nav class="nav-bar">
+    
+    <ul>
+      <?php
+        if(isset($_SESSION['role']) && $_SESSION['role'] == 1 ) {
+      ?>
+      <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
 
-   <div class="logo">RINI <span class="tech">  Tech</span></div>
+      <?php
+        }
+      ?>
 
-   <nav class="nav-bar">
+      <li> <a href="faqja.php">Faqja </a>  </li>
+      <li> <a href="produktet.php"> Produktet  </a> </li>
+      <li> <a href="rrethnesh.php" > Rreth Nesh  </a> </li>
+      <li> <a href="kontakti.php" class="active"> Kontakti  </a> </li>
+                    
+    </ul>                
+  </nav>
+    
+    <div class="icons">
+      <?php
+        if(!isset($_SESSION['role']) ) {
+      ?>
 
+      <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
+        
+      <?php
+        }
           
-                 <ul>
-                  <?php
-                  session_start();
-                    if(isset($_SESSION['roli']) && $_SESSION['roli'] == 1 ) {
-                  ?>
-                    <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
-
-                  <?php
-                  }
-
-                  ?>
-
-             <li> <a href="faqja.php"  >Faqja </a>  </li>
-             <li> <a href="produktet.php"> Produktet  </a> </li>
-             <li> <a href="rrethnesh.php"> Rreth Nesh  </a> </li>
-             <li> <a href="kontakti.php" class="active"> Kontakti  </a> </li>
-               
-           </ul>                
-   </nav>
-
-   <div class="icons">
-      <!-- <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a> -->
+        else {
+      ?>
       <a href="../php_code/ckycuni.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+      <?php
+        }
+      ?>
     </div>
-
+    
 </header> 
 
 
@@ -95,7 +109,7 @@
   
     
 
-    <form class="kontakt-forma" method="post" >
+    <form class="kontakt-forma" method="post" id="kontakt-form" >
         <h1>Na kontaktoni</h1>
         <div id="prapavija-formave" class="tekst-infot">
           <label>Emri :</label>

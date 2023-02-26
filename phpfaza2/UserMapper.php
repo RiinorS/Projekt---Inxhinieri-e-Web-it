@@ -1,7 +1,6 @@
 
 <?php
 include_once '../phpfaza2/databaseConfig.php';
-// ini_set('memory_limit', '1024M');
     class UserMapper extends DatabasePDOConfiguration {
 
         private $conn;

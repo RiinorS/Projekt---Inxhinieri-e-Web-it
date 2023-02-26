@@ -12,8 +12,8 @@ require_once '../components/menu-anash.php';  ?>
         <h2>Mesazhet</h2>
     </div>
     <tr>
-      <th>ID</th>
-      <th>Përdoruesi</th>
+      <th>Mesazhi ID</th>
+      <th>Emri</th>
       <th>Email</th>
       <th>Numri i telefonit</th>
       <th>Mesazhi</th>

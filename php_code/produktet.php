@@ -1,4 +1,7 @@
-<?php require_once '../phpfaza2/ProductsMapper.php'; ?>
+<?php 
+  session_start();
+  require_once '../phpfaza2/ProductsMapper.php'; 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,35 +19,47 @@
 <!-- Navigimi i faqes -->
  <header>
 
-  <div class="logo">RINI <span class="tech">  Tech</span></div>
-
-  <nav class="nav-bar">
-
-                 <ul>
-                 <?php
-                  session_start();
-                    if(isset($_SESSION['role']) && $_SESSION['role'] == 1 ) {
-                  ?>
-                    <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
-
-                  <?php
-                  }
-
-                  ?>
-              
-              <li> <a href="faqja.php" >Faqja </a>  </li>
-              <li> <a href="produktet.php" class="active" >Produktet  </a> </li>
-              <li> <a href="rrethnesh.php"> Rreth Nesh  </a> </li>
-              <li> <a href="kontakti.php"> Kontakti  </a> </li>
-              
-          </ul>                
-  </nav>
-
-  <div class="icons">
-    <!-- <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a> -->
-    <a href="../php_code/ckycuni.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+  <div class="logo">RINI <span class="tech">  Tech</span>
   </div>
+    
+    <nav class="nav-bar">
 
+      <ul>
+        <?php
+            if(isset($_SESSION['role']) && $_SESSION['role'] == 1 ) {
+        ?>
+          <li> <a href="../phpfaza2/dashboard.php"> Dashboard  </a> </li>
+
+        <?php
+          } 
+
+        ?>
+              
+        <li> <a href="faqja.php" >Faqja </a>  </li>
+        <li> <a href="produktet.php" class="active" >Produktet  </a> </li>
+        <li> <a href="rrethnesh.php"> Rreth Nesh  </a> </li>
+        <li> <a href="kontakti.php"> Kontakti  </a> </li>
+              
+      </ul>                
+   </nav>
+
+     <div class="icons">
+      <?php
+        if(!isset($_SESSION['role']) ) {
+      ?>
+
+      <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a>
+        
+      <?php
+        }
+          
+        else {
+      ?>
+      <a href="../php_code/ckycuni.php"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>
+      <?php
+         }
+      ?>
+    </div>
 </header> 
 
 

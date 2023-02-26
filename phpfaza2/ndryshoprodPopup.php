@@ -89,7 +89,7 @@ include_once '../components/menu-anash.php';
 
 function closeNdryshoPopup(){
     
-    window.location.href = 'phpfaza2/produktetdash.php';
+    window.location.href = 'produktetdash.php';
 }
 
 </script> 

@@ -1,6 +1,6 @@
 <?php
 include_once 'MessagesMapper.php';
-include_once '../components/header.php';
+include_once '../components/menu-anash.php';
 
 
 
@@ -27,9 +27,7 @@ if (isset($_GET['id'])) {
 
 
 </div>
-<?php
-include_once '../components/footer.php';
-?>
+
 
 <style>
 
@@ -54,8 +52,8 @@ include_once '../components/footer.php';
     background: white;
     border-radius: 6px;
     position: absolute;
-    top: 43%;
-    left: 35%;
+    top: 30%;
+    left: 43%;
     text-align: center;
     padding: 0 30px 30px ;
     color: #333;

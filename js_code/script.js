@@ -166,27 +166,19 @@ function validimiRegjistohuni(){
 
 
 function kontakti(){
+  document.getElementById("kontakt-form").addEventListener("submit", function(event) {
+
 
     const perdoruesi_kontakto = document.getElementById('perdoruesi_kontakto').value;
     const email_kontakto = document.getElementById('email_kontakto').value;
     const numri_kontakto = document.getElementById('numri_kontakto').value;
     const mesazhi_kontakto = document.getElementById('mesazhi_kontakto').value;
 
+    if(perdoruesi_kontakto.length ===0){
+        alert("Ju lutem kontrolloni që emri të mos të jetë i zbrazët!!");
+        event.preventDefault(); 
 
-    // perdoruesi duhet te jete me minimum 3 karaktere
-
-
-    var regPerdoruesi = /^[a-zA-Z]{3,}$/;
-
-    var regex_Perdoruesi = regPerdoruesi.test(perdoruesi_kontakto);
-
-    if(!regex_Perdoruesi){
-        alert("Ju lutem kontrolloni që emri të përmbajë minimum 3 shkronja!");
     }
-
-
-
-    
 
     // email-a duhet   te permbaje '@' dhe te perfundoje me  'com' ose 'net'
 
@@ -197,25 +189,93 @@ function kontakti(){
 
     if(!regex_Email){
         alert("Ju lutem kontrolloni që email-a të përmbajë @ dhe të përfundojë me  'com' ose 'net'!");
+        event.preventDefault(); 
+
     }
 
-
-    
-
-   
 
     if(numri_kontakto.length ===0){
         alert("Ju lutem kontrolloni që numri mos të jetë i zbrazët!");
+        event.preventDefault(); 
+
 
     }
 
    
-   
-
     if(mesazhi_kontakto.length ===0){
         alert("Ju lutem kontrolloni që mesazhi mos të jetë i zbrazët!");
-    }
+        event.preventDefault(); 
 
+    }
+  });
 
 }
 
+function validimiblejTani(){
+    document.getElementById("porosi-form").addEventListener("submit", function(event) {
+        var emri = document.getElementById("emri_blej").value;
+        var mbiemri = document.getElementById("mbiemri_blej").value;
+        var adresa = document.getElementById("adresa_blej").value;
+        var komuna = document.getElementById("komuna_blej").value;
+        var numri = document.getElementById("numri_blej").value;
+        var produkti = document.getElementById("produkti_blej").value;
+
+        if (emri == "") {
+          alert("Ju lutem kontrolloni që emri mos të jetë i zbrazët!");
+          event.preventDefault(); 
+        }
+        if (mbiemri == "") {
+          alert("Ju lutem kontrolloni që mbiemri mos të jetë i zbrazët!");
+          event.preventDefault(); 
+        }  
+        if (adresa == "") {
+          alert("Ju lutem kontrolloni që adresa mos të jetë e zbrazët!");
+          event.preventDefault(); 
+        }  
+        if (komuna == "") {
+          alert("Ju lutem kontrolloni që komuna mos të jetë e zbrazët!");
+          event.preventDefault(); 
+        }  
+        if (numri == "") {
+          alert("Ju lutem kontrolloni që numri mos të jetë i zbrazët!");
+          event.preventDefault(); 
+        }  
+        if (produkti == "") {
+          alert("Ju lutem kontrolloni që produkti të cilin doni ta porositni mos të jetë i zbrazët!");
+          event.preventDefault(); 
+        }    
+      });
+}
+
+
+function validimiShtoProdukt(){
+
+document.getElementById("shto-form").addEventListener("submit", function(event) {
+    var foto = document.getElementById("shto-foto").value;
+    var titulli = document.getElementById("shto-titull").value;
+    var pershkrimi = document.getElementById("shto-pershkrim").value;
+    var cmimi = document.getElementById("shto-cmim").value;
+    
+
+    if (foto == "") {
+        alert("Ju lutem kontrolloni që foto mos të jetë e zbrazët!");
+      event.preventDefault(); 
+    }
+
+    if (titulli == "") {
+        alert("Ju lutem kontrolloni që titulli mos të jetë i zbrazët!");
+      event.preventDefault(); 
+    }
+
+    if (pershkrimi == "") {
+        alert("Ju lutem kontrolloni që përshkrimi mos të jetë i zbrazët!");
+      event.preventDefault(); 
+    }
+
+    if (cmimi == "") {
+        alert("Ju lutem kontrolloni që cmimi mos të jetë i zbrazët!");
+      event.preventDefault(); 
+    }
+
+  });
+}

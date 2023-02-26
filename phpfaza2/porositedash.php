@@ -1,6 +1,6 @@
 <?php
 require 'OrdersMapper.php';
-include '../components/header.php';  ?>
+include '../components/menu-anash.php';  ?>
 
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,8 @@ include '../components/header.php';  ?>
         <h2>Porositë</h2>
     </div>
     <tr>
-      <th>ID</th>
+      <th>Produkti</th>
+      <th>Porosia ID</th>
       <th>Emri</th>
       <th>Mbiemri</th>
       <th>Adresa</th>
@@ -36,6 +37,9 @@ include '../components/header.php';  ?>
         foreach ($rows as $row) { 
     ?> 
         <tr>
+            <td>
+                <?php echo $row['produkti'] ?>
+            </td>
             <td>
                 <?php echo $row['porosiaid'] ?>
             </td>

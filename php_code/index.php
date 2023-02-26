@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,18 +21,8 @@
 
   <nav class="nav-bar">
 
-                  <ul>
-                  <?php
-                  session_start();
-                    if(isset($_SESSION['role']) && $_SESSION['role'] == 1 ) {
-                  ?>
-                    <li> <a href="../phpfaza2/views/dashboard.php"> Dashboard  </a> </li>
-
-                  <?php
-                  }
-
-                  ?>
-
+          <ul>
+              
             <li> <a href="faqja.php" >Faqja </a>  </li>
             <li> <a href="produktet.php"> Produktet  </a> </li>
             <li> <a href="rrethnesh.php"> Rreth Nesh  </a> </li>
@@ -40,14 +31,7 @@
           </ul>                
   </nav>
 
-  <div class="icons">
-  <!-- <a href="index.php"> <img src="../images/log.png"  width="23px" height="17px"> Kyçuni</a> -->
-  <!-- <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>    -->
-   
-  </div>
-  <!-- <a href="#"> <img src="../images/logout.png"  width="23px" height="17px"> Çkyçuni</a>    -->
-
-  <!-- <a href="#"> Çkyçuni </a> -->
+ 
 
 </header> 
 
@@ -70,14 +54,64 @@
 
       </form>
 
-      <form   action="../phpfaza2/loginVerify.php" id="regjistrohuni"  method="post" class="input-grupi" onsubmit="return validimiRegjistrohuni()" >
-          <input type="text" name="register-username"  id="email_regjistrohuni" class="input-fusha" placeholder="Emri" required >
-          <input type="text" name="register-lastname"  id="perdoruesi_regjistrohuni" class="input-fusha" placeholder="Mbiemri" required  >
-          <input type="password" name="register-password"  id="fjalekalimi_regjistrohuni" class="input-fusha" placeholder="Fjalëkalimi" required>
-          <input type="checkbox" class="tick-kutia" required > <span class="tickkr" >Unë pajtohem me kushtet dhe përmbajtjen e privatësisë</span>
+      <form   action="../phpfaza2/loginVerify.php" id="regjistrohuni"  method="post" class="input-grupi"  >
+          <input type="text" name="register-username"  id="email_regjistrohuni" class="input-fusha" placeholder="Emri"  >
+          <input type="text" name="register-lastname"  id="perdoruesi_regjistrohuni" class="input-fusha" placeholder="Mbiemri"   >
+          <input type="password" name="register-password"  id="fjalekalimi_regjistrohuni" class="input-fusha" placeholder="Fjalëkalimi" >
+          <input type="checkbox" class="tick-kutia"  > <span class="tickkr" >Unë pajtohem me kushtet dhe përmbajtjen e privatësisë</span>
           <button type="submit" class="butoni-submit" name="register-btn"   >Regjistrohuni</button>
 
       </form>
+<?php
+      echo 
+      '<script>
+          document.getElementById("regjistrohuni").addEventListener("submit", function(event) {
+          var emri = document.getElementById("email_regjistrohuni").value;
+          var mbiemri = document.getElementById("perdoruesi_regjistrohuni").value;
+          var fjalekalimi = document.getElementById("fjalekalimi_regjistrohuni").value;
+
+
+          var regEm = /^[a-zA-Z]{3,}$/;
+
+    var regexEmri = regEm.test(emri);
+
+    if(!regexEmri){
+        alert("Ju lutem kontrolloni që emri të përmbajë minimum 3 shkronja!");
+        event.preventDefault(); 
+
+      }
+
+
+    // mbiemri te kete te pakten 3 shkronja
+
+
+    var regMb = /^[a-zA-Z]{3,}$/;
+
+    var regex_Mbiemri = regMb.test(mbiemri);
+
+    if(!regex_Mbiemri){
+        alert("Ju lutem kontrolloni që mbiemri të përmbajë minimum 3 shkronja!");
+        event.preventDefault(); 
+
+    }
+
+
+    // fjalekalimi duhet te kete minimum 5 karaktere dhe te permbaje 1 numer
+
+    var regFjalekalimi = /^[a-zA-Z]{3,}.*\d/;
+
+    var regex_Fjalekalimi = regFjalekalimi.test(fjalekalimi);
+
+    if(!regex_Fjalekalimi){
+        alert("Ju lutem kontrolloni që fjalëkalimi të përmbajë minimum 3 shkronja dhe te paktën 1 numer!");
+        event.preventDefault(); 
+
+    }
+
+        });
+      </script>';
+  ?>
+
 
   </div>
 

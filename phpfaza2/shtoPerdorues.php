@@ -14,7 +14,7 @@ if (isset($_POST['shto-btn'])) {
     $mapper = new UserMapper();
     $mapper->insertUser($user);
 
-    header("Location:../phpfaza2/shtoPerdoruesPopup.php");}
+    header("Location:shtoPerdoruesPopup.php");}
 ?>
    
 
@@ -23,22 +23,50 @@ if (isset($_POST['shto-btn'])) {
 
    <div class='mbajtesi-shto'>
         
-        <form class="forma-shto"  method="post">
+        <form class="forma-shto"  method="post" id="shtoperdorues">
             <div class="login forms form-style">
             <h1>Shto përdoruesin</h1>
                 
                 <label class="label" for="">Emri</label>
-                <input type="text" name='username' class="input"   />
+                <input type="text" id="shto-emer" name='username' class="input"   />
                 <label class="label" for="">Mbiemri</label>
-                <input type="text" name='lastname' class="input"  />
-                <label class="label" for="">Passwordi</label>
-                <input type="password" name='password' class="input"  />
+                <input type="text" id="shto-mbiemer" name='lastname' class="input"  />
+                <label class="label" for="">Fjalëkalimi</label>
+                <input type="password" id="shto-fjalekalim" name='password' class="input"  />
                
 
                 <input id="shto-btn" type="submit" name="shto-btn"  class="input submit" value="Shto"  />
             </div>
         </form>
     </div>
+
+    <?php 
+      echo 
+        '<script>
+            document.getElementById("shtoperdorues").addEventListener("submit", function(event) {
+            var emri = document.getElementById("shto-emer").value;
+            var mbiemri = document.getElementById("shto-mbiemer").value;
+            var fjalekalimi = document.getElementById("shto-fjalekalim").value;
+  
+
+            if (emri == "") {
+              alert("Ju lutem kontrolloni që emri mos të jetë i zbrazët!");
+              event.preventDefault(); 
+            }    
+
+            if (mbiemri == "") {
+              alert("Ju lutem kontrolloni që mbiemri mos të jetë i zbrazët!");
+              event.preventDefault(); 
+            }
+
+            if (fjalekalimi == "") {
+              alert("Ju lutem kontrolloni që fjalekalimi mos të jetë i zbrazët!");
+              event.preventDefault(); 
+            }
+
+          });
+        </script>';
+    ?>
 
 
 

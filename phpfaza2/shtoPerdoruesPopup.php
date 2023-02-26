@@ -89,7 +89,7 @@ include '../components/menu-anash.php';
 
 function closeShtoPopup(){
     
-    window.location.href = 'phpfaza2/perdoruesit.php';
+    window.location.href ='perdoruesit.php';
 }
 
 </script> 
