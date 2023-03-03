@@ -1,5 +1,11 @@
 
-    <?php include '../components/menu-anash.php';  ?>
+    <?php include '../components/menu-anash.php';  
+        session_start();
+        if (!isset($_SESSION['role']) ) {
+            header("Location:../php_code/index.php");
+            
+        }
+    ?>
 
     <div class="mbajtesi">
 
