@@ -63,10 +63,14 @@
                     if ($user['role'] == 1) {
                         $obj = new Admin($user['username'], $user['userlastname']  , $user['role'] ,$user['roleName'] ,$user['password']);
                         $obj->setSession();
+                        $obj->setCookie();
+
                     }
                     else {
                     $obj = new SimpleUser($user['username'], $user['userlastname']  , $user['role'] , $user['roleName'] ,$user['password']);
                     $obj->setSession();
+                    $obj->setCookie();
+
                     }
                 return true;
             } 
