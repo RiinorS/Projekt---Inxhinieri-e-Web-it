@@ -37,7 +37,7 @@
                 header("Location:../php_code/index.php");
             }
             else if($this->verifyLogin($this->username, $this->password) ){
-                header("Location:../phpfaza2/dashboard.php");
+                header("Location:../php_code/faqja.php");
             }
             else {
                 header("Location:../php_code/index.php");
